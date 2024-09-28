@@ -1,4 +1,29 @@
+# Basic Site Settings
 title: "Dr. Ouail Zakary"
 description: "Computational Chemist"
-baseurl: ""
-url: "https://ozakary.github.io"
+baseurl: "" # Leave this blank for a GitHub Pages repository.
+url: "https://ozakary.github.io" # The URL of your GitHub Pages site.
+
+# Theme
+remote_theme: "mmistakes/minimal-mistakes@4.24.0" # Using an older version for compatibility
+
+# Plugins
+plugins:
+  - jekyll-feed
+
+# Navigation Links
+nav_links:
+  - name: "Home"
+    link: "/"
+  - name: "Research"
+    link: "/research"
+  - name: "Publications"
+    link: "/publications"
+  - name: "CV"
+    link: "/cv"
+  - name: "Contact"
+    link: "/contact"
+
+# Markdown and syntax highlighting
+markdown: kramdown
+highlighter: rouge
