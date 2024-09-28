@@ -1,30 +1,22 @@
 # Basic Site Settings
-title: "[Ouail Zakary] | Computational Chemist"
-description: "My research focuses on developing advanced machine learning-driven approaches for modeling large-scale molecular systems under real physicochemical conditions. By integrating state-of-the-art quantum mechanics at the relativistic level and molecular dynamics simulations with atomistic machine learning, I aim to deliver highly predictive models for both structural and dynamic processes. A significant part of my work involves training graph neural networks, along with Kernel and Gaussian Process regression models, to develop machine learning interatomic potentials and machine learning-based NMR parameter models. These models enable long-timescale simulations, improving our ability to analyze experimental NMR data and predict new experimental outcomes for complex materials."
-url: "https://ozakary.github.io"
-baseurl: ""  # Leave blank unless you're using a custom subdirectory
-author: "[Ouail Zakary]"
+title: "Dr. Ouail Zakary | Computational Chemist"
+description: "Research in quantum chemistry, machine learning for molecular systems, and NMR parameter models."
+url: "https://ozakary.github.io"  # Your GitHub Pages URL
+baseurl: ""  # Leave blank unless you're using a subpath
+author: "Dr. Ouail Zakary"
 
 # Theme Settings
-# theme: jekyll-theme-cayman  # Example theme, replace with your preferred theme
-remote_theme: mmistakes/minimal-mistakes  # Uncomment if using the Minimal Mistakes theme
+remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: "dark"
-header:
-  image: "/assets/images/header.jpg"  # Optional header image
-  overlay_color: "#333333"
-  show_title_text: true
-
 
 # Social Media Links
-# These will typically be used by the theme to display icons linking to your social profiles.
 social_links:
   linkedin: "https://www.linkedin.com/in/ouail-zakary-a63a521b9"
   github: "https://github.com/ozakary"
   google_scholar: "https://scholar.google.com/citations?user=kKUFATIAAAAJ&hl=fr"
   researchgate: "https://www.researchgate.net/profile/Ouail-Zakary"
 
-# Navigation Bar Links (optional)
-# Customize this based on the pages you want to link to in the site navigation.
+# Navigation Bar Links
 navbar:
   - name: "Home"
     link: "/"
@@ -37,32 +29,10 @@ navbar:
   - name: "Contact"
     link: "/contact"
 
-# Optional SEO Settings
-# These settings improve how your site appears in search engines like Google.
-# google_analytics: UA-12345678-9  # Replace with your own Google Analytics ID if you want tracking
-# keywords: "computational chemistry, quantum chemistry, scientific research, Python, molecular modeling"
-# description: "[Ouail Zakary] - Research in quantum chemistry and scientific computing."
-
-# Appearance Customization (depends on the theme)
-# For some themes like Minimal Mistakes, you can change layouts, colors, and fonts.
-# Below is an example for Minimal Mistakes.
-# Uncomment these settings if using that theme.
-# minimal_mistakes_skin: "dark"
-# header:
-#   image: "/assets/images/header.jpg"  # Header image if applicable
-#   overlay_color: "#333333"            # Color overlay on top of the header image
-#   show_title_text: true               # Whether to show title text over header image
-# google_fonts:
-#   - family: "Roboto"
-#     weights: "400,700"
-
 # Plugins (Optional)
-# Add additional Jekyll plugins here. For example, the 'jekyll-scholar' plugin for managing citations.
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  # Uncomment for research-heavy sites with references
-  # - jekyll-scholar
 
 # Build Settings
 markdown: kramdown
