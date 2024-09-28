@@ -5,7 +5,7 @@ baseurl: "" # Leave this blank for a GitHub Pages repository.
 url: "https://ozakary.github.io" # The URL of your GitHub Pages site.
 
 # Theme
-remote_theme: "mmistakes/minimal-mistakes"
+remote_theme: "sourabhbajaj/academic-kickstart"
 
 # Plugins
 plugins:
