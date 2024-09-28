@@ -6,6 +6,7 @@ url: "https://ozakary.github.io" # The URL of your GitHub Pages site.
 
 # Theme
 remote_theme: "mmistakes/minimal-mistakes@4.24.0" # Using an older version for compatibility
+css: custom
 
 # Plugins
 plugins:
