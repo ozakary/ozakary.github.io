@@ -47,13 +47,13 @@ const App = () => {
           <p className="text-lg text-gray-600">Postdoctoral Researcher</p>
           <p className="text-gray-600">NMR Research Unit, University of Oulu</p>
           <div className="flex gap-4 mt-4">
-            <a href="#" className="text-blue-600 hover:text-blue-800">
+            <a href="https://github.com/ozakary" className="text-blue-600 hover:text-blue-800">
               <Github className="w-6 h-6" />
             </a>
-            <a href="#" className="text-blue-600 hover:text-blue-800">
+            <a href="https://www.linkedin.com/in/ouail-zakary-a63a521b9" className="text-blue-600 hover:text-blue-800">
               <Linkedin className="w-6 h-6" />
             </a>
-            <a href="#" className="text-blue-600 hover:text-blue-800">
+            <a href="Ouail.Zakary@oulu.fi" className="text-blue-600 hover:text-blue-800">
               <Mail className="w-6 h-6" />
             </a>
           </div>
