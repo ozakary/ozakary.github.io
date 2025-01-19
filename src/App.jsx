@@ -37,8 +37,8 @@ const App = () => {
       <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
         <div className="w-48 h-48 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
           <img
-            src="/api/placeholder/192/192"
-            alt="Profile placeholder"
+            src="/profile-picture.png"
+            alt="Dr. Ouail Zakary"
             className="w-full h-full object-cover"
           />
         </div>
@@ -71,27 +71,138 @@ const App = () => {
     </div>
   );
 
-  const Publications = () => (
-    <div className="max-w-4xl mx-auto">
-      <h2 className="text-2xl font-bold mb-6">Publications</h2>
-      <div className="space-y-6">
-        {/* Example publication */}
+  const Publications = () => {
+    const publications = [
+      {
+        titleHtml: `Different magnitudes of second-order Jahn-Teller effect in isostructural NaMO<sub>2</sub>F<sub>2</sub> (M= Nb, Ta) oxyfluorides`,
+        authors: [
+          { name: "Ouail Zakary", isPI: true },
+          { name: "Monique Body" },
+          { name: "Vincent Sarou-Kanian" },
+          { name: "Brice Arnaud" },
+          { name: "Gwenaël Corbel" },
+          { name: "Christophe Legein" }
+        ],
+        journal: "Journal of Alloys and Compounds",
+        volume: "1010",
+        pages: "177457",
+        year: "2025",
+        doi: "https://doi.org/10.1016/j.jallcom.2024.177457",
+        isOpenAccess: true,
+        isSubscribed: false,
+        descriptionHtml: `The structures of the ordered and isotype oxyfluorides NaMO<sub>2</sub>F<sub>2</sub> (M = Nb, Ta) were thoroughly investigated by combining powder X-Ray Diffraction (PXRD), <sup>19</sup>F and high-field <sup>23</sup>Na and <sup>93</sup>Nb solid-state NMR, and DFT calculations. The structures, derived from Rietveld refinement of the PXRD data, exclusively consist of <i>cis</i>-[MO<sub>4</sub>F<sub>2</sub>]<sup>5–</sup> octahedra, in which cations are displaced from their ideal centered positions toward an oxide face. The NMR parameters were calculated for both the experimental (ES) and the atomic positions optimized (APO) structures, the latter exhibiting, as is often the case, the best agreement with the experimental data. Nb<sup>5+</sup> and Ta<sup>5+</sup> cations having the same size, niobium and tantalum isotypes have usually very close cell parameters. However, those of NaNbO<sub>2</sub>F<sub>2</sub> and NaTaO<sub>2</sub>F<sub>2</sub>, particularly <i>c</i>, differ in unusual proportions. This difference in <i>c</i> parameters is due to stronger second-order Jahn-Teller effect (SOJTE) for the <i>cis</i>-[NbO<sub>4</sub>F<sub>2</sub>]<sup>5–</sup> than for the <i>cis</i>-[TaO<sub>4</sub>F<sub>2</sub>]<sup>5–</sup> octahedra, further confirmed by band structure and projected density of states calculations. Furthermore, by optimizing the synthesis conditions of these compounds using thermal analysis, a very low amplitude endothermic event, upon heating, was observed only for NaNbO<sub>2</sub>F<sub>2</sub>. An extensive analysis of the variable temperature (VT) PXRD data revealed that this event is related to a deviation from linearity of the cell parameters evolution and that structural features of these two isotypes evolve differently with temperature.`
+      },
+        {
+        titleHtml: `Structural modeling of oxygen-fluorine ordering in transition metal inorganic oxyfluorides`,
+        authors: [
+          { name: "Ouail Zakary", isPI: true }
+        ],
+        journal: "Hal theses, Le Mans Université",
+        volume: "N/A",
+        pages: "N/A",
+        year: "2023",
+        doi: "https://theses.hal.science/tel-04412685/",
+        isOpenAccess: true,
+        isSubscribed: false,
+        descriptionHtml: `Mixed anions inorganic compounds, known as heteroanionic materials (HAMs), exhibit various physicochemical properties, such as superconductivity, ionic conductivity, photocatalytic activity, thermoelectricity, and nonlinear optics. These HAMs, particularly those derived from oxides, are advantageous due to their abundant chemistry and straightforward synthesis. Their properties depend not only on the stoichiometry and identity of the anions but also on their position within the crystal structure. Many cases are possible, ranging from complete order to a random distribution of anions, or intermediate orders and extended correlations, known as correlated disorder.This thesis deals with the study of the O/F order in inorganic transition metal oxyfluorides by combining powder X-ray diffraction, solid-state NMR, and ab initio calculations. This multimodal approach was first tested on the ordered compounds NaNbO<sub>2</sub>F<sub>2</sub> and NaTaO<sub>2</sub>F<sub>2</sub>, and then successfully used to describe O/F correlated disorder in TaOF<sub>3</sub>, NbOF<sub>3-<i>x</i></sub>(OH)<sub><i>x</i></sub>, and Ti<sub>0.99</sub>A<sub>0.01</sub>O<sub>0.96</sub>F<sub>1.53</sub>(OH)<sub>0.51</sub>·0.33H<sub>2</sub>O.Additionally, the effect of hydroxylation on the local environment and the chemical shifts of fluorine atoms was modeled. Finally, the existence of a preferential short-range O/F ordering was demonstrated in the pyrochlores RbNb<sub>2</sub>O<sub>5</sub>F and RbTa<sub>2</sub>O<sub>5</sub>F.`
+      },
+      {
+        titleHtml: `Structural Modeling of O/F Correlated Disorder in TaOF<sub>3</sub> and NbOF<sub>3–<i>x</i></sub>(OH)<sub><i>x</i></sub> by Coupling Solid-State NMR and DFT Calculations`,
+        authors: [
+          { name: "Ouail Zakary", isPI: true },
+          { name: "Monique Body" },
+          { name: "Thibault Charpentier" },
+          { name: "Vincent Sarou-Kanian" },
+          { name: "Christophe Legein" }
+        ],
+        journal: "Inorganic Chemistry",
+        volume: "62",
+        pages: "16627–16640",
+        year: "2023",
+        doi: "https://doi.org/10.1021/acs.inorgchem.3c02844",
+        isOpenAccess: false,
+        isSubscribed: true,
+        descriptionHtml: `The structure of MOF<sub>3</sub> (M = Nb, Ta) compounds was precisely modeled by combining powder X-ray diffraction, solid-state NMR spectroscopy, and semiempirical dispersion-corrected DFT calculations. It consists of stacked <sub>∞</sub>(MOF<sub>3</sub>) layers along the <i>c</i> direction formed by heteroleptic corner-connected MX<sub>6</sub> (X = O, F) octahedra. <sup>19</sup>F NMR resonance assignments and occupancy rates of the anionic crystallographic sites have been revised. The bridging site is shared equally by the anions, and the terminal site is occupied by F only. An O/F correlated disorder is expected since <i>cis</i>-MO<sub>2</sub>F<sub>4</sub> octahedra are favored, resulting in one-dimensional −F–M–O–M– strings along the <100> and <010> directions. Ten different 2×2×1 supercells per compound, fulfilling these characteristics, were built. Using DFT calculations and the GIPAW approach, the supercells were relaxed and the <sup>19</sup>F isotropic chemical shift values were determined. The agreement between the experimental and calculated <sup>19</sup>F spectra is excellent for TaOF<sub>3</sub>. The <sup>1</sup>H and <sup>19</sup>F experimental NMR spectra revealed that some of the bridging F atoms are substituted by OH groups, especially in NbOF<sub>3</sub>. New supercells involving OH groups were generated. Remarkably, the best agreement is obtained for the supercells with the composition closest to that estimated from the <sup>19</sup>F NMR spectra, <i>i.e.</i>, NbOF<sub>2.85</sub>(OH)<sub>0.15</sub>.`
+      }
+    ];
+
+    const PublicationCard = ({ publication }) => {
+      const getAccessBadge = () => {
+        if (publication.isOpenAccess) {
+          return {
+            text: "Open Access",
+            className: "bg-green-100 text-green-800"
+          };
+        } else if (publication.isSubscribed) {
+          return {
+            text: "Subscribed",
+            className: "bg-orange-100 text-orange-800"
+          };
+        } else {
+          return {
+            text: "Subscription Required",
+            className: "bg-yellow-100 text-yellow-800"
+          };
+        }
+      };
+
+      const badge = getAccessBadge();
+
+      return (
         <div className="bg-white p-6 rounded-lg shadow-md">
-          <h3 className="font-bold text-lg mb-2">Example Publication Title</h3>
-          <p className="text-gray-600 mb-2">Authors, Journal Name (2024)</p>
-          <p className="text-gray-700 mb-4">Brief description of the publication...</p>
+          <h3 
+            className="font-bold text-lg mb-2"
+            dangerouslySetInnerHTML={{ 
+              __html: publication.titleHtml
+            }}
+          />
+          <p className="text-gray-600 mb-2">
+            {publication.authors.map((author, index) => (
+              <span key={index}>
+                {author.isPI ? <b>{author.name}</b> : author.name}
+                {index < publication.authors.length - 1 ? ", " : ""}
+              </span>
+            ))}
+          </p>
+          <p className="text-gray-700 mb-2">
+            {publication.journal}, <b>{publication.volume}</b>, {publication.pages} ({publication.year}).
+          </p>
+          <div className="flex items-center gap-2 mb-4">
+            <span className={`text-xs font-medium px-2.5 py-0.5 rounded ${badge.className}`}>
+              {badge.text}
+            </span>
+          </div>
+          <p 
+            className="text-gray-700 mb-4"
+            dangerouslySetInnerHTML={{ 
+              __html: publication.descriptionHtml 
+            }}
+          />
           <div className="flex gap-4">
-            <a href="#" className="text-blue-600 hover:text-blue-800 flex items-center gap-2">
-              <FileText className="w-4 h-4" /> PDF
-            </a>
-            <a href="#" className="text-blue-600 hover:text-blue-800 flex items-center gap-2">
+            <a 
+              href={`${publication.doi}`} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 flex items-center gap-2"
+            >
               <Database className="w-4 h-4" /> DOI
             </a>
           </div>
         </div>
+      );
+    };
+
+    return (
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-2xl font-bold mb-6">Publications</h2>
+        <div className="space-y-6">
+          {publications.map((pub, index) => (
+            <PublicationCard key={index} publication={pub} />
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   const Conferences = () => (
     <div className="max-w-4xl mx-auto">
