@@ -313,7 +313,7 @@ const App = () => {
           </div>
           <div className="flex gap-4">
             <a 
-              href={`https://doi.org/${publication.doi}`} 
+              href={`${publication.doi}`} 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-800 flex items-center gap-2"
