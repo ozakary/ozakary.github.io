@@ -135,7 +135,7 @@ const App = () => {
       },
       {
         type: PUBLICATION_TYPES.SUBMITTED,
-        titleHtml: `Hexagonal-Tungsten-Bronze TiOF<sub>2</sub>: Synthesis, Crystal Structure and Anionic Short-range Ordering.`,
+        titleHtml: `Hexagonal-Tungsten-Bronze TiOF<sub>2</sub>: Synthesis, Crystal Structure and Anionic Short-Range Ordering.`,
         authors: [
           { name: "Madhu Chennabassapa"},
           { name: "Alexander G. Squires"},
@@ -388,7 +388,7 @@ const App = () => {
       POSTER: "Poster Communication",
       CONTRIBUTED: "Contributed Talk",
       INVITED: "Invited Talk",
-      SEMINAR: "Seminars"
+      WORKSHOP: "Workshops"
     };
   
     const conferences = [
@@ -470,6 +470,74 @@ const App = () => {
         abstractHtml: "Numerous studies have been conducted on inorganic oxy-hydroxy-fluoride compounds with the aim of determining their physicochemical properties . As they govern these properties, their crystalline structures are of particular interest. Nevertheless, the efficiency of X-ray and neutron diffraction techniques, which are usually employed to determine crystalline structures, is limited since they are unable to distinguish between O and F atoms. In the case of ordered compounds, bond valence calculations allow distinguishing the crystallographic sites occupied by the O and F atoms. However, due to the close ionic radii values of fluoride (F<sup>-</sup>) and oxide (O<sup>2-</sup>) ions which allow them to share the same crystallographic site, inorganic oxy-fluoride compounds are often subject to the so-called chemical disorder. But between the limits of fully ordered and randomly disordered anions, there are many cases of intermediate anion orders that may give rise to non-random site occupancies in the averaged crystal structure, i.e. the so-called correlated disorder. For instance, for heteroanionic materials constructed from heteroleptic (MX<sub>2</sub>X’<sub>4</sub>) octahedral units, cis units are more favored, particularly when the cation is a d0 transition metal. Solid-state NMR spectroscopy (ss-NMR), which provide information about the local environment of the probe nucleus, coupled with DFT calculations, brings forth accurate modeling of the crystal structure, as shown in the past decade, on few disordered oxy-fluorides. During my thesis, we have applied this combination in order to reach a full structural description of numerous ordered/disordered inorganic oxy-hydroxy-fluorides. Herein, we present the results obtained for oxy-trifluoride of niobium and tantalum MOF<sub>3</sub> (M = Nb, Ta) and the Hexagonal-Tungsten-Bronze phase of TiOF<sub>2</sub> (HTB-TiOF<sub>2</sub>). Their crystalline structures, which show correlated disorder, were precisely modelled using X-Ray Powder Diffraction, <sup>1</sup>H and <sup>19</sup>F Magic Angle Spinning (MAS) ss-NMR and DFT calculations. Moreover, NbOF<sub>3</sub> and HTB-TiOF<sub>2</sub> being partially hydroxylated, the agreement between calculated and experimental data has been significantly improved by substituting partially F for OH in the models.",
         doi: "https://doi.org/10.6084/m9.figshare.27115360.v2"
       },
+      {
+        type: CONFERENCE_TYPES.ORAL,
+        titleHtml: "Structural Modeling of O/F Correlated Disorder in NbOF<sub>3</sub> and TaOF<sub>3</sub>",
+        authors: [
+          { name: "Ouail Zakary", isPI: true },
+          { name: "Monique Body" },
+          { name: "Thibault Charpentier" },
+          { name: "Vincent Sarou-Kanian" },
+          { name: "Christophe Legein" }
+        ],
+        conferenceNameHtml: "Alpine Conference on Magnetic Resonance on Solids",
+        location: "Chamonix-Mont-Blanc, France",
+        date: "4-8/09/2022",
+        abstractHtml: "Inorganic oxyfluorides are heteroanionic inorganic compounds that present interesting physical properties. Due to similar anion size, oxide and fluoride anions can occupy the same crystallographic sites. However, a precise knowledge of the atomic arrangements in these compounds is required to interpret and enhance their properties. Since O and F atoms have quasi-similar scattering factors, structural modeling of disordered inorganic oxyfluorides is challenging using X-ray diffraction techniques that only provide average structures. On the other hand, the high sensitivity of solid-sate NMR spectroscopy to local environment of the probed nuclei make it ideal tool for disordered solids. To describe short and long-range order, supercell approach coupled with DFT calculations of the NMR parameters has proven to be efficient. In this study, the structures of NbOF<sub>3</sub> and TaOF<sub>3</sub> were revised using X-ray powder diffraction and <sup>19</sup>F MAS ss-NMR spectroscopy. The MO<sub>2</sub>F<sub>4</sub> octahedra are connected via four common corners forming sheets stacked via van der Walls interactions. The anions are located on two different crystallographic sites: the non-bridging one, fully occupied by F, and the bridging one, equally occupied by O and F. Considering the O/F correlated disorder previously suggested, ten possible 2x2x1 supercells were built and DFT optimized with and without semi-empirical dispersion correction. The resulting agreement between the experimental and the theoretical <sup>19</sup>F isotropic chemical shifts indicates that these ten models describe accurately the disorder in the studied structures.",
+        doi: "https://doi.org/10.6084/m9.figshare.27111496.v2"
+      },
+      {
+        type: CONFERENCE_TYPES.ORAL,
+        titleHtml: "Structural Modeling of Disordered Inorganic Oxyfluorides by Coupling Solid State NMR and DFT Calculations",
+        authors: [
+          { name: "Ouail Zakary", isPI: true },
+          { name: "Thibault Charpentier" },
+          { name: "Monique Body" },
+          { name: "Christophe Legein" }
+        ],
+        conferenceNameHtml: "Réunion RMN Grand Bassin Parisien",
+        location: "Orsay, France",
+        date: "19/11/2021",
+        abstractHtml: "Tantalum and niobium oxyfluorides are part of the heteroanionic inorganic compounds that present interesting physical proprieties. In order to interpret and enhance such properties, a detailed structural modeling of the structure of this type of compounds is required. Structural modeling of inorganic disordered oxyfluorides is more challenging, since their structure is majoritively chemically disordered, precisely, anionic disorder, that is difficult to characterize using conventional diffraction techniques, as O and F atoms are indistinguishable due to their quasi-similar scattering factors. The average structure given by such techniques stays inadequate to describe disorder in such type of solids. On the other hand, solid-state NMR spectroscopy (ss-NMR) sensitivity to short-range environmental effects exerted on probed nuclei, coupled DFT calculations bring forth accurate structural solutions that were unfeasible before determining theoretical NMR parameters using the gauge including projector augmented wave (GIPAW) approach, is crucial to make accurate assignments of the experimental NMR lines, also to provide profound structural insights. In this study, the structure of NbOF<sub>3</sub> and TaOF<sub>3</sub> was precisely modeled, combining X-ray powder diffraction, <sup>19</sup>F and <sup>1</sup>H MAS ss-NMR spectroscopy and DFT calculations. The results suggests unambiguously the existence of one-dimensional strings of correlated O/F disorder in the equatorial crystallographic site along <100> and <010> directions for both compounds. The bridging site is distributed with equal anionic occupancies. Whereas, the non-bridging site is totally occupied by F. Using 2x2x1 supercells, DFT calculations suggests the possibility of ten unique models for each compound.",
+        doi: "https://doi.org/10.6084/m9.figshare.27111955.v2"
+      },
+      {
+        type: CONFERENCE_TYPES.CONTRIBUTED,
+        titleHtml: "Efficient and Accurate Local Equivariant Deep Neural Network Interatomic Potential for Large-Scale Porous Liquids Simulations",
+        authors: [
+          { name: "Ouail Zakary", isPI: true },
+          { name: "Perttu Lantto" }
+        ],
+        conferenceNameHtml: "Winter School in Theoretical Chemistry 2024",
+        location: "Helsinki, Finland",
+        date: "09-12/12/2024",
+        abstractHtml: "Porous materials serve diverse applications like molecular separations and catalysis [1], offering an energy-efficient method for capturing greenhouse gases (CO<sub>2</sub>, and CH<sub>4</sub>) and valuable noble gases (Xe, Ar, and Kr). Xenon — vital in optics, medicine, and nuclear fission processes [2] — poses extraction challenges due to its low atmospheric abundance (0.087 ppm by volume) and inertness, driving high commercial costs. Porous materials must exhibit precise size selectivity [3] and high adsorption capacity for effective xenon isolation in commercial applications. The recent development of porous liquids (PLs) with cavities formed by porous organic cages (POCs) has shown promise in addressing these challenges [4, 5]. Understanding the binding, occupancies, dynamics, and equilibrium between the host (PL and POC) and the guest (Xe) is vital in engineering new POCs with targeted functionalities. Molecular dynamics (MD) simulations have proven essential for understanding and exploring the physicochemical processes governing these systems. In MD simulations, atom movements are governed by forces derived as gradients of the potential energy surface (PES) of the system. Typically, the PES is accurately obtained by calculating the electronic structure using methods like density functional theory (DFT). While this combination of MD with DFT offers precise interatomic forces, their computational scaling limits simulations to tens of picoseconds and a few hundred atoms, which is far from capturing realistic timescales and size of these porous systems. Classical models for computing PES, although faster, lack accuracy. In recent years, machine learning (ML), particularly neural networks (NNs), has emerged as a promising solution to these limitations [6-8] by learning accurate interatomic potentials from a set of high-fidelity ab initio reference calculations while maintaining computational efficiency.Here, we present a machine learning interatomic potential (MLIP) model constructed using the local equivariant deep NN architecture, Allegro [9]. This model was trained, validated, and tested on energies, forces, and virials — computed at the DFT-D4 level with PBE functional and periodic boundary conditions — of structures issued from semi-empirical MD simulations performed at RT and 600K, from a dataset comprising over 1600 structures consisting of 600 to 1170 atoms (H, C, N, O, F, Cl, and Xe). These structures comprise one to two xenon atoms in TBA-type, HAP-type, and DCT-type PLs, as well as CC3 POC where Xe atoms are positioned inside or near the cavities of the POC. The dataset encompasses 1.8 million atoms, with 12.5 million data points used in the process. The MLIP will be applied to provide microscopic interpretation of experimental <sup>129</sup>Xe NMR observations. In this step, we will construct an ML model for magnetic shielding tensors, σ, obtained from the dataset. This ML model will later be used to predict σ in MD simulations to explain experimental, both static spectral and dynamic relaxation, data. References: [1] A. G. Slater, A. I. Cooper, Science 348 (2015) 988. [2] W. M. Stacey, Nuclear Reactor Physics, Wiley-VCH, Weinheim, 2007. [3] T. Mitra, K. E. Jelfs, M. Schmidtmann, A. Ahmed, S. Y. Chong, D. J. Adams, A. I. Cooper, Nat. Chem. 5 (2013) 276–281. [4] T. Tozawa, J. T. A. Jones, S. I. Swamy, S. Jiang, D. J. Adams, S. Shakespeare, R. Clowes, D. Bradshaw, T. Hasell, S. Y. Chong, C. Tang, S. Thompson, J. Parker, A. Trewin, J. Bacsa, A. M. Z. Slawin, A. Steiner, A. I. Cooper, Nat. Mater. 8 (2009) 973–978. [5] L. Chen, P. S. Reiss, S. Y. Chong, D. Holden, K. E. Jelfs, T. Hasell, M. A. Little, A. Kewley, M. E. Briggs, A. Stephenson, K. M. Thomas, J. A. Armstrong, J. Bell, J. Busto, R. Noel, J. Liu, D. M. Strachan, P. K. Thallapally, A. I. Cooper, Nat. Mater. 13 (2014) 954–960. [6] S. Chmiela, H. E. Sauceda, K. R. Müller, A. Tkatchenko, Nat. Commun. 9 (2018) 3887. [7] S. Batzner, A. Musaelian, L. Sun, M. Geiger, J. P. Mailoa, M. Kornbluth, N. Molinari, T. E. Smidt, B. Kozinsky, Nat. Commun. 13 (2022) 2453. [8] J. Vandermause, Y. Xie, J. S. Lim, C. Owen, B. Kozinsky, Nat. Commun. 15 (2021) 5183. [9] A. Musaelian, S. Batzner, A. Johansson, L. Sun, C. J. Owen, M. Kornbluth, B. Kozinsky, Nat. Commun. 14 (2023), 579.",
+        doi: "http://www.chem.helsinki.fi/ws2024.html"
+      },
+      {
+        type: CONFERENCE_TYPES.WORKSHOP,
+        titleHtml: "Machine Learning of First Principles Observables",
+        authors: [
+          { name: "Ouail Zakary", isPI: true },
+        ],
+        conferenceNameHtml: "Centre Européen de Calcul Atomique et Moléculaire (CECAM)",
+        location: "Berlin, Germany",
+        date: "08-12/07/2024",
+        abstractHtml: "Recently, Machine Learning (ML) methods have penetrated almost all research areas in materials modelling and high-throughput materials screening. And yet the ML triumph has so far mainly focused on developing surrogate models for the potential energy surface (PES) with superior computational efficiency while retaining first principles accuracy. The approach to learn observable properties directly is just emerging and is challenged by several issues, which we intend to address. The event is meant to support the development of a new collaborative, international network connecting different fields of research and integrating the young researchers community with the help of a scientifically diverse, interactive workshop.",
+        doi: "https://www.cecam.org/workshop-details/machine-learning-of-first-principles-observables-1322"
+      },
+      {
+        type: CONFERENCE_TYPES.WORKSHOP,
+        titleHtml: "Moving ions with VASP",
+        authors: [
+          { name: "Ouail Zakary", isPI: true },
+        ],
+        conferenceNameHtml: "University of Vienna",
+        location: "Online (Zoom)",
+        date: "27-30/09/2022",
+        abstractHtml: "In 4 days of lectures and hands-on sessions, this workshop covers ab-initio molecular dynamics, machine learning force fields, structure prediction, and phonons. During the hands-on sessions, you will learn to perform your own ab-initio simulations using the Vienna Ab-initio Simulation Package (VASP). Additionally, you have the extraordinary opportunity to meet the team developing VASP to learn from them how to simulate the properties of materials.",
+        doi: "https://www.vasp.at/info/post/moving-ions-workshop-2022/"
+      },
       // Add more conferences here
     ];
   
@@ -483,7 +551,7 @@ const App = () => {
           return "bg-green-50";
         case CONFERENCE_TYPES.INVITED:
           return "bg-yellow-50";
-        case CONFERENCE_TYPES.SEMINAR:
+        case CONFERENCE_TYPES.WORKSHOP:
           return "bg-red-50";
         default:
           return "bg-white";
