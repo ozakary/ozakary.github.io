@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, Code, Users, Award, FileText, Database, Mail, Github, Linkedin } from 'lucide-react';
+import { BookOpen, Code, Users, Award, FileText, Database, Mail, Github, Linkedin, Book } from 'lucide-react';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('about');
@@ -32,45 +32,288 @@ const App = () => {
     </nav>
   );
 
-  const About = () => (
-    <div className="max-w-4xl mx-auto">
-      <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
-        <div className="w-48 h-48 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
-          <img
-            src="/profile-picture.png"
-            alt="Ouail Zakary"
-            className="w-full h-full object-cover"
-          />
+  const About = () => {
+    const [selectedDegree, setSelectedDegree] = useState(null);
+  
+    const education = [
+      {
+        id: "phd",
+        type: "Ph.D.",
+        field: "Physics",
+        title: "Structural Modeling of Oxygen-Fluorine Ordering in Transition Metal Inorganic Oxyfluorides",
+        thesis: "https://theses.hal.science/tel-04412685/",
+        institution: "Le Mans Université (Le Mans, France)",
+        period: "01/10/2020 - 08/12/2023",
+        color: "bg-blue-50",
+        committee: [
+          {
+            name: "Prof. Christian Bonhomme",
+            role: "Referee",
+            position: "Professor",
+            institution: "Sorbonne Université (Paris)",
+            links: {
+              orcid: "0000-0003-0802-6961",
+              scholar: "https://scholar.google.com/citations?user=OkH8acAAAAAJ&hl=en&oi=ao"
+            }
+          },
+          {
+            name: "Dr. Mathieu Allix",
+            role: "Referee",
+            position: "CNRS Research Director",
+            institution: "CNRS CEMHTI (Orléans)",
+            links: {
+              orcid: "0000-0001-9317-1316",
+              scholar: "#"
+            }
+          },
+          {
+            name: "Prof. Christel Gervais",
+            role: "Chair",
+            position: "Professor",
+            institution: "Sorbonne Université (Paris)",
+            links: {
+              orcid: "0000-0001-7450-1738",
+              scholar: "#"
+            }
+          },
+          {
+            name: "Dr. Thibault Charpentier",
+            role: "Examiner",
+            position: "CEA Research Director",
+            institution: "CEA Paris-Saclay (Paris)",
+            links: {
+              orcid: "0000-0002-3034-1389",
+              scholar: "https://scholar.google.com/citations?user=apNunY0AAAAJ&hl=en&oi=ao"
+            }
+          },
+          {
+            name: "Dr. Damien Dambournet",
+            role: "Examiner",
+            position: "Associate Professor",
+            institution: "Sorbonne Université (Paris)",
+            links: {
+              orcid: "0000-0003-3831-2643",
+              scholar: "#"
+            }
+          },
+          {
+            name: "Dr. Monique Body",
+            role: "Supervisor",
+            position: "Associate Professor",
+            institution: "Le Mans Université (Le Mans)",
+            links: {
+              orcid: "0000-0002-5895-3731",
+              scholar: "https://scholar.google.com/citations?user=sLCxmZIAAAAJ&hl=en&oi=ao"
+            }
+          },
+          {
+            name: "Prof. Christophe Legein",
+            role: "Co-supervisor",
+            position: "Professor",
+            institution: "Le Mans Université (Le Mans)",
+            links: {
+              orcid: "0000-0001-7426-8817",
+              scholar: "https://scholar.google.com/citations?user=Xo1Z9_4AAAAJ&hl=en&oi=ao"
+            }
+          }
+
+          // Add other committee members
+        ]
+      },
+      {
+        id: "masters",
+        type: "M.Sc.",
+        field: "Applied Physics and Engineering Physics - Physics and Nanomaterials",
+        institution: "Le Mans Université (Le Mans, France)",
+        period: "01/09/2019 - 30/06/2020",
+        color: "bg-green-50"
+      },
+      {
+        id: "masters",
+        type: "M.Sc.",
+        field: "Physics of Materials and Nanomaterials",
+        institution: "Hassan II University of Casablanca (Casablanca, Morocco)",
+        period: "01/09/2018 - 30/06/2020",
+        color: "bg-green-50"
+      },
+      {
+        id: "bachelors",
+        type: "B.Sc.",
+        field: "Fundamental Physics",
+        institution: "Hassan II University of Casablanca (Casablanca, Morocco)",
+        period: "01/09/2015 - 30/06/2018",
+        color: "bg-purple-50"
+      }
+    ];
+  
+    return (
+      <div className="max-w-4xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
+          <div className="w-48 h-48 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+            <img src="/profile-picture.png" alt="Ouail Zakary" className="w-full h-full object-cover" />
+          </div>
+          <div className="flex-1">
+            <h2 className="text-3xl font-bold mb-4">Ouail Zakary</h2>
+            <p className="text-lg text-gray-600">Computational Chemist</p>
+            <p className="text-gray-600">NMR Research Unit, University of Oulu</p>
+            <div className="flex gap-4 mt-4">
+              <a href="https://github.com/ozakary" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                <Github className="w-6 h-6" />
+              </a>
+              <a href="https://www.linkedin.com/in/ouail-zakary-a63a521b9" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                <Linkedin className="w-6 h-6" />
+              </a>
+              <a href="mailto:Ouail.Zakary@oulu.fi" className="text-blue-600 hover:text-blue-800">
+                <Mail className="w-6 h-6" />
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="flex-1">
-          <h2 className="text-3xl font-bold mb-4">Ouail Zakary</h2>
-          <p className="text-lg text-gray-600">Computational Chemist</p>
-          <p className="text-gray-600">NMR Research Unit, University of Oulu</p>
-          <div className="flex gap-4 mt-4">
-            <a href="https://github.com/ozakary" className="text-blue-600 hover:text-blue-800">
-              <Github className="w-6 h-6" />
-            </a>
-            <a href="https://www.linkedin.com/in/ouail-zakary-a63a521b9" className="text-blue-600 hover:text-blue-800">
-              <Linkedin className="w-6 h-6" />
-            </a>
-            <a href="Ouail.Zakary@oulu.fi" className="text-blue-600 hover:text-blue-800">
-              <Mail className="w-6 h-6" />
-            </a>
+  
+        <div className="prose max-w-none mb-8">
+          <h3 className="text-2xl font-bold mb-4">Research Focus</h3>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            My research focuses on developing advanced machine learning-driven approaches for modeling large-scale molecular systems under real physicochemical conditions. By integrating state-of-the-art quantum mechanics at the relativistic level and molecular dynamics simulations with atomistic machine learning, I aim to deliver highly predictive models for both structural and dynamic processes.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            A significant part of my work involves training graph neural networks, along with Kernel and Gaussian Process regression models, to develop machine learning interatomic potentials and machine learning-based NMR parameter models. These models enable long-timescale simulations, improving our ability to analyze experimental NMR data and predict new experimental outcomes for complex materials.
+          </p>
+        </div>
+  
+        <div className="prose max-w-none mb-8">
+          <h3 className="text-2xl font-bold mb-4">Current Position</h3>
+          <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+            <div>
+              <h4 className="text-xl font-bold">Postdoctoral Researcher</h4>
+              <p className="text-gray-600">NMR Research Unit, University of Oulu</p>
+              <p className="text-gray-700 mt-2">Computational Chemistry</p>
+              <div className="mt-4">
+                <p className="text-gray-700">Principal Investigator:</p>
+                <div className="flex items-center gap-4">
+                  <span className="font-semibold">Dr. Perttu Lantto</span>
+                  <a 
+                    href="https://scholar.google.com/citations?user=C4pyUZ4AAAAJ&hl=en&oi=ao"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800"
+                  >
+                    Google Scholar
+                  </a>
+                  <a 
+                    href="https://orcid.org/0000-0003-0685-7657"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800"
+                  >
+                    ORCID
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center gap-4 mt-4">
+                <button
+                  onClick={() => setSelectedDegree('postdoc')}
+                  className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+                >
+                  {selectedDegree === 'postdoc' ? 'Hide Details' : 'More Details'}
+                </button>
+              </div>
+              {selectedDegree === 'postdoc' && (
+                <div className="mt-4 p-4 bg-white rounded-lg">
+                  <p className="text-gray-700">
+                    Currently working on developing machine learning approaches for simulating porous liquids and modeling NMR parameters. The project involves:
+                  </p>
+                  <ul className="list-disc pl-5 mt-2 space-y-2">
+                    <li>Developing equivariant neural network potentials for molecular dynamics</li>
+                    <li>Creating ML models for NMR parameter prediction</li>
+                    <li>Integrating quantum mechanics with machine learning for improved accuracy</li>
+                    <li>Analyzing experimental NMR data using ML-assisted simulations</li>
+                    <li>Studying host-guest interactions in porous materials</li>
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+  
+        <div className="mb-8">
+          <h3 className="text-2xl font-bold mb-6">Education</h3>
+          <div className="space-y-4">
+            {education.map((degree) => (
+              <div key={degree.id} className={`${degree.color} p-6 rounded-lg shadow-md`}>
+                <div className="md:flex md:justify-between md:items-start md:gap-4">
+                  <div>
+                    <h4 className="text-xl font-bold">{degree.type} in {degree.field}</h4>
+                    {degree.title && (
+                      <p className="text-gray-700 mt-2 mb-2 md:max-w-[70%]">{degree.title}</p>
+                    )}
+                    <p className="text-gray-600">{degree.institution}</p>
+                    <p className="text-gray-500">{degree.period}</p>
+                    {degree.thesis && (
+                      <a 
+                        href={degree.thesis}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 mt-2"
+                      >
+                        <Book className="w-5 h-5" />
+                        <span>View Thesis</span>
+                      </a>
+                    )}
+                  </div>
+                  {degree.committee && (
+                    <button
+                      onClick={() => setSelectedDegree(selectedDegree === degree.id ? null : degree.id)}
+                      className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+                    >
+                      {selectedDegree === degree.id ? 'Hide Details' : 'Show Details'}
+                    </button>
+                  )}
+                </div>
+  
+                {selectedDegree === degree.id && degree.committee && (
+                  <div className="mt-4 p-4 bg-white rounded-lg">
+                    <h5 className="font-bold mb-4">Ph.D. Committee</h5>
+                    <div className="space-y-4">
+                      {degree.committee.map((member, index) => (
+                        <div key={index} className="border-b pb-4 last:border-b-0">
+                          <p className="font-semibold">{member.name}</p>
+                          <p className="text-gray-600">{member.position} - {member.institution}</p>
+                          <p className="text-gray-500">{member.role}</p>
+                          <div className="flex gap-4 mt-2">
+                            {member.links.orcid && (
+                              <a
+                                href={`https://orcid.org/${member.links.orcid}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 hover:text-blue-800"
+                              >
+                                ORCID
+                              </a>
+                            )}
+                            {member.links.scholar && (
+                              <a
+                                href={member.links.scholar}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 hover:text-blue-800"
+                              >
+                                Google Scholar
+                              </a>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>
-      <div className="prose max-w-none">
-        <h3 className="text-2xl font-bold mb-4">Research Focus</h3>
-        <p className="text-gray-700 leading-relaxed mb-6">
-          My research focuses on developing advanced machine learning-driven approaches for modeling large-scale molecular systems under real physicochemical conditions. By integrating state-of-the-art quantum mechanics at the relativistic level and molecular dynamics simulations with atomistic machine learning, I aim to deliver highly predictive models for both structural and dynamic processes.
-        </p>
-        <p className="text-gray-700 leading-relaxed">
-          A significant part of my work involves training graph neural networks, along with Kernel and Gaussian Process regression models, to develop machine learning interatomic potentials and machine learning-based NMR parameter models. These models enable long-timescale simulations, improving our ability to analyze experimental NMR data and predict new experimental outcomes for complex materials.
-        </p>
-      </div>
-    </div>
-  );
-
+    );
+  };
+    
   const Publications = () => {
     const PUBLICATION_TYPES = {
       PUBLISHED: "published",
@@ -568,59 +811,66 @@ const App = () => {
               <div className="space-y-4">
                 {conferences
                   .filter(conf => conf.type === type)
-                  .map((conference, index) => (
-                    <div 
-                      key={index} 
-                      className={`${getBackgroundColor(conference.type)} p-6 rounded-lg shadow-md`}
-                    >
-                      <h4 
-                        className="font-bold text-lg mb-2"
-                        dangerouslySetInnerHTML={{ __html: conference.titleHtml }}
-                      />
-                      <p className="text-gray-600 mb-2">
-                        {conference.authors.map((author, idx) => (
-                          <span key={idx}>
-                            {author.isPI ? <b>{author.name}</b> : author.name}
-                            {idx < conference.authors.length - 1 ? ", " : ""}
-                          </span>
-                        ))}
-                      </p>
-                      <p 
-                        className="text-gray-700 mb-2"
-                        dangerouslySetInnerHTML={{ __html: conference.conferenceNameHtml }}
-                      />
-                      <p className="text-gray-600 mb-2">
-                        {conference.location}, {conference.date}
-                      </p>
-                      
-                      <div className="flex items-center gap-4 mt-4">
-                        <button
-                          onClick={() => setSelectedConference(selectedConference === index ? null : index)}
-                          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
-                        >
-                          {selectedConference === index ? 'Hide Details' : 'More Details'}
-                        </button>
+                  .map((conference, index) => {
+                    // Create unique ID for each conference
+                    const conferenceId = `${type}-${index}`;
+                    
+                    return (
+                      <div 
+                        key={conferenceId} 
+                        className={`${getBackgroundColor(conference.type)} p-6 rounded-lg shadow-md`}
+                      >
+                        <h4 
+                          className="font-bold text-lg mb-2"
+                          dangerouslySetInnerHTML={{ __html: conference.titleHtml }}
+                        />
+                        <p className="text-gray-600 mb-2">
+                          {conference.authors.map((author, idx) => (
+                            <span key={idx}>
+                              {author.isPI ? <b>{author.name}</b> : author.name}
+                              {idx < conference.authors.length - 1 ? ", " : ""}
+                            </span>
+                          ))}
+                        </p>
+                        <p 
+                          className="text-gray-700 mb-2"
+                          dangerouslySetInnerHTML={{ __html: conference.conferenceNameHtml }}
+                        />
+                        <p className="text-gray-600 mb-2">
+                          {conference.location}, {conference.date}
+                        </p>
+                        
+                        <div className="flex items-center gap-4 mt-4">
+                          <button
+                            onClick={() => setSelectedConference(
+                              selectedConference === conferenceId ? null : conferenceId
+                            )}
+                            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+                          >
+                            {selectedConference === conferenceId ? 'Hide Details' : 'More Details'}
+                          </button>
   
-                        <a 
-                          href={conference.doi}
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-blue-600 hover:text-blue-800 flex items-center gap-2"
-                        >
-                          <Database className="w-4 h-4" /> DOI
-                        </a>
-                      </div>
-  
-                      {selectedConference === index && (
-                        <div className="mt-4 p-4 bg-white rounded-lg">
-                          <p 
-                            className="text-gray-700"
-                            dangerouslySetInnerHTML={{ __html: conference.abstractHtml }}
-                          />
+                          <a 
+                            href={conference.doi}
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:text-blue-800 flex items-center gap-2"
+                          >
+                            <Database className="w-4 h-4" /> DOI
+                          </a>
                         </div>
-                      )}
-                    </div>
-                  ))}
+  
+                        {selectedConference === conferenceId && (
+                          <div className="mt-4 p-4 bg-white rounded-lg">
+                            <p 
+                              className="text-gray-700"
+                              dangerouslySetInnerHTML={{ __html: conference.abstractHtml }}
+                            />
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
               </div>
             </div>
           ))}
