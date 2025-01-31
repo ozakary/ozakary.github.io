@@ -1,6 +1,97 @@
 import React, { useState } from 'react';
 import { BookOpen, Code, Users, Award, FileText, Database, Mail, Github, Linkedin, Book } from 'lucide-react';
 
+// Add this component function inside your App.jsx, before the App function
+const InfoPanel = () => (
+  // To control width, adjust max-w-{size} in this div
+  // Available width options: max-w-sm, max-w-md, max-w-lg, max-w-xl, max-w-2xl, max-w-3xl, max-w-4xl, max-w-5xl, max-w-6xl, max-w-7xl
+  // To control background color, change the from-{color} and to-{color} classes
+  // Color options include: gray, red, yellow, green, blue, indigo, purple, pink
+  // Intensity options: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900
+  <div className="w-screen relative left-[50%] right-[50%] ml-[-50vw] mr-[-50vw] bg-gradient-to-r from-gray-900 via-gray-900 to-gray-900 shadow-2xl mt-12">
+    <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]"></div>
+    <div className="relative">
+      {/* Control the maximum width here */}
+      <div className="max-w-5xl mx-auto py-8 px-4">
+        <div className="flex justify-evenly items-center gap-16">
+          {/* ORCID */}
+          <a
+            href="https://orcid.org/0000-0002-7793-3306"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transform transition-all duration-300 hover:scale-110 hover:brightness-125"
+            title="ORCID Profile"
+          >
+            <img 
+              src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_32x32.png" 
+              alt="ORCID"
+              className="w-6 h-6"
+            />
+          </a>
+
+          {/* Google Scholar */}
+          <a
+            href="https://scholar.google.com/citations?user=kKUFATIAAAAJ&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transform transition-all duration-300 hover:scale-110 hover:brightness-125"
+            title="Google Scholar Profile"
+          >
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" fill="#4285f4"/>
+            </svg>
+          </a>
+
+          {/* Email */}
+          <a
+            href="mailto:ouail.zakary@oulu.fi"
+            className="transform transition-all duration-300 hover:scale-110"
+            title="Send Email"
+          >
+            <Mail className="w-6 h-6 text-white hover:text-blue-400" />
+          </a>
+
+          {/* ResearchGate */}
+          <a
+            href="https://www.researchgate.net/profile/Ouail-Zakary"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transform transition-all duration-300 hover:scale-110"
+            title="ResearchGate Profile"
+          >
+            <div className="text-[#00ccbb] font-bold text-2xl leading-none tracking-tighter hover:text-[#00ccbb]/80">
+              R<sup className="text-xl">G</sup>
+            </div>
+          </a>
+
+          {/* GitHub */}
+          <a
+            href="https://github.com/ozakary"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transform transition-all duration-300 hover:scale-110"
+            title="GitHub Profile"
+          >
+            <Github className="w-6 h-6 text-white hover:text-gray-300" />
+          </a>
+
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/ouail-zakary-a63a521b9/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transform transition-all duration-300 hover:scale-110"
+            title="LinkedIn Profile"
+          >
+            <Linkedin className="w-6 h-6 text-[#0077b5] hover:text-[#0077b5]/80" />
+          </a>
+        </div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
+    </div>
+  </div>
+);
+
 const App = () => {
   const [activeTab, setActiveTab] = useState('about');
 
@@ -145,7 +236,24 @@ const App = () => {
         color: "bg-purple-50"
       }
     ];
-  
+    
+    const news = [
+      {
+        date: "January 2025",
+        title: "EUROMAR 2025",
+        content: "Our research unit is organizing the 21<sup>st</sup> European Magnetic Resonance Congress (EUROMAR2025), in Oulu, Finland",
+        link: "https://euromar2025.org/"
+      },
+      {
+        date: "December 10<sup>th</sup> 2024",
+        title: "Contributed Talk",
+        content: "Presented our work on 'Machine Learning Potentials for Large-Scale Porous Liquids Simulations' at the Winter School in Theoretical Chemistry",
+        link: "http://www.chem.helsinki.fi/ws2024.html"
+      },
+      // Add more news items as needed
+    ];
+    
+    
     return (
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
@@ -211,7 +319,7 @@ const App = () => {
               </div>
               <div className="flex items-center gap-4 mt-4">
                 <button
-                  onClick={() => setSelectedDegree('postdoc')}
+                  onClick={() => setSelectedDegree(selectedDegree === 'postdoc' ? null : 'postdoc')}
                   className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
                 >
                   {selectedDegree === 'postdoc' ? 'Hide Details' : 'More Details'}
@@ -310,10 +418,60 @@ const App = () => {
             ))}
           </div>
         </div>
+      {/* Right column - News section with HTML support */}
+      <div className="fixed top-20 right-4 w-72 h-[calc(100vh-6rem)] overflow-y-auto">
+        <div className="bg-white rounded-lg shadow-lg p-6">
+          <h3 className="text-2xl font-bold mb-6 text-gray-800">Latest News</h3>
+          <div className="space-y-6">
+            {news.map((item, index) => (
+              <div 
+                key={index} 
+                className="border-l-4 border-blue-500 pl-4 py-2 hover:bg-gray-50 transition-colors"
+              >
+                <div 
+                  className="text-sm text-gray-600 mb-1"
+                  dangerouslySetInnerHTML={{ __html: item.date }}
+                />
+                <h4 className="font-semibold text-gray-800 mb-2">{item.title}</h4>
+                <p 
+                  className="text-gray-600 text-sm mb-2"
+                  dangerouslySetInnerHTML={{ __html: item.content }}
+                />
+                {item.link && (
+                  <a 
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 text-sm inline-flex items-center"
+                  >
+                    Read more
+                    <svg
+                      className="w-4 h-4 ml-1"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-    );
-  };
-    
+      <hr className="my-8 border-gray-200" />
+        <InfoPanel />
+        <div className="h-8" />
+    </div>
+  );
+};
+  
   const Publications = () => {
     const PUBLICATION_TYPES = {
       PUBLISHED: "published",
@@ -619,6 +777,9 @@ const App = () => {
           type={PUBLICATION_TYPES.IN_PREPARATION} 
           publications={publications}
         />
+        <hr className="my-8 border-gray-200" />
+        <InfoPanel />
+        <div className="h-8" />        
       </div>
     );
   };
@@ -875,6 +1036,9 @@ const App = () => {
             </div>
           ))}
         </div>
+        <hr className="my-8 border-gray-200" />
+        <InfoPanel />
+        <div className="h-8" />          
       </div>
     );
   };
@@ -892,6 +1056,9 @@ const App = () => {
           </a>
         </div>
       </div>
+      <hr className="my-8 border-gray-200" />
+        <InfoPanel />
+        <div className="h-8" />        
     </div>
   );
 
@@ -906,6 +1073,9 @@ const App = () => {
           <p className="text-gray-700">Brief description of the funded project...</p>
         </div>
       </div>
+      <hr className="my-8 border-gray-200" />
+        <InfoPanel />
+        <div className="h-8" />        
     </div>
   );
 
@@ -920,6 +1090,9 @@ const App = () => {
           <p className="text-gray-700">Brief description of collaboration...</p>
         </div>
       </div>
+      <hr className="my-8 border-gray-200" />
+        <InfoPanel />
+        <div className="h-8" />        
     </div>
   );
 
