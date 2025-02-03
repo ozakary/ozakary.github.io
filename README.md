@@ -1,4 +1,4 @@
-# Dr. Ouail Zakary's Academic Portfolio
+# Ouail Zakary's Portfolio
 
 This is my personal academic portfolio website showcasing my research work in computational chemistry. The website includes information about my publications, research focus, and academic contributions.
 
