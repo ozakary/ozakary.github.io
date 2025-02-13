@@ -1,93 +1,187 @@
 import React, { useState } from 'react';
 import { BookOpen, Code, Users, Award, FileText, Database, Mail, Github, Linkedin, Book } from 'lucide-react';
 
-// Add this component function inside your App.jsx, before the App function
-const InfoPanel = () => (
-  // To control width, adjust max-w-{size} in this div
-  // Available width options: max-w-sm, max-w-md, max-w-lg, max-w-xl, max-w-2xl, max-w-3xl, max-w-4xl, max-w-5xl, max-w-6xl, max-w-7xl
-  // To control background color, change the from-{color} and to-{color} classes
-  // Color options include: gray, red, yellow, green, blue, indigo, purple, pink
-  // Intensity options: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900
-  <div className="w-screen relative left-[50%] right-[50%] ml-[-50vw] mr-[-50vw] bg-gradient-to-r from-gray-900 via-gray-900 to-gray-900 shadow-2xl mt-12">
-    <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]"></div>
+const MolecularBackground = () => (
+  <svg className="fixed inset-0 w-full h-full pointer-events-none opacity-[0.03] z-0" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="molecular-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+        {/* Hexagonal molecular structure */}
+        <circle cx="50" cy="50" r="2" fill="currentColor"/>
+        <circle cx="20" cy="50" r="2" fill="currentColor"/>
+        <circle cx="80" cy="50" r="2" fill="currentColor"/>
+        <circle cx="35" cy="25" r="2" fill="currentColor"/>
+        <circle cx="65" cy="25" r="2" fill="currentColor"/>
+        <circle cx="35" cy="75" r="2" fill="currentColor"/>
+        <circle cx="65" cy="75" r="2" fill="currentColor"/>
+        
+        {/* Chemical bonds */}
+        <line x1="23" y1="50" x2="47" y2="50" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2"/>
+        <line x1="53" y1="50" x2="77" y2="50" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2"/>
+        <line x1="38" y1="28" x2="47" y2="47" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2"/>
+        <line x1="62" y1="28" x2="53" y2="47" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2"/>
+        <line x1="38" y1="72" x2="47" y2="53" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2"/>
+        <line x1="62" y1="72" x2="53" y2="53" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#molecular-pattern)"/>
+  </svg>
+);
+
+const NavButton = ({ id, label, activeTab, onClick }) => (
+  <button
+    onClick={onClick}
+    className={`relative px-4 py-2 rounded-lg transition-all duration-200 
+      ${activeTab === id 
+        ? 'bg-blue-600 text-white shadow-lg' 
+        : 'hover:bg-gray-800 hover:text-blue-400'
+      } group overflow-hidden`}
+  >
+    {/* Animated background effect */}
+    <span className={`absolute inset-0 bg-gradient-to-r from-blue-600/50 to-blue-400/50 
+      opacity-0 group-hover:opacity-100 transition-opacity duration-300
+      ${activeTab === id ? 'opacity-100' : ''}`} 
+    />
+    
+    {/* Button text */}
+    <span className="relative z-10">{label}</span>
+    
+    {/* Bottom highlight */}
+    <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-blue-400 transform 
+      transition-transform duration-200 ${activeTab === id ? 'scale-x-100' : 'scale-x-0'}`}
+    />
+  </button>
+);
+
+// Molecular background pattern component
+const MolecularPattern = () => (
+  <svg className="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="molecular-grid" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+        {/* Hexagonal structure */}
+        <circle cx="50" cy="50" r="3" fill="white"/>
+        <circle cx="20" cy="50" r="3" fill="white"/>
+        <circle cx="80" cy="50" r="3" fill="white"/>
+        <circle cx="35" cy="25" r="3" fill="white"/>
+        <circle cx="65" cy="25" r="3" fill="white"/>
+        <circle cx="35" cy="75" r="3" fill="white"/>
+        <circle cx="65" cy="75" r="3" fill="white"/>
+        
+        {/* Bonds */}
+        <line x1="23" y1="50" x2="47" y2="50" stroke="white" strokeWidth="1"/>
+        <line x1="53" y1="50" x2="77" y2="50" stroke="white" strokeWidth="1"/>
+        <line x1="38" y1="28" x2="47" y2="47" stroke="white" strokeWidth="1"/>
+        <line x1="62" y1="28" x2="53" y2="47" stroke="white" strokeWidth="1"/>
+        <line x1="38" y1="72" x2="47" y2="53" stroke="white" strokeWidth="1"/>
+        <line x1="62" y1="72" x2="53" y2="53" stroke="white" strokeWidth="1"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#molecular-grid)"/>
+  </svg>
+);
+
+const SocialLink = ({ href, title, children, className = "text-white" }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`group relative flex items-center justify-center w-12 h-12 rounded-lg 
+    bg-white/5 backdrop-blur-sm transform transition-all duration-300 
+    hover:bg-white/10 hover:scale-105 hover:-translate-y-1 ${className}`}
+    title={title}
+  >
+    <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 
+      group-hover:opacity-100 transition-opacity duration-300" />
     <div className="relative">
-      {/* Control the maximum width here */}
-      <div className="max-w-5xl mx-auto py-8 px-4">
-        <div className="flex justify-evenly items-center gap-16">
+      {children}
+    </div>
+    <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 
+      bg-gray-900/90 text-white px-2 py-1 rounded text-xs opacity-0 
+      group-hover:opacity-100 transition-opacity duration-200 pointer-events-none 
+      backdrop-blur-sm border border-white/10">
+      {title}
+    </div>
+  </a>
+);
+
+const InfoPanel = () => (
+  <div className="w-full relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 mt-12 overflow-hidden">
+    {/* Animated gradient background */}
+    <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-blue-600/20 animate-gradient"></div>
+    
+    {/* Molecular pattern overlay */}
+    <MolecularPattern />
+    
+    <div className="relative">
+      <div className="max-w-4xl mx-auto py-12 px-4">
+        {/* Glowing orb decorations */}
+        <div className="absolute top-0 left-1/4 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-32 h-32 bg-purple-500/20 rounded-full blur-3xl"></div>
+        
+        <div className="flex flex-wrap justify-center gap-6">
           {/* ORCID */}
-          <a
+          <SocialLink 
             href="https://orcid.org/0000-0002-7793-3306"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transform transition-all duration-300 hover:scale-110 hover:brightness-125"
             title="ORCID Profile"
           >
             <img 
               src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_32x32.png" 
               alt="ORCID"
-              className="w-6 h-6"
+              className="w-8 h-8"
             />
-          </a>
+          </SocialLink>
 
           {/* Google Scholar */}
-          <a
+          <SocialLink 
             href="https://scholar.google.com/citations?user=kKUFATIAAAAJ&hl=en"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transform transition-all duration-300 hover:scale-110 hover:brightness-125"
-            title="Google Scholar Profile"
+            title="Google Scholar"
+            className="text-[#4285f4]"
           >
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" fill="#4285f4"/>
+            <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
             </svg>
-          </a>
+          </SocialLink>
 
           {/* Email */}
-          <a
+          <SocialLink 
             href="mailto:ouail.zakary@oulu.fi"
-            className="transform transition-all duration-300 hover:scale-110"
-            title="Send Email"
+            title="Email"
           >
-            <Mail className="w-6 h-6 text-white hover:text-blue-400" />
-          </a>
+            <Mail className="w-8 h-8 text-white group-hover:text-blue-400 transition-colors duration-300" />
+          </SocialLink>
 
           {/* ResearchGate */}
-          <a
+          <SocialLink 
             href="https://www.researchgate.net/profile/Ouail-Zakary"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transform transition-all duration-300 hover:scale-110"
-            title="ResearchGate Profile"
+            title="ResearchGate"
+            className="text-[#00ccbb]"
           >
-            <div className="text-[#00ccbb] font-bold text-2xl leading-none tracking-tighter hover:text-[#00ccbb]/80">
-              R<sup className="text-xl">G</sup>
+            <div className="font-bold text-3xl leading-none tracking-tighter group-hover:text-[#00ccbb]/80">
+              R<sup className="text-2xl">G</sup>
             </div>
-          </a>
+          </SocialLink>
 
           {/* GitHub */}
-          <a
+          <SocialLink 
             href="https://github.com/ozakary"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transform transition-all duration-300 hover:scale-110"
-            title="GitHub Profile"
+            title="GitHub"
           >
-            <Github className="w-6 h-6 text-white hover:text-gray-300" />
-          </a>
+            <Github className="w-8 h-8 text-white group-hover:text-gray-300 transition-colors duration-300" />
+          </SocialLink>
 
           {/* LinkedIn */}
-          <a
+          <SocialLink 
             href="https://www.linkedin.com/in/ouail-zakary-a63a521b9/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transform transition-all duration-300 hover:scale-110"
-            title="LinkedIn Profile"
+            title="LinkedIn"
+            className="text-[#0077b5]"
           >
-            <Linkedin className="w-6 h-6 text-[#0077b5] hover:text-[#0077b5]/80" />
-          </a>
+            <Linkedin className="w-8 h-8 group-hover:text-[#0077b5]/80 transition-colors duration-300" />
+          </SocialLink>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
+
+      {/* Decorative elements */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
     </div>
   </div>
 );
@@ -96,32 +190,44 @@ const App = () => {
   const [activeTab, setActiveTab] = useState('about');
 
   const Navigation = () => (
-    <nav className="bg-gray-900 text-white p-4 fixed w-full top-0 z-50">
-      <div className="container mx-auto flex flex-wrap items-center justify-between">
-        <h1 className="text-xl font-bold">Ouail Zakary</h1>
-        <div className="flex space-x-4">
-          {[
-            ['About', 'about'],
-            ['Publications', 'publications'],
-            ['Conferences', 'conferences'],
-            ['Code', 'code'],
-            ['Funding', 'funding'],
-            ['Collaborators', 'collaborators']
-          ].map(([label, id]) => (
-            <button
-              key={id}
-              onClick={() => setActiveTab(id)}
-              className={`px-3 py-2 rounded transition ${
-                activeTab === id ? 'bg-blue-600' : 'hover:bg-gray-700'
-              }`}
-            >
-              {label}
-            </button>
-          ))}
+    <nav className="bg-gray-900 text-white fixed w-full top-0 z-50 shadow-lg">
+      <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 opacity-50" />
+      <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
+      
+      <div className="relative container mx-auto px-4 py-3">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          {/* Logo/Name */}
+          <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">
+            Ouail Zakary
+          </h1>
+
+          {/* Navigation Buttons */}
+          <div className="flex flex-wrap gap-2">
+            {[
+              ['About', 'about'],
+              ['Publications', 'publications'],
+              ['Conferences', 'conferences'],
+              ['Code', 'code'],
+              ['Funding', 'funding'],
+              ['Collaborators', 'collaborators']
+            ].map(([label, id]) => (
+              <NavButton
+                key={id}
+                id={id}
+                label={label}
+                activeTab={activeTab}
+                onClick={() => setActiveTab(id)}
+              />
+            ))}
+          </div>
         </div>
       </div>
+      
+      {/* Bottom border gradient */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
     </nav>
   );
+
 
   const About = () => {
     const [selectedDegree, setSelectedDegree] = useState(null);
@@ -1117,8 +1223,12 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Add molecular background */}
+      <MolecularBackground />
+      
+      {/* Keep existing structure */}
       <Navigation />
-      <div className="pt-24 px-4 pb-12">
+      <div className="relative z-10 pt-24 px-4 pb-12">
         <TabContent />
       </div>
     </div>
