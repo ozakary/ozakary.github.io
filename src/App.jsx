@@ -1,190 +1,9 @@
 import React, { useState } from 'react';
 import { BookOpen, Code, Users, Award, FileText, Database, Mail, Github, Linkedin, Book } from 'lucide-react';
-
-const MolecularBackground = () => (
-  <svg className="fixed inset-0 w-full h-full pointer-events-none opacity-[0.03] z-0" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <pattern id="molecular-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-        {/* Hexagonal molecular structure */}
-        <circle cx="50" cy="50" r="2" fill="currentColor"/>
-        <circle cx="20" cy="50" r="2" fill="currentColor"/>
-        <circle cx="80" cy="50" r="2" fill="currentColor"/>
-        <circle cx="35" cy="25" r="2" fill="currentColor"/>
-        <circle cx="65" cy="25" r="2" fill="currentColor"/>
-        <circle cx="35" cy="75" r="2" fill="currentColor"/>
-        <circle cx="65" cy="75" r="2" fill="currentColor"/>
-        
-        {/* Chemical bonds */}
-        <line x1="23" y1="50" x2="47" y2="50" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2"/>
-        <line x1="53" y1="50" x2="77" y2="50" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2"/>
-        <line x1="38" y1="28" x2="47" y2="47" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2"/>
-        <line x1="62" y1="28" x2="53" y2="47" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2"/>
-        <line x1="38" y1="72" x2="47" y2="53" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2"/>
-        <line x1="62" y1="72" x2="53" y2="53" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2"/>
-      </pattern>
-    </defs>
-    <rect width="100%" height="100%" fill="url(#molecular-pattern)"/>
-  </svg>
-);
-
-const NavButton = ({ id, label, activeTab, onClick }) => (
-  <button
-    onClick={onClick}
-    className={`relative px-4 py-2 rounded-lg transition-all duration-200 
-      ${activeTab === id 
-        ? 'bg-blue-600 text-white shadow-lg' 
-        : 'hover:bg-gray-800 hover:text-blue-400'
-      } group overflow-hidden`}
-  >
-    {/* Animated background effect */}
-    <span className={`absolute inset-0 bg-gradient-to-r from-blue-600/50 to-blue-400/50 
-      opacity-0 group-hover:opacity-100 transition-opacity duration-300
-      ${activeTab === id ? 'opacity-100' : ''}`} 
-    />
-    
-    {/* Button text */}
-    <span className="relative z-10">{label}</span>
-    
-    {/* Bottom highlight */}
-    <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-blue-400 transform 
-      transition-transform duration-200 ${activeTab === id ? 'scale-x-100' : 'scale-x-0'}`}
-    />
-  </button>
-);
-
-// Molecular background pattern component
-const MolecularPattern = () => (
-  <svg className="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <pattern id="molecular-grid" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-        {/* Hexagonal structure */}
-        <circle cx="50" cy="50" r="3" fill="white"/>
-        <circle cx="20" cy="50" r="3" fill="white"/>
-        <circle cx="80" cy="50" r="3" fill="white"/>
-        <circle cx="35" cy="25" r="3" fill="white"/>
-        <circle cx="65" cy="25" r="3" fill="white"/>
-        <circle cx="35" cy="75" r="3" fill="white"/>
-        <circle cx="65" cy="75" r="3" fill="white"/>
-        
-        {/* Bonds */}
-        <line x1="23" y1="50" x2="47" y2="50" stroke="white" strokeWidth="1"/>
-        <line x1="53" y1="50" x2="77" y2="50" stroke="white" strokeWidth="1"/>
-        <line x1="38" y1="28" x2="47" y2="47" stroke="white" strokeWidth="1"/>
-        <line x1="62" y1="28" x2="53" y2="47" stroke="white" strokeWidth="1"/>
-        <line x1="38" y1="72" x2="47" y2="53" stroke="white" strokeWidth="1"/>
-        <line x1="62" y1="72" x2="53" y2="53" stroke="white" strokeWidth="1"/>
-      </pattern>
-    </defs>
-    <rect width="100%" height="100%" fill="url(#molecular-grid)"/>
-  </svg>
-);
-
-const SocialLink = ({ href, title, children, className = "text-white" }) => (
-  <a
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className={`group relative flex items-center justify-center w-12 h-12 rounded-lg 
-    bg-white/5 backdrop-blur-sm transform transition-all duration-300 
-    hover:bg-white/10 hover:scale-105 hover:-translate-y-1 ${className}`}
-    title={title}
-  >
-    <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 
-      group-hover:opacity-100 transition-opacity duration-300" />
-    <div className="relative">
-      {children}
-    </div>
-    <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 
-      bg-gray-900/90 text-white px-2 py-1 rounded text-xs opacity-0 
-      group-hover:opacity-100 transition-opacity duration-200 pointer-events-none 
-      backdrop-blur-sm border border-white/10">
-      {title}
-    </div>
-  </a>
-);
-
-const InfoPanel = () => (
-  <div className="w-full relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 mt-12 overflow-hidden">
-    {/* Animated gradient background */}
-    <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-blue-600/20 animate-gradient"></div>
-    
-    {/* Molecular pattern overlay */}
-    <MolecularPattern />
-    
-    <div className="relative">
-      <div className="max-w-4xl mx-auto py-12 px-4">
-        {/* Glowing orb decorations */}
-        <div className="absolute top-0 left-1/4 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-32 h-32 bg-purple-500/20 rounded-full blur-3xl"></div>
-        
-        <div className="flex flex-wrap justify-center gap-6">
-          {/* ORCID */}
-          <SocialLink 
-            href="https://orcid.org/0000-0002-7793-3306"
-            title="ORCID Profile"
-          >
-            <img 
-              src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_32x32.png" 
-              alt="ORCID"
-              className="w-8 h-8"
-            />
-          </SocialLink>
-
-          {/* Google Scholar */}
-          <SocialLink 
-            href="https://scholar.google.com/citations?user=kKUFATIAAAAJ&hl=en"
-            title="Google Scholar"
-            className="text-[#4285f4]"
-          >
-            <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
-            </svg>
-          </SocialLink>
-
-          {/* Email */}
-          <SocialLink 
-            href="mailto:ouail.zakary@oulu.fi"
-            title="Email"
-          >
-            <Mail className="w-8 h-8 text-white group-hover:text-blue-400 transition-colors duration-300" />
-          </SocialLink>
-
-          {/* ResearchGate */}
-          <SocialLink 
-            href="https://www.researchgate.net/profile/Ouail-Zakary"
-            title="ResearchGate"
-            className="text-[#00ccbb]"
-          >
-            <div className="font-bold text-3xl leading-none tracking-tighter group-hover:text-[#00ccbb]/80">
-              R<sup className="text-2xl">G</sup>
-            </div>
-          </SocialLink>
-
-          {/* GitHub */}
-          <SocialLink 
-            href="https://github.com/ozakary"
-            title="GitHub"
-          >
-            <Github className="w-8 h-8 text-white group-hover:text-gray-300 transition-colors duration-300" />
-          </SocialLink>
-
-          {/* LinkedIn */}
-          <SocialLink 
-            href="https://www.linkedin.com/in/ouail-zakary-a63a521b9/"
-            title="LinkedIn"
-            className="text-[#0077b5]"
-          >
-            <Linkedin className="w-8 h-8 group-hover:text-[#0077b5]/80 transition-colors duration-300" />
-          </SocialLink>
-        </div>
-      </div>
-
-      {/* Decorative elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-    </div>
-  </div>
-);
+import MolecularBackground from './components/MolecularBackground';
+import NavButton from './components/NavButton';
+import InfoPanel from './components/InfoPanel';
+import ProjectCard from './components/ProjectCard';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('about');
@@ -1149,24 +968,54 @@ const App = () => {
     );
   };
 
-  const Code = () => (
-    <div className="max-w-4xl mx-auto">
-      <h2 className="text-2xl font-bold mb-6">Software & Code</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Example project */}
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h3 className="font-bold text-lg mb-2">Project Name</h3>
-          <p className="text-gray-700 mb-4">Description of the software project...</p>
-          <a href="#" className="text-blue-600 hover:text-blue-800 flex items-center gap-2">
-            <Github className="w-4 h-4" /> View on GitHub
-          </a>
+  const Code = () => {
+    const projects = [
+      {
+        titleHtml: "data-NaMO2F2",
+        descriptionHtml: "This is the Supporting Dataset for the manuscript “Different Magnitudes of Second-Order Jahn-Teller Effect in Isostructural NaMO<sub>2</sub>F<sub>2</sub> (M = Nb, Ta) Oxyfluorides”.",
+        technologies: ["Python", "Shell", "F*", "VASP"],
+        github: "https://github.com/ozakary/data-NaMO2F2",
+        type: "Research Code & Data Analysis"
+      },
+      {
+        titleHtml: "data-RbM2O5F",
+        descriptionHtml: "This is the Supporting Dataset for the manuscript “Revealed Preferential Short-Range Anion Ordering in Disordered RbM2O5F (M = Nb, Ta) Pyrochlore-Type Oxyfluorides”.",
+        technologies: ["Python", "Shell", "F*", "VASP", "Supercell", "ASE"],
+        github: "https://github.com/ozakary/data-RbM2O5F",
+        type: "Research Code & Data Analysis"
+      },
+      {
+        titleHtml: "water-pimd-simulations",
+        descriptionHtml: "This is Exercise N°4 from the Computational Physics and Chemistry 2025 course.",
+        technologies: ["Python", "Shell", "Jupyter Notebook", "I-PI", "LAMMPS"],
+        github: "https://github.com/ozakary/water-pimd-simulations",
+        type: "Code for University Courses"
+      },
+    ];
+
+    return (
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-2xl font-bold mb-6">Software & Code</h2>
+        <div className="space-y-8">
+          {["Research Code & Data Analysis", "Code for University Courses"].map(category => (
+            <div key={category}>
+              <h3 className="text-xl font-semibold mb-4 text-gray-800">{category}</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {projects
+                  .filter(project => project.type === category)
+                  .map((project, index) => (
+                    <ProjectCard key={index} project={project} />
+                  ))}
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-      <hr className="my-8 border-gray-200" />
+        <hr className="my-8 border-gray-200" />
         <InfoPanel />
         <div className="h-8" />        
-    </div>
-  );
+      </div>
+    );
+  };
 
   const Funding = () => (
     <div className="max-w-4xl mx-auto">
@@ -1174,9 +1023,9 @@ const App = () => {
       <div className="space-y-6">
         {/* Example funding */}
         <div className="bg-white p-6 rounded-lg shadow-md">
-          <h3 className="font-bold text-lg mb-2">Grant Title</h3>
-          <p className="text-gray-600 mb-2">Funding Agency, Amount, Duration</p>
-          <p className="text-gray-700">Brief description of the funded project...</p>
+          <h3 className="font-bold text-lg mb-2">Realistic Modeling of Large-Scale Porous Materials using Machine-Learning-Assisted Molecular Dynamics</h3>
+          <p className="text-gray-600 mb-2">Otto A. Malm Foundation, 3300€, 01/01/2024 - 31/12/2024</p>
+          <p className="text-gray-700">The project primary funding is for conference related expenses</p>
         </div>
       </div>
       <hr className="my-8 border-gray-200" />
@@ -1191,9 +1040,9 @@ const App = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Example collaborator */}
         <div className="bg-white p-6 rounded-lg shadow-md">
-          <h3 className="font-bold text-lg mb-2">Collaborator Name</h3>
-          <p className="text-gray-600 mb-2">Institution</p>
-          <p className="text-gray-700">Brief description of collaboration...</p>
+          <h3 className="font-bold text-lg mb-2">Dr. Niraj Aryal</h3>
+          <p className="text-gray-600 mb-2">Condensed Matter Physics and Materials Science Division, Brookhaven National Laboratory, Upton, New York 11973, USA.</p>
+          <p className="text-gray-700">Postdocotal collaboration</p>
         </div>
       </div>
       <hr className="my-8 border-gray-200" />
