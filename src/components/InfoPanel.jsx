@@ -4,19 +4,17 @@ import MolecularPattern from './MolecularPattern';
 import SocialLink from './SocialLink';
 
 const InfoPanel = () => (
-  <div className="w-full relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 mt-12 overflow-hidden">
-    {/* Animated gradient background */}
-    <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-blue-600/20 animate-gradient"></div>
+  <div className="w-full relative bg-gray-900 mt-12 overflow-hidden">
+    {/* Solid background without gradient */}
+    <div className="absolute inset-0 bg-opacity-90"></div>
 
     {/* Molecular pattern overlay */}
     <MolecularPattern />
 
     <div className="relative">
       <div className="max-w-4xl mx-auto py-12 px-4">
-        {/* Glowing orb decorations */}
-        <div className="absolute top-0 left-1/4 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-32 h-32 bg-purple-500/20 rounded-full blur-3xl"></div>
-
+        {/* Removed decorative orbs */}
+        
         <div className="flex flex-wrap justify-center gap-6">
           {/* ORCID */}
           <SocialLink
@@ -79,9 +77,9 @@ const InfoPanel = () => (
         </div>
       </div>
 
-      {/* Decorative elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+      {/* Subtle border at top and bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-700"></div>
+      <div className="absolute top-0 left-0 right-0 h-px bg-gray-800"></div>
     </div>
   </div>
 );

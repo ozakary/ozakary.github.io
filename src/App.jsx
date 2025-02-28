@@ -181,28 +181,43 @@ const App = () => {
     
     return (
       <div className="max-w-4xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
-          <div className="w-48 h-48 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
-            <img src="/profile-picture.png" alt="Ouail Zakary" className="w-full h-full object-cover" />
-          </div>
-          <div className="flex-1">
-            <h2 className="text-3xl font-bold mb-4">Ouail Zakary</h2>
-            <p className="text-lg text-gray-600">Computational Chemist</p>
-            <p className="text-gray-600">NMR Research Unit, University of Oulu</p>
-            <div className="flex gap-4 mt-4">
-              <a href="https://github.com/ozakary" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-                <Github className="w-6 h-6" />
-              </a>
-              <a href="https://www.linkedin.com/in/ouail-zakary-a63a521b9" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-                <Linkedin className="w-6 h-6" />
-              </a>
-              <a href="mailto:Ouail.Zakary@oulu.fi" className="text-blue-600 hover:text-blue-800">
-                <Mail className="w-6 h-6" />
-              </a>
+        {/* Profile section with background banner */}
+        <div className="relative mb-8 rounded-lg shadow-md overflow-hidden">
+          {/* Background banner image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center" 
+            style={{ backgroundImage: "url('./images/bck_about.png')" }}
+          ></div>
+          
+          {/* Semi-transparent overlay for better readability */}
+          <div className="absolute inset-0 bg-black/20"></div>
+          
+          {/* Profile content */}
+          <div className="relative z-10 p-6">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="w-48 h-48 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center shadow-lg border-4 border-white">
+                <img src="/profile-picture.png" alt="Ouail Zakary" className="w-full h-full object-cover" />
+              </div>
+              <div className="flex-1 bg-white/80 p-4 rounded-lg">
+                <h2 className="text-3xl font-bold mb-4">Ouail Zakary</h2>
+                <p className="text-lg text-gray-600">Computational Chemist</p>
+                <p className="text-gray-600">NMR Research Unit, University of Oulu</p>
+                <div className="flex gap-4 mt-4">
+                  <a href="https://github.com/ozakary" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                    <Github className="w-6 h-6" />
+                  </a>
+                  <a href="https://www.linkedin.com/in/ouail-zakary-a63a521b9" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                    <Linkedin className="w-6 h-6" />
+                  </a>
+                  <a href="mailto:Ouail.Zakary@oulu.fi" className="text-blue-600 hover:text-blue-800">
+                    <Mail className="w-6 h-6" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-  
+    
         <div className="prose max-w-none mb-8">
           <h3 className="text-2xl font-bold mb-4">Research Focus</h3>
           <p className="text-gray-700 leading-relaxed mb-6">
@@ -343,23 +358,29 @@ const App = () => {
             ))}
           </div>
         </div>
-      {/* Right column - News section with HTML support */}
-      <div className="fixed top-20 right-4 w-72 h-[calc(100vh-6rem)] overflow-y-auto">
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <h3 className="text-2xl font-bold mb-6 text-gray-800">Latest News</h3>
+  
+      {/* Left column - News section with improved styling */}
+      <div className="fixed top-24 left-4 w-96 h-[calc(100vh-7rem)] overflow-y-auto">
+        <div className="bg-gradient-to-b from-blue-50 to-white rounded-lg shadow-xl p-6 border border-blue-100">
+          <div className="flex items-center gap-2 mb-6">
+            <div className="w-1 h-6 bg-blue-500 rounded-full"></div>
+            <h3 className="text-2xl font-bold text-gray-800">Latest News</h3>
+          </div>
           <div className="space-y-6">
             {news.map((item, index) => (
               <div 
                 key={index} 
-                className="border-l-4 border-blue-500 pl-4 py-2 hover:bg-gray-50 transition-colors"
+                className="group bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-blue-500"
               >
-                <div 
-                  className="text-sm text-gray-600 mb-1"
-                  dangerouslySetInnerHTML={{ __html: item.date }}
-                />
-                <h4 className="font-semibold text-gray-800 mb-2">{item.title}</h4>
+                <div className="flex items-center gap-2 mb-2">
+                  <div 
+                    className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full"
+                    dangerouslySetInnerHTML={{ __html: item.date }}
+                  />
+                </div>
+                <h4 className="font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">{item.title}</h4>
                 <p 
-                  className="text-gray-600 text-sm mb-2"
+                  className="text-gray-600 text-sm mb-3"
                   dangerouslySetInnerHTML={{ __html: item.content }}
                 />
                 {item.link && (
@@ -367,11 +388,11 @@ const App = () => {
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 text-sm inline-flex items-center"
+                    className="text-blue-600 hover:text-blue-800 text-sm inline-flex items-center group-hover:underline"
                   >
                     Read more
                     <svg
-                      className="w-4 h-4 ml-1"
+                      className="w-4 h-4 ml-1 group-hover:translate-x-0.5 transition-transform"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -391,8 +412,8 @@ const App = () => {
         </div>
       </div>
       <hr className="my-8 border-gray-200" />
-        <InfoPanel />
-        <div className="h-8" />
+      <InfoPanel />
+      <div className="h-8" />
     </div>
   );
 };
