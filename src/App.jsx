@@ -4,6 +4,7 @@ import MolecularBackground from './components/MolecularBackground';
 import NavButton from './components/NavButton';
 import InfoPanel from './components/InfoPanel';
 import ProjectCard from './components/ProjectCard';
+import backgroundImage from '../images/bck_about.png';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('about');
@@ -186,7 +187,7 @@ const App = () => {
           {/* Background banner image */}
           <div 
             className="absolute inset-0 bg-cover bg-center" 
-            style={{ backgroundImage: "url('/images/bck_about.png')" }}
+            style={{ backgroundImage: "url(${backgroundImage})" }}
           ></div>
           
           {/* Semi-transparent overlay for better readability */}
