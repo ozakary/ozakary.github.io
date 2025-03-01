@@ -186,7 +186,7 @@ const App = () => {
           {/* Background banner image */}
           <div 
             className="absolute inset-0 bg-cover bg-center" 
-            style={{ backgroundImage: "url('./images/bck_about.png')" }}
+            style={{ backgroundImage: "url('/images/bck_about.png')" }}
           ></div>
           
           {/* Semi-transparent overlay for better readability */}
