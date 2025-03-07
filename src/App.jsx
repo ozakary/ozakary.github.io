@@ -164,6 +164,12 @@ const App = () => {
     
     const news = [
       {
+        date: "March 2025",
+        title: "Article Published in Inorganic Chemistry",
+        content: "Our latest research article, 'Revealed Preferential Short-Range Anion Ordering in Disordered RbM<sub>2</sub>O<sub>5</sub>F (M= Nb, Ta) Pyrochlore-Type Oxyfluorides,' has been published in *Inorganic Chemistry*.",    
+        link: "https://doi.org/10.1021/acs.inorgchem.5c00615"
+      },
+      {
         date: "January 2025",
         title: "EUROMAR 2025",
         content: "Our research unit is organizing the 21<sup>st</sup> European Magnetic Resonance Congress (EUROMAR2025), in Oulu, Finland",
@@ -428,7 +434,25 @@ const App = () => {
     const publications = [
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
-        titleHtml: `Negative Thermal Expansion and Isotope Effect of Chemical Shift of C60-Fullerene Using Machine Learning Methods`,
+        titleHtml: `Machine Learning Enabled Insights into Xenon Dynamics in Single-Walled Carbon Nanotubes`,
+        authors: [
+          { name: "Ouail Zakary", isPI: true },
+          { name: "Tiia Jacklin"},
+          { name: "Perttu Lantto"}
+        ],
+        journal: "In preperation",
+        volume: "xx",
+        pages: "xx",
+        year: "2025",
+        doi: "#",
+        isOpenAccess: false,
+        isSubscribed: false,
+        descriptionHtml: `xx`,
+        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, and Visualization."
+      },
+      {
+        type: PUBLICATION_TYPES.IN_PREPARATION,
+        titleHtml: `Thermal Expansion and Isotope Effects of Chemical Shift of C60-Fullerene Using Machine Learning-Assisted Path Integral Molecular Dynamics`,
         authors: [
           { name: "Ossi Laurila"},
           { name: "Ouail Zakary", isPI: true },
@@ -437,16 +461,16 @@ const App = () => {
         journal: "In preperation",
         volume: "xx",
         pages: "xx",
-        year: "20XX",
+        year: "2025",
         doi: "#",
         isOpenAccess: false,
         isSubscribed: false,
         descriptionHtml: `xx`,
-        contribution: "Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Review & Editing."
+        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Review & Editing."
       },
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
-        titleHtml: `Host-Guest Dynamics in Porous Liquids Modeled Combining <sup>129</sup>Xe NMR with Atomistic Machine Learning Driven Simulations`,
+        titleHtml: `Host-Guest Dynamics in Xenon-Based Porous Liquids Modeled using Invariant and Equivariant Deep Neural Network Architectures`,
         authors: [
           { name: "Ouail Zakary", isPI: true },
           { name: "Perttu Lantto"}
@@ -454,16 +478,16 @@ const App = () => {
         journal: "In preperation",
         volume: "xx",
         pages: "xx",
-        year: "20XX",
+        year: "2025",
         doi: "#",
         isOpenAccess: false,
         isSubscribed: false,
         descriptionHtml: `xx`,
-        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization."
+        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, and Visualization."
       },      
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
-        titleHtml: `Disordered Na<sub>2</sub>M<sub>2</sub>O<sub>5</sub>F<sub>2</sub> (M=Nb, Ta) Oxyfluorides: Short- and Long-Range Anion Arrangment Modeling Using a Multimodal Approach`,
+        titleHtml: `Short- and Long-Range Anion Ordering in the Disordered Monoclinic Phase of Na<sub>2</sub>M<sub>2</sub>O<sub>5</sub>F<sub>2</sub> (M=Nb, Ta) Oxyfluorides`,
         authors: [
           { name: "Ouail Zakary", isPI: true },
           { name: "Monique Body"},
@@ -478,7 +502,7 @@ const App = () => {
         isOpenAccess: false,
         isSubscribed: false,
         descriptionHtml: `xx`,
-        contribution: "Conceptualization, Methodology, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization."
+        contribution: "Conceptualization, Methodology, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, and Visualization."
       },
       {
         type: PUBLICATION_TYPES.SUBMITTED,
