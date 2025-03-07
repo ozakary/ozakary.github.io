@@ -510,7 +510,7 @@ const App = () => {
         contribution: "Investigation, Validation, Writing - Review & Editing, Visualization."
       },
       {
-        type: PUBLICATION_TYPES.SUBMITTED,
+        type: PUBLICATION_TYPES.PUBLISHED,
         titleHtml: `Revealed Preferential Short-Range Anion Ordering in Disordered RbM<sub>2</sub>O<sub>5</sub>F (M= Nb, Ta) Pyrochlore-Type Oxyfluorides`,
         authors: [
           { name: "Ouail Zakary", isPI: true },
@@ -519,15 +519,15 @@ const App = () => {
           { name: "Thibault Charpentier" },
           { name: "Christophe Legein" }
         ],
-        journal: "Submitted for publication",
+        journal: "Inorganic Chemistry",
         volume: "xx",
         pages: "xx",
         year: "2025",
-        doi: "#",
+        doi: "https://doi.org/10.1021/acs.inorgchem.5c00615",
         isOpenAccess: false,
         isSubscribed: false,
-        descriptionHtml: `xx`,
-        contribution: "Conceptualization, Methodology, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization."
+        descriptionHtml: `Describing the crystal structure of disordered materials with mixed-occupancy crystallographic sites is essential for understanding their physicochemical properties and designing new materials tuned to targeted functionalities. Here, we investigate the structure of RbM<sub>2</sub>O<sub>5</sub>F (M = Nb, Ta) pyrochlore-type oxyfluorides using a multimodal approach that combines experimental and computational techniques. Rietveld structural refinement of PXRD data confirmed that these oxyfluorides are isostructural and their average crystal structure is disordered. The anionic site, 48<i>f</i>, is co-occupied by O and F, while the Rb site, 32<i>e</i>, is occupied at 25%. The shapes of the high-field solid-state <sup>19</sup>F MAS, and <sup>87</sup>Rb and <sup>93</sup>Nb (CT)MAS and 3QMAS NMR spectra, indicate that the local environment of these nuclei is distributed. Using the "<i>supercell</i>" approach, models incorporating different anion arrangements and Rb atoms distributed in their crystallographic site, were built and relaxed using DFT, and NMR parameters for <sup>19</sup>F, <sup>87</sup>Rb, and <sup>93</sup>Nb, were computed using the PAW and GIPAW approaches. The models showing the best agreement between computed and experimental NMR parameters are made up exclusively of [MO<sub>5</sub>F]<sup>6-</sup> octahedra, [RbO<sub>15</sub>F<sub>3</sub>]<sup>32-</sup>, [RbO<sub>16</sub>F<sub>2</sub>]<sup>33-</sup>, and [RbO<sub>14</sub>F<sub>4</sub>]<sup>31-</sup> cages, indicating the existence of a preferential short-range anion ordering in these pyrochlores, instead of the expected random distribution.`,
+        contribution: "Conceptualization, Methodology, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, and Visualization."
       },
       {
         type: PUBLICATION_TYPES.PUBLISHED,
