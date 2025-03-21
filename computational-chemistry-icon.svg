@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="45" fill="#f0f8ff" stroke="#3a86ff" stroke-width="2"/>
+  
+  <!-- Atom structure -->
+  <ellipse cx="50" cy="50" rx="30" ry="15" fill="none" stroke="#3a86ff" stroke-width="1.5" transform="rotate(30, 50, 50)"/>
+  <ellipse cx="50" cy="50" rx="30" ry="15" fill="none" stroke="#3a86ff" stroke-width="1.5" transform="rotate(90, 50, 50)"/>
+  <ellipse cx="50" cy="50" rx="30" ry="15" fill="none" stroke="#3a86ff" stroke-width="1.5" transform="rotate(150, 50, 50)"/>
+  
+  <!-- Nucleus -->
+  <circle cx="50" cy="50" r="8" fill="#3a86ff"/>
+  
+  <!-- Electron particles -->
+  <circle cx="80" cy="50" r="4" fill="#ff006e"/>
+  <circle cx="35" cy="76" r="4" fill="#ff006e"/>
+  <circle cx="35" cy="24" r="4" fill="#ff006e"/>
+  
+  <!-- Neural network lines -->
+  <line x1="50" y1="50" x2="75" y2="30" stroke="#8338ec" stroke-width="1.5"/>
+  <line x1="50" y1="50" x2="75" y2="70" stroke="#8338ec" stroke-width="1.5"/>
+  <line x1="50" y1="50" x2="25" y2="30" stroke="#8338ec" stroke-width="1.5"/>
+  <line x1="50" y1="50" x2="25" y2="70" stroke="#8338ec" stroke-width="1.5"/>
+  
+  <!-- Neural network nodes -->
+  <circle cx="75" cy="30" r="3" fill="#8338ec"/>
+  <circle cx="75" cy="70" r="3" fill="#8338ec"/>
+  <circle cx="25" cy="30" r="3" fill="#8338ec"/>
+  <circle cx="25" cy="70" r="3" fill="#8338ec"/>
+</svg>
