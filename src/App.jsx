@@ -4,6 +4,7 @@ import MolecularBackground from './components/MolecularBackground';
 import NavButton from './components/NavButton';
 import InfoPanel from './components/InfoPanel';
 import ProjectCard from './components/ProjectCard';
+import MolecularPattern from './components/MolecularPattern';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('about');
@@ -188,26 +189,24 @@ const App = () => {
     return (
       <div className="max-w-4xl mx-auto">
         {/* Profile section with background banner */}
-        <div className="relative mb-8 rounded-lg shadow-md overflow-hidden">
+        <div className="relative mb-8 rounded-lg shadow-md w-full bg-gray-900 overflow-hidden">
           {/* Background banner image */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center" 
-            style={{ backgroundImage: "url(../images/bck_about.png)" }}
-          ></div>
-          
+
           {/* Semi-transparent overlay for better readability */}
-          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="absolute inset-0 bg-opacity-90"></div>
           
+          <MolecularPattern className="absolute inset-0" />
+
           {/* Profile content */}
           <div className="relative z-10 p-6">
             <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="w-48 h-48 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center shadow-lg border-4 border-white">
+              <div className="w-48 h-48 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center shadow-lg border-2 border-white">
                 <img src="/profile-picture.png" alt="Ouail Zakary" className="w-full h-full object-cover" />
               </div>
-              <div className="flex-1 bg-white/80 p-4 rounded-lg">
+              <div className="flex-1 bg-white/60 p-4 rounded-lg">
                 <h2 className="text-3xl font-bold mb-4">Ouail Zakary</h2>
-                <p className="text-lg text-gray-600">Computational Chemist</p>
-                <p className="text-gray-600">NMR Research Unit, University of Oulu</p>
+                <p className="text-lg text-gray-800">Computational Chemist</p>
+                <p className="text-gray-800">NMR Research Unit, University of Oulu, Finland</p>
                 <div className="flex gap-4 mt-4">
                   <a href="https://github.com/ozakary" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                     <Github className="w-6 h-6" />
@@ -239,7 +238,7 @@ const App = () => {
           <div className="bg-gray-50 p-6 rounded-lg shadow-md">
             <div>
               <h4 className="text-xl font-bold">Postdoctoral Researcher</h4>
-              <p className="text-gray-600">NMR Research Unit, University of Oulu</p>
+              <p className="text-gray-600">NMR Research Unit, University of Oulu (Oulu, Finland)</p>
               <p className="text-gray-700 mt-2">Computational Chemistry</p>
               <div className="mt-4">
                 <p className="text-gray-700">Principal Investigator:</p>
@@ -326,7 +325,7 @@ const App = () => {
   
                 {selectedDegree === degree.id && degree.committee && (
                   <div className="mt-4 p-4 bg-white rounded-lg">
-                    <h5 className="font-bold mb-4">Ph.D. Committee</h5>
+                    <h5 className="text-xl font-bold mb-4">Ph.D. Defense Committee</h5>
                     <div className="space-y-4">
                       {degree.committee.map((member, index) => (
                         <div key={index} className="border-b pb-4 last:border-b-0">
