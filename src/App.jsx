@@ -543,8 +543,8 @@ const App = () => {
           { name: "Christophe Legein" }
         ],
         journal: "Inorganic Chemistry",
-        volume: "xx",
-        pages: "xx",
+        volume: "64",
+        pages: "5764-5777",
         year: "2025",
         doi: "https://doi.org/10.1021/acs.inorgchem.5c00615",
         isOpenAccess: false,
