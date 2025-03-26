@@ -469,7 +469,7 @@ const App = () => {
       },
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
-        titleHtml: `Host-Guest Dynamics in Xenon-Based Porous Liquids Modeled using Invariant and Equivariant Deep Neural Network Architectures`,
+        titleHtml: `Local Equivariant Deep Neural Networks-Based Approach for Large-Scale Modeling of Porous Liquids`,
         authors: [
           { name: "Ouail Zakary", isPI: true },
           { name: "Perttu Lantto"}
