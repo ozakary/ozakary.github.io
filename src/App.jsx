@@ -166,20 +166,26 @@ const App = () => {
     const news = [
       {
         date: "March 2025",
+        title: "Poster presentation",
+        content: "Presented a poster titled \"<b>Machine Learning-Driven Approach for Modeling Host-Guest Dynamics in Xenon-Based Porous Liquids</b>\" at the <i><b>Physics Days 2025</b></i> conference, organized by the <i><b>University of Oulu</b></i>, where our research unit was part of the organizing committee.",    
+        link: "https://doi.org/10.6084/m9.figshare.28684814.v1"
+      },
+      {
+        date: "March 2025",
         title: "Article Published in Inorganic Chemistry",
-        content: "Our latest research article, 'Revealed Preferential Short-Range Anion Ordering in Disordered RbM<sub>2</sub>O<sub>5</sub>F (M= Nb, Ta) Pyrochlore-Type Oxyfluorides,' has been published in *Inorganic Chemistry*.",    
+        content: "Our latest research article, \"<b>Revealed Preferential Short-Range Anion Ordering in Disordered RbM<sub>2</sub>O<sub>5</sub>F (M= Nb, Ta) Pyrochlore-Type Oxyfluorides</b>\" has been published in <i><b>Inorganic Chemistry</b></i>.",    
         link: "https://doi.org/10.1021/acs.inorgchem.5c00615"
       },
       {
         date: "January 2025",
         title: "EUROMAR 2025",
-        content: "Our research unit is organizing the 21<sup>st</sup> European Magnetic Resonance Congress (EUROMAR2025), in Oulu, Finland",
+        content: "Our research unit is organizing the 21<sup>st</sup> European Magnetic Resonance Congress (<b>EUROMAR2025</b>), in Oulu, Finland",
         link: "https://euromar2025.org/"
       },
       {
         date: "December 10<sup>th</sup> 2024",
         title: "Contributed Talk",
-        content: "Presented our work on 'Machine Learning Potentials for Large-Scale Porous Liquids Simulations' at the Winter School in Theoretical Chemistry",
+        content: "Presented our work on \"<b>Machine Learning Potentials for Large-Scale Porous Liquids Simulations</b>\" at the <i><b>Winter School in Theoretical Chemistry</b></i>",
         link: "http://www.chem.helsinki.fi/ws2024.html"
       },
       // Add more news items as needed
@@ -765,6 +771,19 @@ const App = () => {
     };
   
     const conferences = [
+      {
+        type: CONFERENCE_TYPES.POSTER,
+        titleHtml: "Machine Learning Driven Approach for Modeling Host-Guest Dynamics in Xenon-Based Porous Liquids",
+        authors: [
+          { name: "Ouail Zakary", isPI: true },
+          { name: "Perttu Lantto" }
+        ],
+        conferenceNameHtml: "Physics Days 2025",
+        location: "Oulu, Finland",
+        date: "26-28/03/2025",
+        abstractHtml: "Porous materials serve diverse applications like molecular separations and catalysis, offering an energy-efficient method for capturing greenhouse gases (CO2, and CH4 ) and valuable noble gases (Xe, Ar, and Kr). Xenon — vital in optics, medicine, and nuclear fission processes — poses extraction challenges due to its low atmospheric abundance (0.087 ppm by volume) and inertness, driving high commercial costs. Porous materials must exhibit precise size selectivity and high adsorption capacity for effective xenon isolation in commercial applications. The recent development of porous liquids (PLs) with cavities formed by porous organic cages (POCs) has shown promise in addressing these challenges. Understanding the binding, occupancies, dynamics, and equilibrium between the host (PL and POC) and the guest (Xe) is vital in engineering new POCs with targeted functionalities. Molecular dynamics (MD) simulations have proven essential for understanding and exploring the physicochemical processes governing these systems. In MD simulations, atom movements are governed by forces derived as gradients of the potential energy surface (PES) of the system. Typically, the PES is accurately obtained by calculating the electronic structure using methods like density functional theory (DFT). While this combination of MD with DFT offers precise interatomic forces, their computational scaling limits simulations to tens of picoseconds and a few hundred atoms, which is far from capturing realistic timescales and size of these porous systems. <br> Classical models for computing PES, although faster, lack accuracy. In recent years, machine learning (ML), particularly neural networks (NNs), has emerged as a promising solution to these limitations by learning accurate interatomic potentials from a set of high-fidelity ab initio reference calculations while maintaining computational efficiency. <br> Here, we present a machine learning interatomic potential (MLIP) model constructed using the local equivariant deep NN architecture, Allegro. This model was trained, validated, and tested on energies, forces, and virials — computed at the DFT-D4 level with PBE functional and periodic boundary conditions — of structures issued from semi-empirical MD simulations performed at RT and 600K, from a dataset comprising over 1600 structures consisting of 600 to 1170 atoms (H, C, N, O, F, Cl, and Xe). These structures comprise one to two xenon atoms in TBA-type, HAP-type, and DCT-type PLs, as well as CC3 POC where Xe atoms are positioned inside or near the cavities of the POC. The dataset encompasses 1.8 million atoms, with 12.5 million data points used in the process. <br> The MLIP will be applied to provide microscopic interpretation of experimental 129Xe NMR observations. In this step, we will construct an ML model for magnetic shielding tensors, obtained from the dataset. This ML model will later be used to predict the magnetic shielding in MD simulations to explain experimental, both static spectral and dynamic relaxation, data.",
+        doi: "https://doi.org/10.6084/m9.figshare.28684814.v1"
+      },
       {
         type: CONFERENCE_TYPES.POSTER,
         titleHtml: "Combining Molecular Dynamics with Deep Neural Network Architectures for Realistic Simulations of Porous Liquids",
