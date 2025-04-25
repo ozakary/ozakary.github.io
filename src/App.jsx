@@ -1041,6 +1041,20 @@ const App = () => {
         type: "Research Code & Data Analysis"
       },
       {
+        titleHtml: "data-NaMO2F2",
+        descriptionHtml: "This is the Supporting Dataset for the manuscript “Different Magnitudes of Second-Order Jahn-Teller Effect in Isostructural NaMO<sub>2</sub>F<sub>2</sub> (M = Nb, Ta) Oxyfluorides”.",
+        technologies: ["Python", "Shell", "F*", "VASP"],
+        github: "https://github.com/ozakary/data-NaMO2F2",
+        type: "Research Code & Data Analysis"
+      },
+      {
+        titleHtml: "data-NaMO2F2",
+        descriptionHtml: "This is the Supporting Dataset for the manuscript “Different Magnitudes of Second-Order Jahn-Teller Effect in Isostructural NaMO<sub>2</sub>F<sub>2</sub> (M = Nb, Ta) Oxyfluorides”.",
+        technologies: ["Python", "Shell", "F*", "VASP"],
+        github: "https://github.com/ozakary/data-NaMO2F2",
+        type: "Research Code & Data Analysis"
+      },
+      {
         titleHtml: "data-RbM2O5F",
         descriptionHtml: "This is the Supporting Dataset for the manuscript “Revealed Preferential Short-Range Anion Ordering in Disordered RbM2O5F (M = Nb, Ta) Pyrochlore-Type Oxyfluorides”.",
         technologies: ["Python", "Shell", "F*", "VASP", "Supercell", "ASE"],
