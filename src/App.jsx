@@ -145,25 +145,31 @@ const App = () => {
         period: "01/09/2019 - 30/06/2020",
         color: "bg-green-50"
       },
-      {
-        id: "masters",
-        type: "M.Sc.",
-        field: "Physics of Materials and Nanomaterials",
-        institution: "Hassan II University of Casablanca (Casablanca, Morocco)",
-        period: "01/09/2018 - 30/06/2020",
-        color: "bg-green-50"
-      },
-      {
-        id: "bachelors",
-        type: "B.Sc.",
-        field: "Fundamental Physics",
-        institution: "Hassan II University of Casablanca (Casablanca, Morocco)",
-        period: "01/09/2015 - 30/06/2018",
-        color: "bg-purple-50"
-      }
+//      {
+//        id: "masters",
+//        type: "M.Sc.",
+//        field: "Physics of Materials and Nanomaterials",
+//        institution: "Hassan II University of Casablanca (Casablanca, Morocco)",
+//        period: "01/09/2018 - 30/06/2020",
+//        color: "bg-green-50"
+//      },
+//      {
+//        id: "bachelors",
+//        type: "B.Sc.",
+//        field: "Fundamental Physics",
+//        institution: "Hassan II University of Casablanca (Casablanca, Morocco)",
+//        period: "01/09/2015 - 30/06/2018",
+//        color: "bg-purple-50"
+//      }
     ];
     
     const news = [
+      {
+        date: "June 2025",
+        title: "Poster presentation",
+        content: "Presented a poster titled \"<b>Host-Guest Dynamics in Porous Liquids Modeled Using E(3)-Equivariant Neural Networks</b>\" at the <i><b>13<sup>th</sup> Triennial Congress of the World Association of Theoretical and Computational Chemists (WATOC 2025)</b></i> conference, organized at the <i><b>Oslo Kongressenter</b></i> at <i><b>Oslo</b></i>, <i><b>Norway</b></i>.",    
+        link: "https://www.watoc2025.no/"
+      },
       {
         date: "June 2025",
         title: "Poster presentation",
@@ -377,7 +383,7 @@ const App = () => {
         </div>
   
       {/* Left column - News section with improved styling */}
-      <div className="fixed top-24 left-4 w-96 h-[calc(100vh-7rem)] overflow-y-auto">
+      <div className="fixed top-24 right-10 w-96 h-[calc(100vh-7rem)] overflow-y-auto">
         <div className="bg-gradient-to-b from-blue-50 to-white rounded-lg shadow-xl p-6 border border-blue-100">
           <div className="flex items-center gap-2 mb-6">
             <div className="w-1 h-6 bg-blue-500 rounded-full"></div>
@@ -445,7 +451,24 @@ const App = () => {
     const publications = [
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
-        titleHtml: `Machine Learning Enabled Insights into Xenon Dynamics in Single-Walled Carbon Nanotubes`,
+        titleHtml: `Message Passing Equivariant Neural Network-Driven Simulations for Proton Exchange and <sup>129</sup>Xe NMR in Acidic and Basic Aqueous Phases`,
+        authors: [
+          { name: "Ouail Zakary", isPI: true },
+          { name: "Matias Hintsanen"},
+        ],
+        journal: "In preperation",
+        volume: "xx",
+        pages: "xx",
+        year: "2026",
+        doi: "#",
+        isOpenAccess: false,
+        isSubscribed: false,
+        descriptionHtml: `xx`,
+        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, and Visualization."
+      },
+      {
+        type: PUBLICATION_TYPES.IN_PREPARATION,
+        titleHtml: `Insights Into Xenon Transport and NMR Chemical Shift Tensor in Carbon Nanotubes Using Equivariant Neural Networks`,
         authors: [
           { name: "Ouail Zakary", isPI: true },
           { name: "Tiia Jacklin"},
@@ -463,9 +486,10 @@ const App = () => {
       },
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
-        titleHtml: `Thermal Expansion and Isotope Effects of Chemical Shift of C60-Fullerene Using Machine Learning-Assisted Path Integral Molecular Dynamics`,
+        titleHtml: `Neural Newtorks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene`,
         authors: [
           { name: "Ossi Laurila"},
+          { name: "Tiia Jacklin"},
           { name: "Ouail Zakary", isPI: true },
           { name: "Perttu Lantto"}
         ],
@@ -481,7 +505,7 @@ const App = () => {
       },
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
-        titleHtml: `Local Equivariant Deep Neural Networks-Based Approach for Large-Scale Modeling of Porous Liquids`,
+        titleHtml: `<i>E</i>(3)-Equivariant Neural Networks Reveal How Host–Guest Dynamics Shape <sup>129</sup>Xe NMR in Xenon-Loaded Porous Liquids`,
         authors: [
           { name: "Ouail Zakary", isPI: true },
           { name: "Perttu Lantto"}
@@ -498,7 +522,7 @@ const App = () => {
       },      
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
-        titleHtml: `Short- and Long-Range Anion Ordering in the Disordered Monoclinic Phase of Na<sub>2</sub>M<sub>2</sub>O<sub>5</sub>F<sub>2</sub> (M=Nb, Ta) Oxyfluorides`,
+        titleHtml: `Hidden Order Within Disorder: Insights Into Short-Range Anion Arrangements in the Disordered Monoclinic Phase of Na<sub>2</sub>M<sub>2</sub>O<sub>5</sub>F<sub>2</sub> (M=Nb, Ta) Oxyfluorides`,
         authors: [
           { name: "Ouail Zakary", isPI: true },
           { name: "Monique Body"},
@@ -779,6 +803,19 @@ const App = () => {
     const conferences = [
       {
         type: CONFERENCE_TYPES.POSTER,
+        titleHtml: "Host-Guest Dynamics in Porous Liquids Modeled Using E(3)-Equivariant Neural Networks",
+        authors: [
+          { name: "Ouail Zakary", isPI: true },
+          { name: "Perttu Lantto" }
+        ],
+        conferenceNameHtml: "The 13<sup>th</sup> Triennial Congress of the World Association of Theoretical and Computational Chemists (WATOC 2025)",
+        location: "Oslo, Norway",
+        date: "21-27/06/2025",
+        abstractHtml: "Porous organic cages (POCs) in porous liquids (PLs) offer promising platforms for selective Xe capture. Understanding Xe binding and dynamics in these systems is crucial for material design. While DFT-based molecular dynamics (MD) accurately models these interactions, it is computationally prohibitive for large systems. Machine learning interatomic potentials (MLIPs), particularly neural networks like Allegro, provide a scalable alternative. We present an MLIP trained on DFT-D4 theory-level data for PLs and POCs with Xe, covering over 1.8 million atoms across varied structures. Furthermore, we train an invariant SchNet model to predict <sup>129</sup>Xe NMR magnetic shielding tensors, offering microscopic insights into static NMR spectra and dynamic relaxation behaviors.",
+        doi: "https://doi.org/10.6084/m9.figshare.28684814.v1"
+      },
+      {
+        type: CONFERENCE_TYPES.POSTER,
         titleHtml: "Local E(3)-Equivariant Neural Network Force Field for Modeling Host-Guest Interactions in Xenon-Based Porous Organic Cages",
         authors: [
           { name: "Ouail Zakary", isPI: true },
@@ -1052,6 +1089,20 @@ const App = () => {
 
   const Code = () => {
     const projects = [
+      {
+        titleHtml: "Lammps-Kokkos-Mace_Mahti-CSC",
+        descriptionHtml: "A recipe for the installation of LAMMPS with Kokkos GPU acceleration and MACE model for ML interatomic potential support on the Mahti CSC supercomputer.",
+        technologies: ["Shell", "Python"],
+        github: "https://github.com/ozakary/Lammps-Kokkos-Mace_Mahti-CSC",
+        type: "Research Code & Data Analysis"
+      },
+      {
+        titleHtml: "ClusterProbe",
+        descriptionHtml: "A Python tool for analyzing the local environment around Xenon atoms in molecular clusters and identifying anomalous structures based on coordination number thresholds.",
+        technologies: ["Python"],
+        github: "https://github.com/ozakary/TrajSlicer",
+        type: "Research Code & Data Analysis"
+      },
       {
         titleHtml: "TrajSlicer",
         descriptionHtml: "A versatile Python tool for converting LAMMPS dump files to XYZ format and sampling molecular dynamics trajectories with precise frame control.",
