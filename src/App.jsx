@@ -1231,7 +1231,7 @@ const App = () => {
       
       {/* Keep existing structure */}
       <Navigation />
-      <div className="relative z-10 pt-32 lg:pt-20 px-4 pb-12">
+      <div className="relative z-10 pt-40 lg:pt-20 px-4 pb-12">
         <TabContent />
       </div>
     </div>
