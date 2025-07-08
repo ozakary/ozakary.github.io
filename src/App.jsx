@@ -383,7 +383,7 @@ const App = () => {
         </div>
   
       {/* Left column - News section with improved styling */}
-      <div className="fixed top-24 right-10 w-96 h-[calc(100vh-7rem)] overflow-y-auto">
+      <div className="lg:fixed lg:top-24 lg:right-10 lg:w-96 lg:h-[calc(100vh-7rem)] lg:overflow-y-auto">
         <div className="bg-gradient-to-b from-blue-50 to-white rounded-lg shadow-xl p-6 border border-blue-100">
           <div className="flex items-center gap-2 mb-6">
             <div className="w-1 h-6 bg-blue-500 rounded-full"></div>
