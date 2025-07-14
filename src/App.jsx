@@ -204,27 +204,33 @@ const App = () => {
     
     const news = [
       {
+        date: "July 2025",
+        title: "Contributed Talk",
+        content: "Presented our work titled \"<b>Equivariant Neural Networks Reveal How Host–Guest Interactions Shape Xenon NMR Chemical Shift in Porous Organic Cages</b>\" at <b><i>EUROMAR 2025</b></i> conference, organized at the <i><b>Oulu Music Centre</b></i> and <i><b>Pohjankartano</b></i> at <i><b>Oulu</b></i>, <i><b>Finland</b></i>.",    
+        link: "https://euromar2025.org/"
+      },      
+      {
         date: "June 2025",
-        title: "Poster presentation",
+        title: "Poster Presentation",
         content: "Presented a poster titled \"<b>Host-Guest Dynamics in Porous Liquids Modeled Using E(3)-Equivariant Neural Networks</b>\" at the <i><b>13<sup>th</sup> Triennial Congress of the World Association of Theoretical and Computational Chemists (WATOC 2025)</b></i> conference, organized at the <i><b>Oslo Kongressenter</b></i> at <i><b>Oslo</b></i>, <i><b>Norway</b></i>.",    
         link: "https://www.watoc2025.no/"
       },
       {
         date: "June 2025",
-        title: "Poster presentation",
+        title: "Poster Presentation",
         content: "Presented a poster titled \"<b>Local E(3)-Equivariant Neural Network Force Field for Modeling Host-Guest Interactions in Xenon-Based Porous Organic Cages</b>\" at the <i><b>Computational Chemistry Days 2025</b></i> conference, organized at the <i><b>Department of Chemistry and Materials Science</b></i> at <i><b>Aalto University</b></i>.",    
         link: "https://ocamm.fi/event/computational-chemistry-days-2025/"
       },
       {
         date: "March 2025",
-        title: "Poster presentation",
+        title: "Poster Presentation",
         content: "Presented a poster titled \"<b>Machine Learning-Driven Approach for Modeling Host-Guest Dynamics in Xenon-Based Porous Liquids</b>\" at the <i><b>Physics Days 2025</b></i> conference, organized by the <i><b>University of Oulu</b></i>, where our research unit was part of the organizing committee.",    
         link: "https://ssl.eventilla.com/physicsdays2025"
       },
       {
         date: "March 2025",
         title: "Article Published in Inorganic Chemistry",
-        content: "Our latest research article, \"<b>Revealed Preferential Short-Range Anion Ordering in Disordered RbM<sub>2</sub>O<sub>5</sub>F (M= Nb, Ta) Pyrochlore-Type Oxyfluorides</b>\" has been published in <i><b>Inorganic Chemistry</b></i>.",    
+        content: "Our research article, \"<b>Revealed Preferential Short-Range Anion Ordering in Disordered RbM<sub>2</sub>O<sub>5</sub>F (M= Nb, Ta) Pyrochlore-Type Oxyfluorides</b>\" has been published in <i><b>Inorganic Chemistry</b></i>.",    
         link: "https://doi.org/10.1021/acs.inorgchem.5c00615"
       },
       {
@@ -234,10 +240,16 @@ const App = () => {
         link: "https://euromar2025.org/"
       },
       {
-        date: "December 10<sup>th</sup> 2024",
+        date: "December 2024",
         title: "Contributed Talk",
         content: "Presented our work on \"<b>Machine Learning Potentials for Large-Scale Porous Liquids Simulations</b>\" at the <i><b>Winter School in Theoretical Chemistry</b></i>",
         link: "http://www.chem.helsinki.fi/ws2024.html"
+      },
+      {
+        date: "November 2024",
+        title: "Article Published in Journal of Alloys and Compounds",
+        content: "Our research article, \"<b>Different magnitudes of second-order Jahn-Teller effect in isostructural NaMO<sub>2</sub>F<sub>2</sub> (M = Nb, Ta) oxyfluorides</b>\" has been published in <i><b>Journal of Alloys and Compounds</b></i>.",
+        link: "https://doi.org/10.1016/j.jallcom.2024.177457"
       },
       // Add more news items as needed
     ];
@@ -840,6 +852,18 @@ const App = () => {
     };
   
     const conferences = [
+      {
+        type: CONFERENCE_TYPES.CONTRIBUTED,
+        titleHtml: "Equivariant Neural Networks Reveal How Host–Guest Interactions Shape Xenon NMR Chemical Shift in Porous Organic Cages",
+        authors: [
+          { name: "Ouail Zakary", isPI: true }
+        ],
+        conferenceNameHtml: "The 21<sup>th</sup> European Magnetic Resonance Congress (EUROMAR)",
+        location: "Oulu, Finland",
+        date: "06-10/07/2025",
+        abstractHtml: "Porous materials serve diverse applications like molecular separations and catalysis [1], offering energy-efficient methods for capturing greenhouse gases and valuable noble gases including xenon. Despite its importance in medicine and nuclear processes [2], xenon extraction remains challenging due to its low atmospheric concentration (0.087 ppm) and inertness. Porous materials with precise size selectivity [3] and high adsorption capacity are essential for effective xenon isolation. Recent developments in porous liquids (PLs) with cavities formed by porous organic cages (POCs) show promise in addressing these challenges [4]. Understanding the binding, occupancies, dynamics, and equilibrium between the host (POC) and the guest (Xe) is vital for engineering new PLs with targeted properties. While computational simulations are essential for exploring PLs, common approaches face limitations—quantum methods are computationally expensive for large systems, while classical methods are inaccurate. In this work, we present two complementary machine learning (ML) models: (1) an ML interatomic potential (MLIP) obtained by training E3-equivariant graph neural network (GNN), Allegro [5], on a PBE-D4 theory-level dataset; and (2) an NMR-ML model obtained by training the invariant GNN, SchNet [6], on a PBE-(SVP,TZVP)/BHandHLYP-SVP theory-level dataset. The MLIP model enables accurate, data-efficient, and transferable large-scale molecular dynamics simulations and the NMR-ML model enable predicting Xe NMR chemical shifts. These simulations provide microscopic interpretations of experimental 129Xe NMR observations. [1] A. G. Slater, A. I. Cooper, Science 348, 988 (2015); [2] W. M. Stacey, Nuclear Reactor Physics, Wiley-VCH, Weinheim, (2007); [3] T. Mitra et al., Nat. Chem. 5, 276 (2013); [4] L. Chen et al., Nat. Mater. 13, 954 (2014); [5] A. Musaelian et al., Nat. Commun. 14, 579 (2023); [6] K. Schütt et al., Advances in neural information processing systems 30, (2017).",
+        doi: "https://www.conftool.org/euromar2025/index.php?page=browseSessions&presentations=show&search=ouail+zakary"
+      },
       {
         type: CONFERENCE_TYPES.POSTER,
         titleHtml: "Host-Guest Dynamics in Porous Liquids Modeled Using E(3)-Equivariant Neural Networks",
