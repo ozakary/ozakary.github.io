@@ -502,20 +502,22 @@ const App = () => {
     const publications = [
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
-        titleHtml: `Message Passing Equivariant Neural Network-Driven Simulations for Proton Exchange and <sup>129</sup>Xe NMR in Acidic and Basic Aqueous Phases`,
+        titleHtml: `Neural Newtorks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene`,
         authors: [
+          { name: "Ossi Laurila"},
+          { name: "Tiia Jacklin"},
           { name: "Ouail Zakary", isPI: true },
-          { name: "Matias Hintsanen"},
+          { name: "Perttu Lantto"}
         ],
         journal: "In preperation",
         volume: "xx",
         pages: "xx",
-        year: "2026",
+        year: "2025",
         doi: "#",
         isOpenAccess: false,
         isSubscribed: false,
         descriptionHtml: `xx`,
-        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, and Visualization."
+        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Review & Editing."
       },
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
@@ -537,43 +539,7 @@ const App = () => {
       },
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
-        titleHtml: `Neural Newtorks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene`,
-        authors: [
-          { name: "Ossi Laurila"},
-          { name: "Tiia Jacklin"},
-          { name: "Ouail Zakary", isPI: true },
-          { name: "Perttu Lantto"}
-        ],
-        journal: "In preperation",
-        volume: "xx",
-        pages: "xx",
-        year: "2025",
-        doi: "#",
-        isOpenAccess: false,
-        isSubscribed: false,
-        descriptionHtml: `xx`,
-        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Review & Editing."
-      },
-      {
-        type: PUBLICATION_TYPES.IN_PREPARATION,
-        titleHtml: `<i>E</i>(3)-Equivariant Neural Networks Reveal How Host–Guest Dynamics Shape <sup>129</sup>Xe NMR in Xenon-Loaded Porous Liquids`,
-        authors: [
-          { name: "Ouail Zakary", isPI: true },
-          { name: "Perttu Lantto"}
-        ],
-        journal: "In preperation",
-        volume: "xx",
-        pages: "xx",
-        year: "2025",
-        doi: "#",
-        isOpenAccess: false,
-        isSubscribed: false,
-        descriptionHtml: `xx`,
-        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, and Visualization."
-      },      
-      {
-        type: PUBLICATION_TYPES.IN_PREPARATION,
-        titleHtml: `Hidden Order Within Disorder: Insights Into Short-Range Anion Arrangements in the Disordered Monoclinic Phase of Na<sub>2</sub>M<sub>2</sub>O<sub>5</sub>F<sub>2</sub> (M=Nb, Ta) Oxyfluorides`,
+        titleHtml: `Hidden Short-Range Order in Mixed-Anion Sodium-Oxyfluorotantalates`,
         authors: [
           { name: "Ouail Zakary", isPI: true },
           { name: "Monique Body"},
@@ -591,8 +557,61 @@ const App = () => {
         contribution: "Conceptualization, Methodology, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, and Visualization."
       },
       {
+        type: PUBLICATION_TYPES.IN_PREPARATION,
+        titleHtml: `Unlocking Short- and Long-Range Phase Transitions in RuP Using Equivariant Neural Networks`,
+        authors: [
+          { name: "Ouail Zakary", isPI: true },
+          { name: "Emil Bozin"},
+          { name: "Nraj Aryal"},
+        ],
+        journal: "In preperation",
+        volume: "xx",
+        pages: "xx",
+        year: "2026",
+        doi: "#",
+        isOpenAccess: false,
+        isSubscribed: false,
+        descriptionHtml: `xx`,
+        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, and Visualization."
+      },
+      {
+        type: PUBLICATION_TYPES.IN_PREPARATION,
+        titleHtml: `Message Passing Equivariant Neural Network-Driven Simulations for Proton Exchange and <sup>129</sup>Xe NMR in Water`,
+        authors: [
+          { name: "Ouail Zakary", isPI: true },
+          { name: "Matias Hintsanen"},
+          { name: "Perttu Lantto"},
+        ],
+        journal: "In preperation",
+        volume: "xx",
+        pages: "xx",
+        year: "2026",
+        doi: "#",
+        isOpenAccess: false,
+        isSubscribed: false,
+        descriptionHtml: `xx`,
+        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, and Visualization."
+      },
+      {
         type: PUBLICATION_TYPES.SUBMITTED,
-        titleHtml: `Hexagonal-Tungsten-Bronze TiOF<sub>2</sub>: Synthesis, Crystal Structure and Anionic Short-Range Ordering.`,
+        titleHtml: `Equivariant Neural Networks Reveal How Host–Guest Interactions Shape <sup>129</sup>Xe NMR in Porous Liquids`,
+        authors: [
+          { name: "Ouail Zakary", isPI: true },
+          { name: "Perttu Lantto"}
+        ],
+        journal: "In preperation",
+        volume: "xx",
+        pages: "xx",
+        year: "2025",
+        doi: "#",
+        isOpenAccess: false,
+        isSubscribed: false,
+        descriptionHtml: `xx`,
+        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, and Visualization."
+      },
+      {
+        type: PUBLICATION_TYPES.SUBMITTED,
+        titleHtml: `Hexagonal-Tungsten-Bronze TiOF<sub>2</sub>: Synthesis, Crystal Structure and Anionic Short-Range Ordering`,
         authors: [
           { name: "Madhu Chennabassapa"},
           { name: "Alexander G. Squires"},
@@ -1152,6 +1171,13 @@ const App = () => {
 
   const Code = () => {
     const projects = [
+      {
+        titleHtml: "data-Xe_at_CC3_at_TBA",
+        descriptionHtml: "This is the supporting code for the manuscript “Equivariant Neural Networks Reveal How Host–Guest Interactions Shape 129Xe NMR in Porous Liquids”.",
+        technologies: ["Shell", "Python"],
+        github: "https://github.com/ozakary/data-Xe_at_CC3_at_TBA",
+        type: "Research Code & Data Analysis"
+      },
       {
         titleHtml: "Lammps-Kokkos-Mace_Mahti-CSC",
         descriptionHtml: "A recipe for the installation of LAMMPS with Kokkos GPU acceleration and MACE model for ML interatomic potential support on the Mahti CSC supercomputer.",
