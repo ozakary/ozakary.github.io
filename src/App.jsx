@@ -599,7 +599,7 @@ const App = () => {
           { name: "Ouail Zakary", isPI: true },
           { name: "Perttu Lantto"}
         ],
-        journal: "In preperation",
+        journal: "Submitted for publication",
         volume: "xx",
         pages: "xx",
         year: "2025",
