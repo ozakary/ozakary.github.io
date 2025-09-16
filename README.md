@@ -1,11 +1,14 @@
 # Ouail Zakary's Portfolio
 
-This is my personal academic portfolio website showcasing my research work in computational chemistry. The website includes information about my publications, research focus, and academic contributions.
+This is my personal [academic portfolio](https://ozakary.github.io/) website showcasing my research work in computational chemistry. The website includes information about my publications, research focus, and academic contributions.
 
-**Author:** Ouail Zakary  
-**ORCID:** [0000-0002-7793-3306](https://orcid.org/0000-0002-7793-3306)  
-**E-mail:** [Ouail.Zakary@oulu.fi](mailto:Ouail.Zakary@oulu.fi)  
-**Website:** [Ouail Zakary - webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)
+---
+📄 Author: **Ouail Zakary**  
+- 📧 Email: [Ouail.Zakary@oulu.fi](mailto:Ouail.Zakary@oulu.fi)  
+- 🔗 ORCID: [0000-0002-7793-3306](https://orcid.org/0000-0002-7793-3306)  
+- 🌐 Website: [Personal Webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
+- 📁 Portfolio: [Academic Portfolio](https://ozakary.github.io/)
+---
 
 ## Website Contents
 
@@ -68,10 +71,6 @@ npm run build
 # Deploy to GitHub Pages
 npm run deploy
 ```
-
-## License
-
-MIT License
 
 ---
 
