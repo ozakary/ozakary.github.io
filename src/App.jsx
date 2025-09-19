@@ -603,7 +603,7 @@ const App = () => {
         volume: "xx",
         pages: "xx",
         year: "2025",
-        doi: "#",
+        doi: "https://doi.org/10.26434/chemrxiv-2025-njln9",
         isOpenAccess: false,
         isSubscribed: false,
         descriptionHtml: `xx`,
