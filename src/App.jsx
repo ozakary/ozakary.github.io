@@ -98,6 +98,7 @@ const App = () => {
         field: "Physics",
         title: "Structural Modeling of Oxygen-Fluorine Ordering in Transition Metal Inorganic Oxyfluorides",
         thesis: "https://theses.hal.science/tel-04412685/",
+        defenseDetails: "https://theses.fr/2023LEMA1026",
         institution: "Le Mans Université (Le Mans, France)",
         period: "01/10/2020 - 08/12/2023",
         color: "bg-blue-50",
@@ -370,16 +371,31 @@ const App = () => {
                     )}
                     <p className="text-gray-600">{degree.institution}</p>
                     <p className="text-gray-500">{degree.period}</p>
-                    {degree.thesis && (
-                      <a 
-                        href={degree.thesis}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 mt-2"
-                      >
-                        <Book className="w-5 h-5" />
-                        <span>View Thesis</span>
-                      </a>
+                    {(degree.thesis || degree.defenseDetails) && (
+                      <div className="flex flex-wrap gap-4 mt-2">
+                        {degree.thesis && (
+                          <a 
+                            href={degree.thesis}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800"
+                          >
+                            <Book className="w-5 h-5" />
+                            <span>View Thesis</span>
+                          </a>
+                        )}
+                        {degree.defenseDetails && (
+                          <a 
+                            href={degree.defenseDetails}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800"
+                          >
+                            <Users className="w-5 h-5" />
+                            <span>Ph.D. Defense Details</span>
+                          </a>
+                        )}
+                      </div>
                     )}
                   </div>
                   {degree.committee && (
