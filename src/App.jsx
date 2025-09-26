@@ -185,22 +185,22 @@ const App = () => {
         period: "01/09/2019 - 30/06/2020",
         color: "bg-green-50"
       },
-//      {
-//        id: "masters",
-//        type: "M.Sc.",
-//        field: "Physics of Materials and Nanomaterials",
-//        institution: "Hassan II University of Casablanca (Casablanca, Morocco)",
-//        period: "01/09/2018 - 30/06/2020",
-//        color: "bg-green-50"
-//      },
-//      {
-//        id: "bachelors",
-//        type: "B.Sc.",
-//        field: "Fundamental Physics",
-//        institution: "Hassan II University of Casablanca (Casablanca, Morocco)",
-//        period: "01/09/2015 - 30/06/2018",
-//        color: "bg-purple-50"
-//      }
+      {
+        id: "masters",
+        type: "M.Sc.",
+        field: "Physics of Materials and Nanomaterials",
+        institution: "Hassan II University of Casablanca (Casablanca, Morocco)",
+        period: "01/09/2018 - 30/06/2020",
+        color: "bg-green-50"
+      },
+      {
+        id: "bachelors",
+        type: "B.Sc.",
+        field: "Fundamental Physics",
+        institution: "Hassan II University of Casablanca (Casablanca, Morocco)",
+        period: "01/09/2015 - 30/06/2018",
+        color: "bg-purple-50"
+      }
     ];
     
     const news = [
