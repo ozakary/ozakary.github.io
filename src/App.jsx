@@ -205,6 +205,12 @@ const App = () => {
     
     const news = [
       {
+        date: "September 2025",
+        title: "Preprint Available on ChemRxiv",
+        content: "A preprint of our latest research, \"<b>Equivariant Neural Networks Reveal How Host–Guest Interactions Shape <sup>129</sup>Xe NMR in Porous Liquids</b>\", is available on ChemRxiv.",    
+        link: "https://doi.org/10.26434/chemrxiv-2025-njln9"
+      },
+      {
         date: "July 2025",
         title: "Contributed Talk",
         content: "Presented our work titled \"<b>Equivariant Neural Networks Reveal How Host–Guest Interactions Shape Xenon NMR Chemical Shift in Porous Organic Cages</b>\" at <b><i>EUROMAR 2025</b></i> conference, organized at the <i><b>Oulu Music Centre</b></i> and <i><b>Pohjankartano</b></i> at <i><b>Oulu</b></i>, <i><b>Finland</b></i>.",    
