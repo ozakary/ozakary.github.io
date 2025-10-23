@@ -524,11 +524,11 @@ const App = () => {
     const publications = [
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
-        titleHtml: `Neural Newtorks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene`,
+        titleHtml: `Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene`,
         authors: [
           { name: "Ossi Laurila"},
           { name: "Tiia Jacklin"},
-          { name: "Ouail Zakary", isPI: true },
+          { name: "Ouail Zakary*", isPI: true },
           { name: "Perttu Lantto"}
         ],
         journal: "In preperation",
@@ -539,13 +539,13 @@ const App = () => {
         isOpenAccess: false,
         isSubscribed: false,
         descriptionHtml: `xx`,
-        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Review & Editing."
+        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, and Supervision."
       },
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
-        titleHtml: `Insights Into Xenon Transport and NMR Chemical Shift Tensor in Carbon Nanotubes Using Equivariant Neural Networks`,
+        titleHtml: `Transport Properties in Carbon Nanotubes Investigated using Machine Learning-Accelerated Molecular Dynamics and <sup>129</sup>Xe NMR Simulations`,
         authors: [
-          { name: "Ouail Zakary", isPI: true },
+          { name: "Ouail Zakary*", isPI: true },
           { name: "Tiia Jacklin"},
           { name: "Perttu Lantto"}
         ],
@@ -557,13 +557,13 @@ const App = () => {
         isOpenAccess: false,
         isSubscribed: false,
         descriptionHtml: `xx`,
-        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, and Visualization."
+        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, and Project administration."
       },
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
         titleHtml: `Hidden Short-Range Order in Mixed-Anion Sodium-Oxyfluorotantalates`,
         authors: [
-          { name: "Ouail Zakary", isPI: true },
+          { name: "Ouail Zakary*", isPI: true },
           { name: "Monique Body"},
           { name: "Vincent Sarou-Kanian"},
           { name: "Christophe Legein"}
@@ -576,15 +576,16 @@ const App = () => {
         isOpenAccess: false,
         isSubscribed: false,
         descriptionHtml: `xx`,
-        contribution: "Conceptualization, Methodology, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, and Visualization."
+        contribution: "Conceptualization, Methodology, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, and Project administration."
       },
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
-        titleHtml: `Unlocking Short- and Long-Range Phase Transitions in RuP Using Equivariant Neural Networks`,
+        titleHtml: `Short-Range Ordering and Phase Transition in RuP Superconductor Unlocked by Machine Learning-Accelerated Molecular Dynamics`,
         authors: [
-          { name: "Ouail Zakary", isPI: true },
-          { name: "Emil Bozin"},
-          { name: "Nraj Aryal"},
+          { name: "Ouail Zakary*", isPI: true },
+          { name: "Emil S. Bozin"},
+          { name: "Weiguo Yin"},
+          { name: "Nraj Aryal*"},
         ],
         journal: "In preperation",
         volume: "xx",
@@ -594,15 +595,15 @@ const App = () => {
         isOpenAccess: false,
         isSubscribed: false,
         descriptionHtml: `xx`,
-        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, and Visualization."
+        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, and Project administration."
       },
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
-        titleHtml: `Message Passing Equivariant Neural Network-Driven Simulations for Proton Exchange and <sup>129</sup>Xe NMR in Water`,
+        titleHtml: `Insights into Proton-Transfer Effect on <sup>129</sup>Xe NMR in Liquid Water Using Equivariant Neural Networks`,
         authors: [
-          { name: "Ouail Zakary", isPI: true },
           { name: "Matias Hintsanen"},
           { name: "Perttu Lantto"},
+          { name: "Ouail Zakary*", isPI: true },          
         ],
         journal: "In preperation",
         volume: "xx",
@@ -612,13 +613,13 @@ const App = () => {
         isOpenAccess: false,
         isSubscribed: false,
         descriptionHtml: `xx`,
-        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, and Visualization."
+        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, and Project administration."
       },
       {
         type: PUBLICATION_TYPES.SUBMITTED,
         titleHtml: `Equivariant Neural Networks Reveal How Host–Guest Interactions Shape <sup>129</sup>Xe NMR in Porous Liquids`,
         authors: [
-          { name: "Ouail Zakary", isPI: true },
+          { name: "Ouail Zakary*", isPI: true },
           { name: "Perttu Lantto"}
         ],
         journal: "Submitted for publication",
@@ -648,7 +649,7 @@ const App = () => {
           { name: "Olaf J. Borkiewicz" },
           { name: "Benjamin. J. Morgan" },
           { name: "David O. Scanlon" },
-          { name: "Damien Dambournet" }
+          { name: "Damien Dambournet*" }
         ],
         journal: "Submitted for publication",
         volume: "xx",
@@ -664,7 +665,7 @@ const App = () => {
         type: PUBLICATION_TYPES.PUBLISHED,
         titleHtml: `Revealed Preferential Short-Range Anion Ordering in Disordered RbM<sub>2</sub>O<sub>5</sub>F (M= Nb, Ta) Pyrochlore-Type Oxyfluorides`,
         authors: [
-          { name: "Ouail Zakary", isPI: true },
+          { name: "Ouail Zakary*", isPI: true },
           { name: "Monique Body" },
           { name: "Vincent Sarou-Kanian" },
           { name: "Thibault Charpentier" },
@@ -684,11 +685,11 @@ const App = () => {
         type: PUBLICATION_TYPES.PUBLISHED,
         titleHtml: `Different Magnitudes of Second-Order Jahn-Teller Effect in Isostructural NaMO<sub>2</sub>F<sub>2</sub> (M= Nb, Ta) Oxyfluorides`,
         authors: [
-          { name: "Ouail Zakary", isPI: true },
+          { name: "Ouail Zakary*", isPI: true },
           { name: "Monique Body" },
           { name: "Vincent Sarou-Kanian" },
           { name: "Brice Arnaud" },
-          { name: "Gwenaël Corbel" },
+          { name: "Gwenaël Corbel*" },
           { name: "Christophe Legein" }
         ],
         journal: "Journal of Alloys and Compounds",
@@ -705,7 +706,7 @@ const App = () => {
         type: PUBLICATION_TYPES.PUBLISHED,
         titleHtml: `Structural Modeling of Oxygen-Fluorine Ordering in Transition Metal Inorganic Oxyfluorides`,
         authors: [
-          { name: "Ouail Zakary", isPI: true },
+          { name: "Ouail Zakary*", isPI: true },
         ],
         journal: "Hal theses, Le Mans Université",
         volume: "N/A",
@@ -721,8 +722,8 @@ const App = () => {
         type: PUBLICATION_TYPES.PUBLISHED,
         titleHtml: `Structural Modeling of O/F Correlated Disorder in TaOF<sub>3</sub> and NbOF<sub>3–<i>x</i></sub>(OH)<sub><i>x</i></sub> by Coupling Solid-State NMR and DFT Calculations`,
         authors: [
-          { name: "Ouail Zakary", isPI: true },
-          { name: "Monique Body" },
+          { name: "Ouail Zakary*", isPI: true },
+          { name: "Monique Body*" },
           { name: "Thibault Charpentier" },
           { name: "Vincent Sarou-Kanian" },
           { name: "Christophe Legein" }
