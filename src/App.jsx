@@ -617,23 +617,6 @@ const App = () => {
       },
       {
         type: PUBLICATION_TYPES.SUBMITTED,
-        titleHtml: `Equivariant Neural Networks Reveal How Host–Guest Interactions Shape <sup>129</sup>Xe NMR in Porous Liquids`,
-        authors: [
-          { name: "Ouail Zakary*", isPI: true },
-          { name: "Perttu Lantto"}
-        ],
-        journal: "Submitted for publication",
-        volume: "xx",
-        pages: "xx",
-        year: "2025",
-        doi: "https://doi.org/10.26434/chemrxiv-2025-njln9",
-        isOpenAccess: false,
-        isSubscribed: false,
-        descriptionHtml: `xx`,
-        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, and Visualization."
-      },
-      {
-        type: PUBLICATION_TYPES.SUBMITTED,
         titleHtml: `Hexagonal-Tungsten-Bronze TiOF<sub>2</sub>: Synthesis, Crystal Structure and Anionic Short-Range Ordering`,
         authors: [
           { name: "Madhu Chennabassapa"},
@@ -660,6 +643,23 @@ const App = () => {
         isSubscribed: false,
         descriptionHtml: `xx`,
         contribution: "Investigation, Validation, Writing - Review & Editing, Visualization."
+      },
+      {
+        type: PUBLICATION_TYPES.PUBLISHED,
+        titleHtml: `Equivariant Neural Networks Reveal How Host–Guest Interactions Shape <sup>129</sup>Xe NMR in Porous Liquids`,
+        authors: [
+          { name: "Ouail Zakary*", isPI: true },
+          { name: "Perttu Lantto"}
+        ],
+        journal: "The Journal of Physical Chemistry Letters",
+        volume: "xx",
+        pages: "in press",
+        year: "2025",
+        doi: "https://doi.org/10.26434/chemrxiv-2025-njln9-v2",
+        isOpenAccess: false,
+        isSubscribed: false,
+        descriptionHtml: `Understanding host-guest interactions in porous liquids (PLs) formed from porous organic cages (POCs) is pivotal in tailoring their physicochemical properties, therefore, providing an avenue for engineering new PLs with enhanced functionalities. In this work, we demonstrate, for the first time, the use of an accurate and efficient machine learning-based approach for atomistic modeling of host-guest interactions in large-scale PLs. The approach uses E(3)-equivariant graph neural networks (EGNNs) to construct a machine learning interatomic potential and a nuclear magnetic resonance machine learning model. The former enables machine learning molecular dynamics (MLMD) simulations, while the latter computes <sup>129</sup>Xe isotropic chemical shift, <i>δ</i><sub>iso</sub>, from MLMD snapshots. Applied to a PL composed of CC3-R POC in 4-(trifluoromethoxy)benzyl alcohol (TBA) solvent loaded with high Xe concentration, this dual-model approach shows that host(CC3)–guest(Xe) interactions are best described by a three-site binding model comprising the CC3 intrinsic cavity, CC3 openings, and TBA solvent, with exchange events occurring between these sites. Good agreement between computed and experimental <sup>129</sup>Xe <i>δ</i><sub>iso</sub> validates our approach, demonstrating EGNN-based simulations as transformative tools for advancing PL understanding.`,
+        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, Project Administration."
       },
       {
         type: PUBLICATION_TYPES.PUBLISHED,
