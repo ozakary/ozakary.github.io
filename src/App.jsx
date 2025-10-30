@@ -543,7 +543,7 @@ const App = () => {
       },
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
-        titleHtml: `Transport Properties in Carbon Nanotubes Investigated using Machine Learning-Accelerated Molecular Dynamics and <sup>129</sup>Xe NMR Simulations`,
+        titleHtml: `Xenon Transport in Carbon Nanotubes Investigated using Machine Learning-Accelerated Molecular Dynamics and <sup>129</sup>Xe NMR Simulations`,
         authors: [
           { name: "Ouail Zakary*", isPI: true },
           { name: "Tiia Jacklin"},
@@ -614,6 +614,83 @@ const App = () => {
         isSubscribed: false,
         descriptionHtml: `xx`,
         contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, and Project administration."
+      },
+      {
+        type: PUBLICATION_TYPES.IN_PREPARATION,
+        titleHtml: `On Nuclear Quantum Effects in Neutral and Charged Endohedral Fullerenes with Helium Monomer and Dimer and Their Influence on <sup>3</sup>He NMR Signatures: Insights from Machine Learning-Accelerated Simulations.`,
+        authors: [
+          { name: "Ossi Laurila*"},
+          { name: "Ouail Zakary*", isPI: true },
+          { name: "Perttu Lantto*"},          
+        ],
+        journal: "In preperation",
+        volume: "xx",
+        pages: "xx",
+        year: "2026",
+        doi: "#",
+        isOpenAccess: false,
+        isSubscribed: false,
+        descriptionHtml: `xx`,
+        contribution: "Conceptualization, Methodology, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, and Project administration."
+      },
+      {
+        type: PUBLICATION_TYPES.IN_PREPARATION,
+        titleHtml: `Machine Learning-Driven Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Enable the Assignements of Singlet NMR in the Case of High Molecular Symmetry.`,
+        authors: [
+          { name: "Ouail Zakary*", isPI: true },
+          { name: "Ossi Laurila"},
+          { name: "Perttu Lantto"},          
+        ],
+        journal: "In preperation",
+        volume: "xx",
+        pages: "xx",
+        year: "2026",
+        doi: "#",
+        isOpenAccess: false,
+        isSubscribed: false,
+        descriptionHtml: `xx`,
+        contribution: "Conceptualization, Methodology, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, and Project administration."
+      },
+      {
+        type: PUBLICATION_TYPES.IN_PREPARATION,
+        titleHtml: `Unifying the Description of Type-II Porous Liquids Through Machine Learning-Accelerated Molecular Dynamics and <sup>129</sup>Xe NMR: Simulations Informing Experiments.`,
+        authors: [
+          { name: "Ouail Zakary*", isPI: true },
+          { name: "Sarah E. Mailhiot"},
+          { name: "Anne Selent"},
+          { name: "Jiří Mareš"},
+          { name: "Perttu Lantto"},
+          { name: "Ville-Veikko Telkki*"},          
+        ],
+        journal: "In preperation",
+        volume: "xx",
+        pages: "xx",
+        year: "2026",
+        doi: "#",
+        isOpenAccess: false,
+        isSubscribed: false,
+        descriptionHtml: `xx`,
+        contribution: "Conceptualization, Methodology, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, and Project administration."
+      },
+      {
+        type: PUBLICATION_TYPES.IN_PREPARATION,
+        titleHtml: `Probing R3@DMSO and R3S@H2O Porous Liquids Combining <sup>129</sup>Xe NMR and Machine Learning-Accelerated Simulations.`,
+        authors: [
+          { name: "Anne Selent"},
+          { name: "Ouail Zakary", isPI: true },
+          { name: "Jiří Mareš"},
+          { name: "Perttu Lantto"},
+          { name: "Ville-Veikko Telkki*"},          
+        ],
+        journal: "In preperation",
+        volume: "xx",
+        pages: "xx",
+        year: "2026",
+        doi: "#",
+        isOpenAccess: false,
+        isSubscribed: false,
+        descriptionHtml: `xx`,
+        contribution: "Conceptualization, Methodology, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, and Project administration."
       },
       {
         type: PUBLICATION_TYPES.SUBMITTED,
