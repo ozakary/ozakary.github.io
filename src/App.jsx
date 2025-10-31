@@ -208,7 +208,7 @@ const App = () => {
         date: "September 2025",
         title: "Preprint Available on ChemRxiv",
         content: "A preprint of our latest research, \"<b>Equivariant Neural Networks Reveal How Host–Guest Interactions Shape <sup>129</sup>Xe NMR in Porous Liquids</b>\", is available on ChemRxiv.",    
-        link: "https://doi.org/10.26434/chemrxiv-2025-njln9"
+        link: "https://doi.org/10.26434/chemrxiv-2025-njln9-v2"
       },
       {
         date: "July 2025",
