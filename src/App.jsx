@@ -524,22 +524,22 @@ const App = () => {
     const publications = [
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
-        titleHtml: `Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene`,
+        titleHtml: `Short-Range Ordering and Phase Transition in RuP Superconductor Unlocked by Machine Learning-Accelerated Molecular Dynamics`,
         authors: [
-          { name: "Ossi Laurila"},
-          { name: "Tiia Jacklin"},
           { name: "Ouail Zakary*", isPI: true },
-          { name: "Perttu Lantto"}
+          { name: "Emil S. Bozin"},
+          { name: "Weiguo Yin"},
+          { name: "Nraj Aryal*"},
         ],
         journal: "In preperation",
         volume: "xx",
         pages: "xx",
-        year: "2025",
+        year: "2026",
         doi: "#",
         isOpenAccess: false,
         isSubscribed: false,
         descriptionHtml: `xx`,
-        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, and Supervision."
+        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, and Project administration."
       },
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
@@ -577,25 +577,6 @@ const App = () => {
         isSubscribed: false,
         descriptionHtml: `xx`,
         contribution: "Conceptualization, Methodology, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, and Project administration."
-      },
-      {
-        type: PUBLICATION_TYPES.IN_PREPARATION,
-        titleHtml: `Short-Range Ordering and Phase Transition in RuP Superconductor Unlocked by Machine Learning-Accelerated Molecular Dynamics`,
-        authors: [
-          { name: "Ouail Zakary*", isPI: true },
-          { name: "Emil S. Bozin"},
-          { name: "Weiguo Yin"},
-          { name: "Nraj Aryal*"},
-        ],
-        journal: "In preperation",
-        volume: "xx",
-        pages: "xx",
-        year: "2026",
-        doi: "#",
-        isOpenAccess: false,
-        isSubscribed: false,
-        descriptionHtml: `xx`,
-        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, and Project administration."
       },
       {
         type: PUBLICATION_TYPES.IN_PREPARATION,
@@ -690,7 +671,26 @@ const App = () => {
         isOpenAccess: false,
         isSubscribed: false,
         descriptionHtml: `xx`,
-        contribution: "Conceptualization, Methodology, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, and Project administration."
+        contribution: "Conceptualization, Methodology, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, and Project Administration."
+      },
+      {
+        type: PUBLICATION_TYPES.SUBMITTED,
+        titleHtml: `Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene`,
+        authors: [
+          { name: "Ossi Laurila"},
+          { name: "Tiia Jacklin"},
+          { name: "Ouail Zakary*", isPI: true },
+          { name: "Perttu Lantto*"}
+        ],
+        journal: "Submitted for publication",
+        volume: "xx",
+        pages: "xx",
+        year: "2025",
+        doi: "#",
+        isOpenAccess: false,
+        isSubscribed: false,
+        descriptionHtml: `xx`,
+        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Supervision, and Project Administration."
       },
       {
         type: PUBLICATION_TYPES.SUBMITTED,
