@@ -205,6 +205,12 @@ const App = () => {
     
     const news = [
       {
+        date: "November 2025",
+        title: "Preprint Available on ChemRxiv",
+        content: "A preprint of our latest research, \"<b>Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene</b>\", is available on ChemRxiv.",    
+        link: "https://doi.org/10.26434/chemrxiv-2025-68g6s"
+      },
+      {
         date: "September 2025",
         title: "Preprint Available on ChemRxiv",
         content: "A preprint of our latest research, \"<b>Equivariant Neural Networks Reveal How Host–Guest Interactions Shape <sup>129</sup>Xe NMR in Porous Liquids</b>\", is available on ChemRxiv.",    
@@ -686,10 +692,10 @@ const App = () => {
         volume: "xx",
         pages: "xx",
         year: "2025",
-        doi: "#",
+        doi: "https://doi.org/10.26434/chemrxiv-2025-68g6s",
         isOpenAccess: false,
         isSubscribed: false,
-        descriptionHtml: `xx`,
+        descriptionHtml: `A definitive answer on the existence and magnitude of the negative thermal expansion (NTE) and its effect on <sup>13</sup>C nuclear magnetic resonance (NMR) signature in C<sub>60</sub> fullerene has been previously demonstrated using quantum-mechanical treatments of thermal rovibrational motion. This approach, while accurate, is computationally expensive and lacks the implementation of dispersion corrections, limiting its scope for exploring the influence of such effects on the observed NTE. Alternative methods, such as ab initio path integral molecular dynamics (PIMD), are more flexible but remain computationally expensive, especially when combined with <sup>13</sup>C NMR parameter calculations. To overcome these limitations, we introduce an accurate and efficient neural network–based approach that combines machine learning interatomic potentials (MLIPs) with an NMR machine learning (NMR-ML) model. The MLIPs enable machine learning PIMD (MLPIMD) simulations, while the NMR-ML model computes <sup>13</sup>C isotropic magnetic shielding, <i>σ</i><sub>iso</sub>, directly from MLPIMD snapshots. We perform temperature-dependent MLPIMD simulations with MLIPs trained at different levels of theory. In all cases, NTE is observed, and the results reveal how both dispersion and basis set choices influence its magnitude. Furthermore, we confirm that NTE cannot be observed using classical MD simulations, highlighting its quantum-mechanical origin. To further tests our approach, we investigate <sup>13</sup>C NMR, by performing <sup>13</sup>C <i>σ</i><sub>iso</sub> calculations for the three C<sub>60</sub> isotopomers, including one with <sup>13</sup>C at a site shared by one pentagon and two hexagons, one with two <sup>13</sup>C at a C–C bond shared by two hexagons, and one with two <sup>13</sup>C at a C–C bond shared by a hexagon and a pentagon. The results show a good agreement with the experimental data, highlighting the accuracy of our approach. This work demonstrates that ML-accelerated simulations enable accurate and efficient modeling of thermally activated quantum mechanical phenomena.`,
         contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Supervision, and Project Administration."
       },
       {
@@ -733,7 +739,7 @@ const App = () => {
         pages: "in press",
         year: "2025",
         doi: "https://doi.org/10.26434/chemrxiv-2025-njln9-v2",
-        isOpenAccess: false,
+        isOpenAccess: true,
         isSubscribed: false,
         descriptionHtml: `Understanding host-guest interactions in porous liquids (PLs) formed from porous organic cages (POCs) is pivotal in tailoring their physicochemical properties, therefore, providing an avenue for engineering new PLs with enhanced functionalities. In this work, we demonstrate, for the first time, the use of an accurate and efficient machine learning-based approach for atomistic modeling of host-guest interactions in large-scale PLs. The approach uses E(3)-equivariant graph neural networks (EGNNs) to construct a machine learning interatomic potential and a nuclear magnetic resonance machine learning model. The former enables machine learning molecular dynamics (MLMD) simulations, while the latter computes <sup>129</sup>Xe isotropic chemical shift, <i>δ</i><sub>iso</sub>, from MLMD snapshots. Applied to a PL composed of CC3-R POC in 4-(trifluoromethoxy)benzyl alcohol (TBA) solvent loaded with high Xe concentration, this dual-model approach shows that host(CC3)–guest(Xe) interactions are best described by a three-site binding model comprising the CC3 intrinsic cavity, CC3 openings, and TBA solvent, with exchange events occurring between these sites. Good agreement between computed and experimental <sup>129</sup>Xe <i>δ</i><sub>iso</sub> validates our approach, demonstrating EGNN-based simulations as transformative tools for advancing PL understanding.`,
         contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, Project Administration."
