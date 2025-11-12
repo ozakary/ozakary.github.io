@@ -206,6 +206,12 @@ const App = () => {
     const news = [
       {
         date: "November 2025",
+        title: "Article Published in The Journal of Physical Chemistry Letters",
+        content: "Our research article, \"<b>Equivariant Neural Networks Reveal How Host–Guest Interactions Shape <sup>129</sup>Xe NMR in Porous Liquids</b>\" has been published in <i><b>The Journal of Physical Chemistry Letters</b></i>.",    
+        link: "https://doi.org/10.1021/acs.jpclett.5c02846"
+      },
+      {
+        date: "November 2025",
         title: "Preprint Available on ChemRxiv",
         content: "A preprint of our latest research, \"<b>Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene</b>\", is available on ChemRxiv.",    
         link: "https://doi.org/10.26434/chemrxiv-2025-68g6s"
@@ -735,10 +741,10 @@ const App = () => {
           { name: "Perttu Lantto"}
         ],
         journal: "The Journal of Physical Chemistry Letters",
-        volume: "xx",
-        pages: "in press",
+        volume: "16",
+        pages: "12095-12103",
         year: "2025",
-        doi: "https://doi.org/10.26434/chemrxiv-2025-njln9-v2",
+        doi: "https://doi.org/10.1021/acs.jpclett.5c02846",
         isOpenAccess: true,
         isSubscribed: false,
         descriptionHtml: `Understanding host-guest interactions in porous liquids (PLs) formed from porous organic cages (POCs) is pivotal in tailoring their physicochemical properties, therefore, providing an avenue for engineering new PLs with enhanced functionalities. In this work, we demonstrate, for the first time, the use of an accurate and efficient machine learning-based approach for atomistic modeling of host-guest interactions in large-scale PLs. The approach uses E(3)-equivariant graph neural networks (EGNNs) to construct a machine learning interatomic potential and a nuclear magnetic resonance machine learning model. The former enables machine learning molecular dynamics (MLMD) simulations, while the latter computes <sup>129</sup>Xe isotropic chemical shift, <i>δ</i><sub>iso</sub>, from MLMD snapshots. Applied to a PL composed of CC3-R POC in 4-(trifluoromethoxy)benzyl alcohol (TBA) solvent loaded with high Xe concentration, this dual-model approach shows that host(CC3)–guest(Xe) interactions are best described by a three-site binding model comprising the CC3 intrinsic cavity, CC3 openings, and TBA solvent, with exchange events occurring between these sites. Good agreement between computed and experimental <sup>129</sup>Xe <i>δ</i><sub>iso</sub> validates our approach, demonstrating EGNN-based simulations as transformative tools for advancing PL understanding.`,
@@ -1121,6 +1127,24 @@ const App = () => {
         date: "4-8/09/2022",
         abstractHtml: "Inorganic oxyfluorides are heteroanionic inorganic compounds that present interesting physical properties. Due to similar anion size, oxide and fluoride anions can occupy the same crystallographic sites. However, a precise knowledge of the atomic arrangements in these compounds is required to interpret and enhance their properties. Since O and F atoms have quasi-similar scattering factors, structural modeling of disordered inorganic oxyfluorides is challenging using X-ray diffraction techniques that only provide average structures. On the other hand, the high sensitivity of solid-sate NMR spectroscopy to local environment of the probed nuclei make it ideal tool for disordered solids. To describe short and long-range order, supercell approach coupled with DFT calculations of the NMR parameters has proven to be efficient. In this study, the structures of NbOF<sub>3</sub> and TaOF<sub>3</sub> were revised using X-ray powder diffraction and <sup>19</sup>F MAS ss-NMR spectroscopy. The MO<sub>2</sub>F<sub>4</sub> octahedra are connected via four common corners forming sheets stacked via van der Walls interactions. The anions are located on two different crystallographic sites: the non-bridging one, fully occupied by F, and the bridging one, equally occupied by O and F. Considering the O/F correlated disorder previously suggested, ten possible 2x2x1 supercells were built and DFT optimized with and without semi-empirical dispersion correction. The resulting agreement between the experimental and the theoretical <sup>19</sup>F isotropic chemical shifts indicates that these ten models describe accurately the disorder in the studied structures.",
         doi: "https://doi.org/10.6084/m9.figshare.27111496.v2"
+      },
+      {
+        type: CONFERENCE_TYPES.ORAL,
+        titleHtml: "Caractérisations et modélisations structurales de fluorures inorganiques désordonnés: apports de la RMN du solide et des calculs DFT",
+        authors: [
+          { name: "Christophe Legein" },
+          { name: "Monique Body" },
+          { name: "Ouail Zakary", isPI: true },
+          { name: "Jérôme Lhoste" },
+          { name: "Franck Fayon" },
+          { name: "Damien Dambournet" }
+          
+        ],
+        conferenceNameHtml: "Colloque Français de Chimie du Fluor, CFCF",
+        location: "Forges-les-Eaux, France",
+        date: "16-19/05/2022",
+        abstractHtml: "Cette communication illustre, par quelques exemples tirés de nos travaux récents, l’apport de la RMN du solide et de la modélisation par DFT des paramètres RMN, à la description structurale de fluorures inorganiques désordonnés. La RMN de <sup>19</sup>F a permis d’identifier et quantifier les divers environnements du fluor dans une anatase hydroxyfluorée lacunaire cationique mais aussi après insertion d’ions mono ou polyvalents, contribuant ainsi à mieux comprendre leur intercalation dans ce matériau d’anode pour batterie.[1] Dans le cas des ions Al<sup>3+</sup>, la RMN haut champ de <sup>27</sup>Al a contribué à caractériser un mécanisme d'insertion complexe dans trois types de sites hôtes distincts.[2] Les spectres RMN haut champ de <sup>27</sup>Al de matériaux nanostructurés β-AlF<sub>3-<i>x</i></sub>(OH)<sub><i>x</i></sub> permettent de distinguer quatre résonances attribuées à quatre environnements AlF<sub>6-<i>y</i></sub>(OH)<sub><i>y</i></sub> sur la base de calculs DFT.[3] Les teneurs en ions OH<sup>-</sup> ont ainsi pu être estimées ; elles varient de ∼16% (AlF<sub>2.52</sub>(OH)<sub>0.48</sub>) à ∼19% (AlF<sub>2.42</sub>(OH)<sub>0.58</sub>) pour des surfaces spécifiques comprises entre 25 et 345 m<sup>2</sup>.g<sup>-1</sup>. La RMN de <sup>19</sup>F est particulièrement efficace pour sonder l'ordre oxygène/fluor et donc caractériser l'arrangement anionique dans des oxyfluorures désordonnés. Les structures des isotypes NbO<sub>2</sub>F et TaO<sub>2</sub>F [4] d’une part, et NbOF<sub>3</sub> et TaOF<sub>3</sub> d’autre part, ont été modélisées à l’aide de supermailles permettant de satisfaire les désordres corrélés qui les caractérisent. Les paramètres RMN de <sup>19</sup>F calculés à partir de ces modèles, en très bon accord avec les paramètres expérimentaux, valident ces modèles structuraux. Références [1] T. Koketsu, J. Ma, B. J. Morgan, M. Body, C. Legein, W. Dachraoui, M. Giannini, A. Demortiere, M. Salanne, F. Dardoize, H. Groult, O. J. Borkiewicz, K. W. Chapman, P. Strasser, D. Dambournet, Nat. Mater. 2017, 16, 1142–1148. [2] C. Legein, B. J. Morgan, F. Fayon, T. Koketsu, J. Ma, M. Body, V. Sarou-Kanian, X.-K. Wei, M. Heggen, O. J. Borkiewicz, P. Strasser, D. Dambournet, Angew. Chem. Int. Ed. 2020, 59, 19247–19253. [3] V. Camus-Genot, A. Guiet, J. Lhoste, F. Fayon, M. Body, S. Kodjikian, R. Moury, M. Leblanc, J.-L. Bobet, C. Legein, V. Maisonneuve, Cryst. Growth Des. 2021, 21, 5914−5927. [4] J. Dabachi, M. Body, C. Galven, F. Boucher, C. Legein, Inorg. Chem. 2017, 56, 5219−5232.",
+        doi: "https://hal.science/hal-05287392v1"
       },
       {
         type: CONFERENCE_TYPES.ORAL,
