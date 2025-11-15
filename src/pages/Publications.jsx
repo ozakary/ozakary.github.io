@@ -70,9 +70,9 @@ import InfoPanel from '../components/InfoPanel';
         type: PUBLICATION_TYPES.IN_PREPARATION,
         titleHtml: `Insights into Proton-Transfer Effect on <sup>129</sup>Xe NMR in Liquid Water Using Equivariant Neural Networks`,
         authors: [
+          { name: "Ouail Zakary*", isPI: true },
           { name: "Matias Hintsanen"},
           { name: "Perttu Lantto"},
-          { name: "Ouail Zakary*", isPI: true },          
         ],
         journal: "In preperation",
         volume: "xx",
@@ -106,9 +106,9 @@ import InfoPanel from '../components/InfoPanel';
         type: PUBLICATION_TYPES.IN_PREPARATION,
         titleHtml: `Machine Learning-Driven Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Enable the Assignements of Singlet NMR in the Case of High Molecular Symmetry.`,
         authors: [
+          { name: "Ossi Laurila*"},
           { name: "Ouail Zakary*", isPI: true },
-          { name: "Ossi Laurila"},
-          { name: "Perttu Lantto"},          
+          { name: "Perttu Lantto*"},          
         ],
         journal: "In preperation",
         volume: "xx",
