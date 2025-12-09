@@ -121,6 +121,12 @@ import MolecularPattern from '../components/MolecularPattern';
     const news = [
       {
         date: "November 2025",
+        title: "Article Featured as Supplementary Journal Cover",
+        content: "Our recent paper \"<b>Equivariant Neural Networks Reveal How Host–Guest Interactions Shape <sup>129</sup>Xe NMR in Porous Liquids</b>\", published in <i><b>The Journal of Physical Chemistry Letters</b></i>, has been featured as a Supplementary Journal Cover!",    
+        link: "https://pubs.acs.org/toc/jpclcd/16/46"
+      },
+      {
+        date: "November 2025",
         title: "Article Published in The Journal of Physical Chemistry Letters",
         content: "Our research article, \"<b>Equivariant Neural Networks Reveal How Host–Guest Interactions Shape <sup>129</sup>Xe NMR in Porous Liquids</b>\" has been published in <i><b>The Journal of Physical Chemistry Letters</b></i>.",    
         link: "https://doi.org/10.1021/acs.jpclett.5c02846"
@@ -129,7 +135,7 @@ import MolecularPattern from '../components/MolecularPattern';
         date: "November 2025",
         title: "Preprint Available on ChemRxiv",
         content: "A preprint of our latest research, \"<b>Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene</b>\", is available on ChemRxiv.",    
-        link: "https://doi.org/10.26434/chemrxiv-2025-68g6s"
+        link: "https://doi.org/10.26434/chemrxiv-2025-68g6s-v2"
       },
       {
         date: "September 2025",
