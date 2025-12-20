@@ -6,8 +6,15 @@ import ProjectCard from '../components/ProjectCard';
   const Code = () => {
     const projects = [
       {
+        titleHtml: "data-C60_ML",
+        descriptionHtml: "This is the supporting code for the manuscript “Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene“.",
+        technologies: ["Shell", "Python"],
+        github: "https://github.com/ozakary/data-C60_ML",
+        type: "Research Code & Data Analysis"
+      },
+      {
         titleHtml: "data-Xe_at_CC3_at_TBA",
-        descriptionHtml: "This is the supporting code for the manuscript “Equivariant Neural Networks Reveal How Host–Guest Interactions Shape 129Xe NMR in Porous Liquids”.",
+        descriptionHtml: "This is the supporting code for the manuscript “Equivariant Neural Networks Reveal How Host–Guest Interactions Shape <sup>129</sup>Xe NMR in Porous Liquids”.",
         technologies: ["Shell", "Python"],
         github: "https://github.com/ozakary/data-Xe_at_CC3_at_TBA",
         type: "Research Code & Data Analysis"
@@ -49,7 +56,7 @@ import ProjectCard from '../components/ProjectCard';
       },
       {
         titleHtml: "data-RbM2O5F",
-        descriptionHtml: "This is the Supporting Dataset for the manuscript “Revealed Preferential Short-Range Anion Ordering in Disordered RbM2O5F (M = Nb, Ta) Pyrochlore-Type Oxyfluorides”.",
+        descriptionHtml: "This is the Supporting Dataset for the manuscript “Revealed Preferential Short-Range Anion Ordering in Disordered RbM<sub>2</sub>O<sub>5</sub>F (M = Nb, Ta) Pyrochlore-Type Oxyfluorides”.",
         technologies: ["Python", "Shell", "F*", "VASP", "Supercell", "ASE"],
         github: "https://github.com/ozakary/data-RbM2O5F",
         type: "Research Code & Data Analysis"

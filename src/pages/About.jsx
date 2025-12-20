@@ -120,6 +120,12 @@ import MolecularPattern from '../components/MolecularPattern';
     
     const news = [
       {
+        date: "December 2025",
+        title: "Attended the 39<sup>th</sup> Winter School in Theoretical Chemstry",
+        content: "I recently attended the Helsinki Winter School in Theoretical Chemistry, which focused on \"<b>Electronic Structure Theory</b>\". The school was a highly enriching experience, featuring excellent lectures by leading researchers in the field. Topics covered ranged from full configuration interaction (CI) theory and Green’s functions to relativistic quantum mechanics and density functional theory (DFT).",    
+        link: "http://www.chem.helsinki.fi/ws2025.html"
+      },
+      {
         date: "November 2025",
         title: "Article Featured as Supplementary Journal Cover",
         content: "Our recent paper \"<b>Equivariant Neural Networks Reveal How Host–Guest Interactions Shape <sup>129</sup>Xe NMR in Porous Liquids</b>\", published in <i><b>The Journal of Physical Chemistry Letters</b></i>, has been featured as a Supplementary Journal Cover!",    

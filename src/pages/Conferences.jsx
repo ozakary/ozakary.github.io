@@ -207,6 +207,18 @@ import InfoPanel from '../components/InfoPanel';
       },
       {
         type: CONFERENCE_TYPES.WORKSHOP,
+        titleHtml: "Electronic Structure Theory",
+        authors: [
+          { name: "Ouail Zakary", isPI: true },
+        ],
+        conferenceNameHtml: "Winter School in Theoretical Chemistry 2025",
+        location: "Helsinki, Finland",
+        date: "15-18/12/2025",
+        abstractHtml: "XXX.",
+        doi: "http://www.chem.helsinki.fi/ws2025.html"
+      },
+      {
+        type: CONFERENCE_TYPES.WORKSHOP,
         titleHtml: "Machine Learning of First Principles Observables",
         authors: [
           { name: "Ouail Zakary", isPI: true },
