@@ -121,7 +121,7 @@ import MolecularPattern from '../components/MolecularPattern';
     const news = [
       {
         date: "December 2025",
-        title: "Attended the 39<sup>th</sup> Winter School in Theoretical Chemstry",
+        title: "Attended the 39th Winter School in Theoretical Chemstry",
         content: "I recently attended the Helsinki Winter School in Theoretical Chemistry, which focused on \"<b>Electronic Structure Theory</b>\". The school was a highly enriching experience, featuring excellent lectures by leading researchers in the field. Topics covered ranged from full configuration interaction (CI) theory and Green’s functions to relativistic quantum mechanics and density functional theory (DFT).",    
         link: "http://www.chem.helsinki.fi/ws2025.html"
       },
