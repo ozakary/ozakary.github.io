@@ -163,25 +163,6 @@ import InfoPanel from '../components/InfoPanel';
 //      },
       {
         type: PUBLICATION_TYPES.SUBMITTED,
-        titleHtml: `Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene`,
-        authors: [
-          { name: "Ossi Laurila"},
-          { name: "Tiia Jacklin"},
-          { name: "Ouail Zakary*", isPI: true },
-          { name: "Perttu Lantto*"}
-        ],
-        journal: "Submitted for publication",
-        volume: "xx",
-        pages: "xx",
-        year: "2025",
-        doi: "https://doi.org/10.26434/chemrxiv-2025-68g6s-v2",
-        isOpenAccess: false,
-        isSubscribed: false,
-        descriptionHtml: `A definitive answer on the existence and magnitude of the negative thermal expansion (NTE) and its effect on <sup>13</sup>C nuclear magnetic resonance (NMR) signature in C<sub>60</sub> fullerene has been previously demonstrated using quantum-mechanical treatments of thermal rovibrational motion. This approach, while accurate, is computationally expensive and lacks the implementation of dispersion corrections, limiting its scope for exploring the influence of such effects on the observed NTE. Alternative methods, such as ab initio path integral molecular dynamics (PIMD), are more flexible but remain computationally expensive, especially when combined with <sup>13</sup>C NMR parameter calculations. To overcome these limitations, we introduce an accurate and efficient neural network–based approach that combines machine learning interatomic potentials (MLIPs) with an NMR machine learning (NMR-ML) model. The MLIPs enable machine learning PIMD (MLPIMD) simulations, while the NMR-ML model computes <sup>13</sup>C isotropic magnetic shielding, <i>σ</i><sub>iso</sub>, directly from MLPIMD snapshots. We perform temperature-dependent MLPIMD simulations with MLIPs trained at different levels of theory. In all cases, NTE is observed, and the results reveal how both dispersion and basis set choices influence its magnitude. Furthermore, we confirm that NTE cannot be observed using classical MD simulations, highlighting its quantum-mechanical origin. To further tests our approach, we investigate <sup>13</sup>C NMR, by performing <sup>13</sup>C <i>σ</i><sub>iso</sub> calculations for the three C<sub>60</sub> isotopomers, including one with <sup>13</sup>C at a site shared by one pentagon and two hexagons, one with two <sup>13</sup>C at a C–C bond shared by two hexagons, and one with two <sup>13</sup>C at a C–C bond shared by a hexagon and a pentagon. The results show a good agreement with the experimental data, highlighting the accuracy of our approach. This work demonstrates that ML-accelerated simulations enable accurate and efficient modeling of thermally activated quantum mechanical phenomena.`,
-        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Supervision, and Project Administration."
-      },
-      {
-        type: PUBLICATION_TYPES.SUBMITTED,
         titleHtml: `Hexagonal-Tungsten-Bronze TiOF<sub>2</sub>: Synthesis, Crystal Structure and Anionic Short-Range Ordering`,
         authors: [
           { name: "Madhu Chennabassapa"},
@@ -208,6 +189,25 @@ import InfoPanel from '../components/InfoPanel';
         isSubscribed: false,
         descriptionHtml: `xx`,
         contribution: "Investigation, Validation, Writing - Review & Editing, Visualization."
+      },
+      {
+        type: PUBLICATION_TYPES.PUBLISHED,
+        titleHtml: `Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights into Quantum Effects in C<sub>60</sub> Fullerene`,
+        authors: [
+          { name: "Ossi Laurila"},
+          { name: "Tiia Jacklin"},
+          { name: "Ouail Zakary*", isPI: true },
+          { name: "Perttu Lantto*"}
+        ],
+        journal: "The Journal of Physical Chemistry A",
+        volume: "in press",
+        pages: "xx",
+        year: "2026",
+        doi: "https://doi.org/10.1021/acs.jpca.6c00238",
+        isOpenAccess: false,
+        isSubscribed: false,
+        descriptionHtml: `A definitive answer on the existence and magnitude of the negative thermal expansion (NTE) and the <sup>13</sup>C nuclear magnetic resonance (NMR) signature in C<sub>60</sub> fullerene has been previously demonstrated using quantum-mechanical treatments of thermal rovibrational motion. This approach, while accurate, is computationally expensive, lacks the implementation of dispersion corrections, and is fundamentally limited to systems with well-defined equilibrium geometries and sufficiently strong restoring forces, making it inapplicable to weakly bound van der Waals complexes. Alternative methods, such as <i>ab initio</i> path integral molecular dynamics (PIMD), are more flexible but remain computationally expensive, especially when combined with calculations of <sup>13</sup>C NMR parameters. To overcome these limitations, we introduce an accurate and efficient neural network-based approach that combines machine learning interatomic potentials (MLIPs) with an NMR machine learning (NMR-ML) model. MLIPs enable machine learning PIMD (MLPIMD) simulations, while the NMR-ML model computes <sup>13</sup>C isotropic magnetic shielding, σ<sub>iso</sub>, directly from MLPIMD snapshots. We perform temperature-dependent MLPIMD simulations with MLIPs trained at different levels of theory. In all cases, NTE is observed, and the results reveal how both dispersion effects and atomic basis set choices influence its magnitude. Furthermore, we confirm that NTE is a quantum-mechanical phenomenon and, hence, classical MD simulations cannot reproduce it. To further test our approach, we investigate fully quantum-mechanical secondary isotope shifts of <sup>13</sup>C NMR magnetic shielding due to the isotope change from <sup>12</sup>C to <sup>13</sup>C of the immediate neighbor with hexagon-hexagon or hexagon-pentagon bond with the observed nucleus. The results show a good agreement with the experimental data, highlighting the accuracy of our approach. This work demonstrates that ML-accelerated simulations enable accurate and efficient modeling of thermally activated quantum mechanical phenomena.`,
+        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Supervision, and Project Administration."
       },
       {
         type: PUBLICATION_TYPES.PUBLISHED,

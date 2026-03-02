@@ -120,6 +120,12 @@ import MolecularPattern from '../components/MolecularPattern';
     
     const news = [
       {
+        date: "March 2026",
+        title: "Article Published in The Journal of Physical Chemistry A",
+        content: "Our research article, \"<b>Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights into Quantum Effects in C<sub>60</sub> Fullerene</b>\" has been published in <i><b>The Journal of Physical Chemistry A</b></i>.",    
+        link: "https://doi.org/10.1021/acs.jpca.6c00238"
+      },
+      {
         date: "December 2025",
         title: "Attended the 39th Winter School in Theoretical Chemstry",
         content: "I recently attended the Helsinki Winter School in Theoretical Chemistry, which focused on \"<b>Electronic Structure Theory</b>\". The school was a highly enriching experience, featuring excellent lectures by leading researchers in the field. Topics covered ranged from full configuration interaction (CI) theory and Green’s functions to relativistic quantum mechanics and density functional theory (DFT).",    
