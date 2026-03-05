@@ -269,22 +269,6 @@ import InfoPanel from '../components/InfoPanel';
       },
       {
         type: PUBLICATION_TYPES.PUBLISHED,
-        titleHtml: `Structural Modeling of Oxygen-Fluorine Ordering in Transition Metal Inorganic Oxyfluorides`,
-        authors: [
-          { name: "Ouail Zakary*", isPI: true },
-        ],
-        journal: "Hal theses, Le Mans Université",
-        volume: "N/A",
-        pages: "N/A",
-        year: "2023",
-        doi: "https://theses.hal.science/tel-04412685/",
-        isOpenAccess: true,
-        isSubscribed: false,
-        descriptionHtml: `Mixed anions inorganic compounds, known as heteroanionic materials (HAMs), exhibit various physicochemical properties, such as superconductivity, ionic conductivity, photocatalytic activity, thermoelectricity, and nonlinear optics. These HAMs, particularly those derived from oxides, are advantageous due to their abundant chemistry and straightforward synthesis. Their properties depend not only on the stoichiometry and identity of the anions but also on their position within the crystal structure. Many cases are possible, ranging from complete order to a random distribution of anions, or intermediate orders and extended correlations, known as correlated disorder.This thesis deals with the study of the O/F order in inorganic transition metal oxyfluorides by combining powder X-ray diffraction, solid-state NMR, and ab initio calculations. This multimodal approach was first tested on the ordered compounds NaNbO<sub>2</sub>F<sub>2</sub> and NaTaO<sub>2</sub>F<sub>2</sub>, and then successfully used to describe O/F correlated disorder in TaOF<sub>3</sub>, NbOF<sub>3-<i>x</i></sub>(OH)<sub><i>x</i></sub>, and Ti<sub>0.99</sub>A<sub>0.01</sub>O<sub>0.96</sub>F<sub>1.53</sub>(OH)<sub>0.51</sub>·0.33H<sub>2</sub>O.Additionally, the effect of hydroxylation on the local environment and the chemical shifts of fluorine atoms was modeled. Finally, the existence of a preferential short-range O/F ordering was demonstrated in the pyrochlores RbNb<sub>2</sub>O<sub>5</sub>F and RbTa<sub>2</sub>O<sub>5</sub>F.`,
-        contribution: "Conceptualization, Methodology, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization."
-      },
-      {
-        type: PUBLICATION_TYPES.PUBLISHED,
         titleHtml: `Structural Modeling of O/F Correlated Disorder in TaOF<sub>3</sub> and NbOF<sub>3–<i>x</i></sub>(OH)<sub><i>x</i></sub> by Coupling Solid-State NMR and DFT Calculations`,
         authors: [
           { name: "Ouail Zakary*", isPI: true },
