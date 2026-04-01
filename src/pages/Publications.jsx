@@ -12,25 +12,6 @@ import InfoPanel from '../components/InfoPanel';
     const publications = [
 //      {
 //        type: PUBLICATION_TYPES.IN_PREPARATION,
-//        titleHtml: `Short-Range Ordering and Phase Transition in RuP Superconductor Unlocked by Machine Learning-Accelerated Molecular Dynamics`,
-//        authors: [
-//          { name: "Ouail Zakary*", isPI: true },
-//          { name: "Emil S. Bozin"},
-//          { name: "Weiguo Yin"},
-//          { name: "Nraj Aryal*"},
-//        ],
-//        journal: "In preperation",
-//        volume: "xx",
-//        pages: "xx",
-//        year: "2026",
-//        doi: "#",
-//        isOpenAccess: false,
-//        isSubscribed: false,
-//        descriptionHtml: `xx`,
-//        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, and Project administration."
-//      },
-//      {
-//        type: PUBLICATION_TYPES.IN_PREPARATION,
 //        titleHtml: `Xenon Transport in Carbon Nanotubes Investigated using Machine Learning-Accelerated Molecular Dynamics and <sup>129</sup>Xe NMR Simulations`,
 //        authors: [
 //          { name: "Ouail Zakary*", isPI: true },
@@ -161,6 +142,24 @@ import InfoPanel from '../components/InfoPanel';
 //        descriptionHtml: `xx`,
 //        contribution: "Conceptualization, Methodology, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, and Project Administration."
 //      },
+      {
+        type: PUBLICATION_TYPES.SUBMITTED,
+        titleHtml: `Local Symmetry Breaking and Two-Stage Phase Transition in RuP Uncovered by a Fine-Tuned Atomistic Foundation Model`,
+        authors: [
+          { name: "Ouail Zakary*", isPI: true },
+          { name: "Weiguo Yin"},
+          { name: "Nraj Aryal*"},
+        ],
+        journal: "Submitted for publication",
+        volume: "xx",
+        pages: "xx",
+        year: "2026",
+        doi: "https://doi.org/10.26434/chemrxiv.15001387/v1",
+        isOpenAccess: true,
+        isSubscribed: false,
+        descriptionHtml: `Resolving short-range structural distortions that persist within high-symmetry crystal structures remains a central challenge in materials chemistry. These distortions are dynamic, with correlations extending over nanometer length scales and picosecond timescales, making their atomistic modeling computationally demanding. Here, we address this challenge by modeling the parent compound of ruthenium-pnictide superconductors, RuP, in which such distortions and correlations are prominent. We fine-tune an atomistic foundation model (AFM) on ab initio molecular dynamics datasets and use the resulting interatomic potential to perform machine-learning molecular dynamics simulations of RuP. Analysis of the temperature dependence of lattice parameters and structure factors reveals a two-step phase transition, including an isosymmetric monoclinic-to-monoclinic transition near 180 K, followed by a monoclinic-to-orthorhombic transition near 330 K. Local order metrics and correlation functions further show that short-range monoclinic distortions persist above 330 K within the average high-symmetry phase, providing direct evidence of local symmetry breaking. Electronic-structure calculations reproduce the experimentally observed evolution from an insulating low-temperature state to an intermediate pseudogap-like regime and finally to a metallic high-temperature state, connecting the two-stage electronic transition to the underlying structural transformation. Phonon dispersion analysis reveals the emergence of imaginary phonon modes above the second transition, consistent with the dynamical instability of the average orthorhombic structure and the persistence of local lattice distortions. These findings provide an atomistic picture of local symmetry breaking in RuP and demonstrate that fine-tuned AFMs provide a practical approach for quantifying short-range distortions and correlated fluctuations in crystals with complex phase behavior.`,
+        contribution: "Conceptualization, Methodology, Software, Formal analysis, Investigation, Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, and Project administration."
+      },
       {
         type: PUBLICATION_TYPES.SUBMITTED,
         titleHtml: `Hexagonal-Tungsten-Bronze TiOF<sub>2</sub>: Synthesis, Crystal Structure and Anionic Short-Range Ordering`,

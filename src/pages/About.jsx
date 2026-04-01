@@ -121,6 +121,12 @@ import MolecularPattern from '../components/MolecularPattern';
     const news = [
       {
         date: "March 2026",
+        title: "Preprint Available on ChemRxiv",
+        content: "A preprint of our latest research, \"<b>Local Symmetry Breaking and Two-Stage Phase Transition in RuP Uncovered by a Fine-Tuned Atomistic Foundation Model</b>\", is available on ChemRxiv.",    
+        link: "https://doi.org/10.26434/chemrxiv.15001387/v1"
+      },      
+      {
+        date: "March 2026",
         title: "Article Published in The Journal of Physical Chemistry A",
         content: "Our research article, \"<b>Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights into Quantum Effects in C<sub>60</sub> Fullerene</b>\" has been published in <i><b>The Journal of Physical Chemistry A</b></i>.",    
         link: "https://doi.org/10.1021/acs.jpca.6c00238"
