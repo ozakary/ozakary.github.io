@@ -6,6 +6,13 @@ import ProjectCard from '../components/ProjectCard';
   const Code = () => {
     const projects = [
       {
+        titleHtml: "data-RuP",
+        descriptionHtml: "This is the supporting code for the manuscript “Local Symmetry Breaking and Two-Stage Phase Transitions in RuP Uncovered by a Fine-Tuned Atomistic Foundation Model“.",
+        technologies: ["Shell", "Python"],
+        github: "https://github.com/ozakary/data-RuP",
+        type: "Research Code & Data Analysis"
+      },
+      {
         titleHtml: "data-C60_ML",
         descriptionHtml: "This is the supporting code for the manuscript “Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene“.",
         technologies: ["Shell", "Python"],
