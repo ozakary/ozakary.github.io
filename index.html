@@ -1,13 +1,184 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/computational-chemistry-icon_2.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ouail Zakary Webpage</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ouail Zakary — NMR Research Unit, University of Oulu</title>
+  <meta name="description" content="Personal academic website of Ouail Zakary, Postdoctoral Researcher at the NMR Research Unit, University of Oulu, Finland.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="sitenav">
+  <a class="sitenav-name" href="index.html">Ouail Zakary</a>
+  <div class="sitenav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="conferences.html">Conferences</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="software.html">Software</a>
+    <a href="grants.html">Grants &amp; Collaborations</a>
+    <a href="cv.html">CV</a>
+  </div>
+</nav>
+
+<main>
+  <!-- HERO -->
+  <div class="hero">
+    <img class="hero-photo" src="images/profile-picture.png" alt="Ouail Zakary">
+    <div class="hero-text">
+      <h1>Ouail Zakary</h1>
+      <div class="hero-pos">Ph.D. &nbsp;·&nbsp; Postdoctoral Researcher &nbsp;·&nbsp; NMR Research Unit, University of Oulu, Finland</div>
+      <p>My research focuses on developing machine learning-driven approaches for the atomistic modeling of molecular and solid-state systems under real physicochemical conditions. By integrating quantum mechanics at the relativistic level with classical and path integral molecular dynamics, I aim to deliver highly predictive models for structural, dynamic, and spectroscopic observables.</p>
+      <p>A significant part of my work involves training equivariant graph neural networks and kernel regression models to develop ML interatomic potentials and ML NMR models that enable long-timescale simulations of complex materials.</p>
+      <div class="kw-row">
+        <span class="kw">MLIPs</span>
+        <span class="kw">Equivariant GNNs</span>
+        <span class="kw">¹²⁹Xe NMR</span>
+        <span class="kw">Porous Materials</span>
+        <span class="kw">MACE</span>
+        <span class="kw">Path Integral MD</span>
+        <span class="kw">HPC</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWS -->
+  <div class="news-wrap">
+    <div class="news-header">
+      <div class="sec-title">Latest news</div>
+      <div class="filter-row">
+        <button class="ftag on" onclick="filterNews('all', this)">All</button>
+        <button class="ftag" onclick="filterNews('pub', this)">Publications</button>
+        <button class="ftag" onclick="filterNews('conf', this)">Conferences</button>
+        <button class="ftag" onclick="filterNews('award', this)">Awards</button>
+        <button class="ftag" onclick="filterNews('grant', this)">Grants</button>
+      </div>
+    </div>
+
+    <div class="news-grid" id="news-grid">
+
+      <div class="ni" data-cat="pre">
+        <span class="ntag t-pre">Preprint</span>
+        <div class="ndate">March 2026</div>
+        <div class="ntitle">RuP preprint published on ChemRxiv</div>
+        <div class="ndesc">Manuscript uncovering a two-stage phase transition in RuP via fine-tuned MACE-MH-1 now available as a preprint.</div>
+        <a class="nread" href="https://doi.org/10.26434/chemrxiv.15001387/v1" target="_blank" rel="noopener">Read more</a>
+      </div>
+
+      <div class="ni" data-cat="conf">
+        <span class="ntag t-conf">Conference</span>
+        <div class="ndate">April 2026</div>
+        <div class="ntitle">Oral presentation at EUROMAR 2026</div>
+        <div class="ndesc">Presenting work on ML-accelerated MD and noble gas NMR in porous materials at EUROMAR 2026, Lodge on Loch Lomond, Scotland.</div>
+        <span class="nread">Read more</span>
+      </div>
+
+      <div class="ni" data-cat="award">
+        <span class="ntag t-award">Award</span>
+        <div class="ndate">December 2025</div>
+        <div class="ntitle">JPCL paper selected as Supplementary Journal Cover</div>
+        <div class="ndesc">Our paper on equivariant neural networks for ¹²⁹Xe NMR in porous liquids featured as a Supplementary Cover of J. Phys. Chem. Lett.</div>
+        <a class="nread" href="https://doi.org/10.1021/acs.jpclett.5c02846" target="_blank" rel="noopener">Read more</a>
+      </div>
+
+      <div class="ni" data-cat="pub">
+        <span class="ntag t-pub">Publication</span>
+        <div class="ndate">January 2026</div>
+        <div class="ntitle">New paper in J. Phys. Chem. A</div>
+        <div class="ndesc">Collaborative paper on kernel and GNN-based NMR models for multi-element prediction published in JPCA with Laurila, Jacklin, and Lantto.</div>
+        <a class="nread" href="https://doi.org/10.1021/acs.jpca.6c00238" target="_blank" rel="noopener">Read more</a>
+      </div>
+
+      <div class="ni" data-cat="grant">
+        <span class="ntag t-grant">Grant</span>
+        <div class="ndate">November 2025</div>
+        <div class="ntitle">Academy Research Fellowship application submitted</div>
+        <div class="ndesc">Submitted a Research Council of Finland Academy Research Fellowship application with collaboration letters from DKFZ and Imperial College London.</div>
+        <span class="nread">Read more</span>
+      </div>
+
+      <div class="ni" data-cat="pub">
+        <span class="ntag t-pub">Publication</span>
+        <div class="ndate">October 2025</div>
+        <div class="ntitle">C₆₀ manuscript submitted to Nature Communications</div>
+        <div class="ndesc">Submitted work on ML-accelerated path integral MD and ¹³C NMR of C₆₀ combining quantum nuclear effects with equivariant potentials.</div>
+        <span class="nread">Read more</span>
+      </div>
+
+      <div class="ni hidden" data-cat="conf" id="ex1">
+        <span class="ntag t-conf">Conference</span>
+        <div class="ndate">September 2025</div>
+        <div class="ntitle">Abstract accepted at SMARTER 9, Torino</div>
+        <div class="ndesc">Poster contribution accepted at the 9th SMARTER conference on solid-state NMR, presenting results on RuP phase transition analysis.</div>
+        <span class="nread">Read more</span>
+      </div>
+
+      <div class="ni hidden" data-cat="award" id="ex2">
+        <span class="ntag t-award">Award</span>
+        <div class="ndate">August 2025</div>
+        <div class="ntitle">Sakari Alhopuro Foundation grant awarded</div>
+        <div class="ndesc">Received funding from the Sakari Alhopuro Foundation to support research on ML-driven NMR prediction for porous and functional materials.</div>
+        <span class="nread">Read more</span>
+      </div>
+
+      <div class="ni hidden" data-cat="pub" id="ex3">
+        <span class="ntag t-pub">Publication</span>
+        <div class="ndate">June 2025</div>
+        <div class="ntitle">Zenodo data deposit for ¹²⁹Xe NMR pipeline</div>
+        <div class="ndesc">Full dataset and computational pipeline for the porous liquids ¹²⁹Xe NMR study deposited on Zenodo alongside the JPCL publication.</div>
+        <span class="nread">Read more</span>
+      </div>
+
+    </div>
+    <button class="show-more-btn" id="show-more-btn" onclick="showMore()">Show older news</button>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="fs">
+    <h4>Contact</h4>
+    <p>Ouail Zakary</p>
+    <p>Office: KE 318</p>
+    <a href="mailto:ouail.zakary@oulu.fi">ouail.zakary@oulu.fi</a>
+  </div>
+  <div class="fs">
+    <h4>Address</h4>
+    <p>NMR Research Unit</p>
+    <p>University of Oulu</p>
+    <p>Pentti Kaiteran katu 1</p>
+    <p>P.O. Box 8000, 90014 Oulu, Finland</p>
+  </div>
+  <div class="fs">
+    <h4>Academic profiles</h4>
+    <a href="https://orcid.org/0000-0002-7793-3306" target="_blank" rel="noopener">ORCID: 0000-0002-7793-3306</a>
+    <a href="https://scholar.google.com/citations?user=kKUFATIAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+    <a href="https://github.com/ozakary" target="_blank" rel="noopener">GitHub: ozakary</a>
+    <a href="https://www.scopus.com/authid/detail.uri?authorId=58662986700" target="_blank" rel="noopener">Scopus: 58662986700</a>
+    <a href="https://www.webofscience.com/wos/author/record/OSI-7733-2025" target="_blank" rel="noopener">ResearcherID: OSI-7733-2025</a>
+  </div>
+</footer>
+<div class="fbot">© 2026 Ouail Zakary &nbsp;·&nbsp; NMR Research Unit, University of Oulu &nbsp;·&nbsp; ozakary.github.io</div>
+
+<script>
+function filterNews(cat, el) {
+  document.querySelectorAll('.ftag').forEach(f => f.classList.remove('on'));
+  el.classList.add('on');
+  document.querySelectorAll('#news-grid .ni').forEach(function(item) {
+    var match = cat === 'all'
+      || item.dataset.cat === cat
+      || (cat === 'pub' && (item.dataset.cat === 'pub' || item.dataset.cat === 'pre'));
+    item.style.display = match ? 'flex' : 'none';
+  });
+}
+function showMore() {
+  ['ex1','ex2','ex3'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) { el.classList.remove('hidden'); el.style.display = 'flex'; }
+  });
+  document.getElementById('show-more-btn').style.display = 'none';
+}
+</script>
+</body>
 </html>

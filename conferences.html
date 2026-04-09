@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conferences — Ouail Zakary</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="sitenav">
+  <a class="sitenav-name" href="index.html">Ouail Zakary</a>
+  <div class="sitenav-links">
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="conferences.html" class="active">Conferences</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="software.html">Software</a>
+    <a href="grants.html">Grants &amp; Collaborations</a>
+    <a href="cv.html">CV</a>
+  </div>
+</nav>
+
+<main>
+<div class="inner">
+  <h2>Conferences</h2>
+  <div class="page-sub">Click any entry to expand abstract</div>
+
+  <!-- CONF 1 -->
+  <div class="xcard">
+    <div class="xhd" onclick="xToggle('c1')" role="button" aria-expanded="false" id="btn-c1">
+      <div class="xmeta">
+        <div class="xnum">2026 &nbsp;·&nbsp; Oral presentation</div>
+        <div class="xtitle">ML-Accelerated Molecular Dynamics and Noble Gas NMR in Porous Materials</div>
+        <div class="xauth"><strong>Zakary, O.</strong>; Lantto, P.; Telkki, V.-V.</div>
+        <div class="xjrnl">EUROMAR 2026 &nbsp;·&nbsp; Lodge on Loch Lomond, Scotland &nbsp;·&nbsp; April 2026</div>
+        <span class="xbadge b-talk">Talk</span>
+      </div>
+      <span class="xtog" id="xi-c1">+</span>
+    </div>
+    <div class="xbody" id="c1">
+      <div class="pub-inner">
+        <div class="albl">Abstract</div>
+        <div class="atxt">We present a machine learning-accelerated molecular dynamics framework for simulating xenon diffusion and host–guest dynamics in porous organic cages (CC3) at experimentally relevant timescales. By combining equivariant graph neural network potentials with path-integral techniques, we achieve quantum-mechanical accuracy at a computational cost compatible with microsecond-scale sampling. The resulting trajectories are used to compute ¹²⁹Xe NMR chemical shift distributions via a trained shielding model, enabling direct comparison with variable-temperature NMR experiments. Our results reveal how cage breathing modes, solvent environment, and xenon occupancy jointly determine the observed NMR lineshape, providing a quantitative atomistic picture of guest dynamics in porous liquid hosts.</div>
+        <div class="xlinks">
+          <span class="xl dim">DOI — not yet assigned</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONF 2 -->
+  <div class="xcard">
+    <div class="xhd" onclick="xToggle('c2')" role="button" aria-expanded="false" id="btn-c2">
+      <div class="xmeta">
+        <div class="xnum">2025 &nbsp;·&nbsp; Poster</div>
+        <div class="xtitle">Fine-Tuning Atomistic Foundation Models for Phase Transition Prediction in Inorganic Phosphides</div>
+        <div class="xauth"><strong>Zakary, O.</strong>; Yin, W.; Aryal, N.; Lantto, P.</div>
+        <div class="xjrnl">SMARTER 9 &nbsp;·&nbsp; Torino, Italy &nbsp;·&nbsp; September 2025</div>
+        <span class="xbadge b-poster">Poster</span>
+      </div>
+      <span class="xtog" id="xi-c2">+</span>
+    </div>
+    <div class="xbody" id="c2">
+      <div class="pub-inner">
+        <div class="albl">Abstract</div>
+        <div class="atxt">Foundation models for atomistic simulation have demonstrated remarkable transferability across chemical space, yet their application to complex inorganic phase transitions remains largely unexplored. Here we describe the fine-tuning of MACE-MH-1 on a targeted DFT dataset for RuP, covering both the low-symmetry P2₁/a and the high-symmetry Pnma phases. The fine-tuned model is deployed in extended molecular dynamics runs to characterize the two-stage structural transition near 180 K and 330 K. We discuss the practical requirements for generating informative fine-tuning datasets and the role of symmetry analysis tools (OVITO, spglib) in characterizing intermediate phases from MD trajectories.</div>
+        <div class="xlinks">
+          <span class="xl dim">DOI — not yet assigned</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<footer class="footer">
+  <div class="fs">
+    <h4>Contact</h4>
+    <p>Ouail Zakary</p>
+    <p>Office: KE 318</p>
+    <a href="mailto:ouail.zakary@oulu.fi">ouail.zakary@oulu.fi</a>
+  </div>
+  <div class="fs">
+    <h4>Address</h4>
+    <p>NMR Research Unit</p>
+    <p>University of Oulu</p>
+    <p>Pentti Kaiteran katu 1</p>
+    <p>P.O. Box 8000, 90014 Oulu, Finland</p>
+  </div>
+  <div class="fs">
+    <h4>Academic profiles</h4>
+    <a href="https://orcid.org/0000-0002-7793-3306" target="_blank" rel="noopener">ORCID: 0000-0002-7793-3306</a>
+    <a href="https://scholar.google.com/citations?user=kKUFATIAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+    <a href="https://github.com/ozakary" target="_blank" rel="noopener">GitHub: ozakary</a>
+    <a href="https://www.scopus.com/authid/detail.uri?authorId=58662986700" target="_blank" rel="noopener">Scopus: 58662986700</a>
+    <a href="https://www.webofscience.com/wos/author/record/OSI-7733-2025" target="_blank" rel="noopener">ResearcherID: OSI-7733-2025</a>
+  </div>
+</footer>
+<div class="fbot">© 2026 Ouail Zakary &nbsp;·&nbsp; NMR Research Unit, University of Oulu &nbsp;·&nbsp; ozakary.github.io</div>
+
+<script>
+function xToggle(id) {
+  var body = document.getElementById(id);
+  var icon = document.getElementById('xi-' + id);
+  var btn  = document.getElementById('btn-' + id);
+  var open = body.classList.contains('open');
+  body.classList.toggle('open', !open);
+  icon.textContent = open ? '+' : '−';
+  btn.setAttribute('aria-expanded', String(!open));
+}
+</script>
+</body>
+</html>

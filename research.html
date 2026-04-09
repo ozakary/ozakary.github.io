@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — Ouail Zakary</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="sitenav">
+  <a class="sitenav-name" href="index.html">Ouail Zakary</a>
+  <div class="sitenav-links">
+    <a href="index.html">Home</a>
+    <a href="research.html" class="active">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="conferences.html">Conferences</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="software.html">Software</a>
+    <a href="grants.html">Grants &amp; Collaborations</a>
+    <a href="cv.html">CV</a>
+  </div>
+</nav>
+
+<main>
+<div class="inner">
+  <h2>Research</h2>
+  <div class="page-sub">Click any topic to expand</div>
+  <p class="intro-p">My research sits at the intersection of machine learning, molecular dynamics, and NMR spectroscopy. Working in the group of Prof. Perttu Lantto at the University of Oulu, I develop atomistic models that bridge quantum-mechanical accuracy and the long timescales required to interpret experimental measurements in complex materials.</p>
+
+  <!-- TOPIC 1 -->
+  <div class="xcard">
+    <div class="xhd" onclick="xToggle('r1')" role="button" aria-expanded="false" id="btn-r1">
+      <div class="rhd">
+        <div class="rthumb">
+          <!-- Replace with: <img src="images/research-mlip.png" alt="ML interatomic potentials"> -->
+          <svg width="34" height="34" viewBox="0 0 50 50" fill="none" aria-hidden="true">
+            <circle cx="25" cy="25" r="18" stroke="#8a8070" stroke-width="1.2" fill="none" stroke-dasharray="3 2"/>
+            <circle cx="25" cy="25" r="7" fill="#c8c0b4"/>
+            <circle cx="25" cy="9"  r="4" fill="#a09080"/>
+            <circle cx="39" cy="33" r="4" fill="#a09080"/>
+            <circle cx="11" cy="33" r="4" fill="#a09080"/>
+            <line x1="25" y1="18" x2="25" y2="13" stroke="#8a8070" stroke-width="0.8"/>
+            <line x1="33" y1="29" x2="36" y2="31" stroke="#8a8070" stroke-width="0.8"/>
+            <line x1="17" y1="29" x2="14" y2="31" stroke="#8a8070" stroke-width="0.8"/>
+          </svg>
+        </div>
+        <div>
+          <div class="xtitle">ML interatomic potentials</div>
+          <div class="rshort">Equivariant GNNs and foundation model fine-tuning for large-scale atomistic simulation</div>
+        </div>
+      </div>
+      <span class="xtog" id="xi-r1">+</span>
+    </div>
+    <div class="xbody" id="r1">
+      <div class="rbody-inner">
+        <div class="rimg">
+          <!-- Replace src with your image: <img src="images/research-mlip.png" alt="ML interatomic potentials"> -->
+          <div class="rimg-placeholder">Image placeholder<br>to be replaced</div>
+          <div class="rimg-cap">Illustration — to be replaced</div>
+        </div>
+        <div class="rright">
+          <div class="albl">Overview</div>
+          <div class="atxt">Machine learning interatomic potentials (MLIPs) allow quantum-mechanical accuracy to be achieved at a fraction of the cost of direct DFT calculations, enabling simulations at experimentally relevant timescales and system sizes. My work focuses on training and fine-tuning equivariant GNN potentials — in particular the MACE architecture — for complex inorganic and molecular systems. A recent highlight is the fine-tuning of MACE-MH-1 on targeted RuP datasets, enabling the discovery of a two-stage phase transition that was inaccessible to direct DFT-based MD. I also develop and maintain multi-GPU LAMMPS+MACE workflows for LUMI (AMD ROCm) and Mahti (NVIDIA).</div>
+          <div class="plbl">Related publications</div>
+          <div class="pref">
+            <div class="pt">Local Symmetry Breaking and Two-Stage Phase Transition in RuP Uncovered by a Fine-Tuned Atomistic Foundation Model</div>
+            <div class="pj">ChemRxiv 2026 &nbsp;·&nbsp; Preprint</div>
+            <div class="pa">Zakary, O.; Yin, W.; Aryal, N.</div>
+            <a class="pdoi" href="https://doi.org/10.26434/chemrxiv.15001387/v1" target="_blank" rel="noopener">DOI: 10.26434/chemrxiv.15001387/v1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOPIC 2 -->
+  <div class="xcard">
+    <div class="xhd" onclick="xToggle('r2')" role="button" aria-expanded="false" id="btn-r2">
+      <div class="rhd">
+        <div class="rthumb">
+          <svg width="34" height="34" viewBox="0 0 50 50" fill="none" aria-hidden="true">
+            <rect x="8"  y="20" width="34" height="6" rx="2" fill="#e0d8cc"/>
+            <rect x="8"  y="30" width="24" height="6" rx="2" fill="#d0c8bc"/>
+            <circle cx="38" cy="23" r="4" fill="#a09080"/>
+            <circle cx="38" cy="33" r="4" fill="#b8b0a4"/>
+            <text x="10" y="25" font-size="5" fill="#8a8070" font-family="Arial">¹²⁹Xe</text>
+            <text x="10" y="35" font-size="5" fill="#8a8070" font-family="Arial">¹³C</text>
+          </svg>
+        </div>
+        <div>
+          <div class="xtitle">NMR spectroscopy &amp; ML prediction</div>
+          <div class="rshort">¹²⁹Xe, ¹³C and multi-element NMR chemical shift modeling in porous and complex materials</div>
+        </div>
+      </div>
+      <span class="xtog" id="xi-r2">+</span>
+    </div>
+    <div class="xbody" id="r2">
+      <div class="rbody-inner">
+        <div class="rimg">
+          <div class="rimg-placeholder">Image placeholder<br>to be replaced</div>
+          <div class="rimg-cap">Illustration — to be replaced</div>
+        </div>
+        <div class="rright">
+          <div class="albl">Overview</div>
+          <div class="atxt">NMR spectroscopy is one of the most powerful probes of local structure and dynamics in materials, but first-principles computation of chemical shifts is expensive, limiting achievable statistical sampling. I develop ML NMR models — trained on relativistic DFT shielding tensors — that predict ¹²⁹Xe, ¹³C, ¹⁵N, and other nuclear chemical shifts at negligible cost once trained. A key focus is xenon NMR in porous organic cages (CC3) and porous liquids, where cage breathing, solvent reorganization, and guest siting collectively determine the observed spectrum. Models are deployed on-the-fly during MD trajectories, enabling direct comparison with variable-temperature experimental NMR data.</div>
+          <div class="plbl">Related publications</div>
+          <div class="pref">
+            <div class="pt">Equivariant Neural Networks Reveal How Host–Guest Interactions Shape ¹²⁹Xe NMR in Porous Liquids</div>
+            <div class="pj">J. Phys. Chem. Lett. 2025, 16, 12095–12103</div>
+            <div class="pa">Zakary, O.; Lantto, P.</div>
+            <a class="pdoi" href="https://doi.org/10.1021/acs.jpclett.5c02846" target="_blank" rel="noopener">DOI: 10.1021/acs.jpclett.5c02846</a>
+          </div>
+          <div class="pref">
+            <div class="pt">Machine Learning NMR Models for Multi-Element Prediction in Complex Materials</div>
+            <div class="pj">J. Phys. Chem. A 2026, 130, 2169–2181</div>
+            <div class="pa">Laurila, O.; Jacklin, T.; Zakary, O.; Lantto, P.</div>
+            <a class="pdoi" href="https://doi.org/10.1021/acs.jpca.6c00238" target="_blank" rel="noopener">DOI: 10.1021/acs.jpca.6c00238</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOPIC 3 -->
+  <div class="xcard">
+    <div class="xhd" onclick="xToggle('r3')" role="button" aria-expanded="false" id="btn-r3">
+      <div class="rhd">
+        <div class="rthumb">
+          <svg width="34" height="34" viewBox="0 0 50 50" fill="none" aria-hidden="true">
+            <circle cx="25" cy="25" r="12" fill="#c8c0b4"/>
+            <ellipse cx="25" cy="25" rx="22" ry="9" stroke="#8a8070" stroke-width="1" fill="none"/>
+            <ellipse cx="25" cy="25" rx="9" ry="22" stroke="#8a8070" stroke-width="1" fill="none"/>
+          </svg>
+        </div>
+        <div>
+          <div class="xtitle">Path integral molecular dynamics</div>
+          <div class="rshort">Quantum nuclear effects in fullerene and molecular systems via PIMD</div>
+        </div>
+      </div>
+      <span class="xtog" id="xi-r3">+</span>
+    </div>
+    <div class="xbody" id="r3">
+      <div class="rbody-inner">
+        <div class="rimg">
+          <div class="rimg-placeholder">Image placeholder<br>to be replaced</div>
+          <div class="rimg-cap">Illustration — to be replaced</div>
+        </div>
+        <div class="rright">
+          <div class="albl">Overview</div>
+          <div class="atxt">Classical molecular dynamics treats nuclei as point particles, neglecting quantum effects such as zero-point energy and tunneling that are particularly important for light nuclei and at low temperatures. Path integral molecular dynamics (PIMD) addresses this by representing each nucleus as a ring polymer of classical beads, recovering quantum statistical mechanics exactly in the limit of many beads. My work combines PIMD with ML interatomic potentials to make quantum nuclear simulations tractable for large systems. A key application is C₆₀ fullerene, where quantum effects significantly influence both structural properties and ¹³C NMR chemical shifts, enabling direct comparison with experimental solid-state NMR data.</div>
+          <div class="plbl">Related publications</div>
+          <div class="pref">
+            <div class="pt">ML-Accelerated Path Integral MD and ¹³C NMR of C₆₀ Fullerene</div>
+            <div class="pj">Nature Communications — submitted 2025</div>
+            <div class="pa">Zakary, O. et al.</div>
+            <span class="pdoi" style="color:#bbb;cursor:default;text-decoration:none;">DOI — upon publication</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOPIC 4 -->
+  <div class="xcard">
+    <div class="xhd" onclick="xToggle('r4')" role="button" aria-expanded="false" id="btn-r4">
+      <div class="rhd">
+        <div class="rthumb">
+          <svg width="34" height="34" viewBox="0 0 50 50" fill="none" aria-hidden="true">
+            <rect x="6"  y="13" width="38" height="24" rx="2" stroke="#8a8070" stroke-width="1.2" fill="#e8e0d4"/>
+            <rect x="10" y="18" width="12" height="4" rx="1" fill="#a09080"/>
+            <rect x="10" y="24" width="18" height="4" rx="1" fill="#b8b0a4"/>
+            <rect x="10" y="30" width="10" height="4" rx="1" fill="#a09080"/>
+            <circle cx="36" cy="20" r="3" fill="#c8c0b4"/>
+            <circle cx="36" cy="28" r="3" fill="#c8c0b4"/>
+          </svg>
+        </div>
+        <div>
+          <div class="xtitle">HPC workflows &amp; open-source tools</div>
+          <div class="rshort">Multi-GPU LAMMPS+MACE on LUMI and Mahti, VASP automation, and community tooling</div>
+        </div>
+      </div>
+      <span class="xtog" id="xi-r4">+</span>
+    </div>
+    <div class="xbody" id="r4">
+      <div class="rbody-inner">
+        <div class="rimg">
+          <div class="rimg-placeholder">Image placeholder<br>to be replaced</div>
+          <div class="rimg-cap">Illustration — to be replaced</div>
+        </div>
+        <div class="rright">
+          <div class="albl">Overview</div>
+          <div class="atxt">Deploying ML potentials at scale requires careful integration with HPC infrastructure. I develop and document production-ready workflows for running LAMMPS with MACE on both AMD ROCm (LUMI) and NVIDIA CUDA (Mahti) architectures, resolving compatibility issues between ML libraries, MPI implementations, and GPU backends. These workflows — including SLURM job scripts, module environments, and build instructions — are made publicly available. I also maintain automated VASP DFT pipelines for generating ML training datasets, and contribute Python analysis tools for RDF, structure factors, space-group tracking, and phonon dispersion from MD trajectories.</div>
+          <div class="plbl">Related resources</div>
+          <div class="pref">
+            <div class="pt">All workflow documentation and analysis tools available on GitHub</div>
+            <div class="pj">github.com/ozakary</div>
+            <a class="pdoi" href="https://github.com/ozakary" target="_blank" rel="noopener">Visit repository</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="collab-note">Supervised by <strong style="color: var(--ac);">Prof. Perttu Lantto</strong>, NMR Research Unit, University of Oulu. Collaborating with Prof. Ville-Veikko Telkki (Oulu), Dr. Rebecca Greenaway (Imperial College London), Prof. Leif Schröder (DKFZ Heidelberg), and Dr. Niraj Aryal (Brookhaven National Laboratory).</p>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="fs">
+    <h4>Contact</h4>
+    <p>Ouail Zakary</p>
+    <p>Office: KE 318</p>
+    <a href="mailto:ouail.zakary@oulu.fi">ouail.zakary@oulu.fi</a>
+  </div>
+  <div class="fs">
+    <h4>Address</h4>
+    <p>NMR Research Unit</p>
+    <p>University of Oulu</p>
+    <p>Pentti Kaiteran katu 1</p>
+    <p>P.O. Box 8000, 90014 Oulu, Finland</p>
+  </div>
+  <div class="fs">
+    <h4>Academic profiles</h4>
+    <a href="https://orcid.org/0000-0002-7793-3306" target="_blank" rel="noopener">ORCID: 0000-0002-7793-3306</a>
+    <a href="https://scholar.google.com/citations?user=kKUFATIAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+    <a href="https://github.com/ozakary" target="_blank" rel="noopener">GitHub: ozakary</a>
+    <a href="https://www.scopus.com/authid/detail.uri?authorId=58662986700" target="_blank" rel="noopener">Scopus: 58662986700</a>
+    <a href="https://www.webofscience.com/wos/author/record/OSI-7733-2025" target="_blank" rel="noopener">ResearcherID: OSI-7733-2025</a>
+  </div>
+</footer>
+<div class="fbot">© 2026 Ouail Zakary &nbsp;·&nbsp; NMR Research Unit, University of Oulu &nbsp;·&nbsp; ozakary.github.io</div>
+
+<script>
+function xToggle(id) {
+  var body = document.getElementById(id);
+  var icon = document.getElementById('xi-' + id);
+  var btn  = document.getElementById('btn-' + id);
+  var open = body.classList.contains('open');
+  body.classList.toggle('open', !open);
+  icon.textContent = open ? '+' : '−';
+  btn.setAttribute('aria-expanded', String(!open));
+}
+</script>
+</body>
+</html>
