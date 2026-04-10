@@ -6,6 +6,16 @@
   <title>Ouail Zakary — NMR Research Unit, University of Oulu</title>
   <meta name="description" content="Personal academic website of Ouail Zakary, Postdoctoral Researcher at the NMR Research Unit, University of Oulu, Finland.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .stats-strip{background:#f5f0e8;border-top:1px solid #e0d8cc;border-bottom:1px solid #e0d8cc;padding:20px 40px;}
+    .stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;max-width:900px;margin:0 auto;}
+    .stat-item{text-align:center;padding:6px 12px;border-right:1px solid #e0d8cc;}
+    .stat-item:last-child{border-right:none;}
+    .stat-num{font-size:32px;color:#2d6a8a;font-family:Georgia,serif;font-weight:normal;line-height:1;margin-bottom:5px;display:block;}
+    .stat-label{font-size:10px;font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:0.6px;color:#6a5a40;line-height:1.4;}
+    .stat-sub{font-size:9px;font-family:Arial,sans-serif;color:#b0a898;margin-top:2px;}
+    @media(max-width:760px){.stats-grid{grid-template-columns:repeat(3,1fr);}.stat-item:nth-child(3){border-right:none;}.stat-item:nth-child(4),.stat-item:nth-child(5){border-top:1px solid #e0d8cc;}}
+  </style>
 </head>
 <body>
 
@@ -40,9 +50,40 @@
         <span class="kw">Material Chemistry</span>
         <span class="kw">DFT</span>
         <span class="kw"><i>Ab Initio</i> Methods</span>
-        <span class="kw">Cassical/Path Integral MD</span>
+        <span class="kw">Classical/Path Integral MD</span>
         <span class="kw">HPC</span>
         <span class="kw">Python</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-strip">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-num" id="s-pub">0</span>
+        <div class="stat-label">Publications</div>
+        <div class="stat-sub">peer-reviewed</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" id="s-conf">0</span>
+        <div class="stat-label">Conferences</div>
+        <div class="stat-sub">talks &amp; posters</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" id="s-years">0</span>
+        <div class="stat-label">Years of research</div>
+        <div class="stat-sub">since PhD start</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" id="s-students">0</span>
+        <div class="stat-label">Students supervised</div>
+        <div class="stat-sub">PhD, MSc &amp; BSc</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" id="s-countries">0</span>
+        <div class="stat-label">Countries</div>
+        <div class="stat-sub">collaborations &amp; conferences</div>
       </div>
     </div>
   </div>
@@ -73,7 +114,7 @@
       <div class="ni" data-cat="pub">
         <span class="ntag t-pub">Publication</span>
         <div class="ndate">March 2026</div>
-        <div class="ntitle">New paper in J. Phys. Chem. A</div>
+        <div class="ntitle">New paper in <i>J. Phys. Chem. A</i></div>
         <div class="ndesc">Our collaborative paper, "<b>Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights into Quantum Effects in C<sub>60</sub> Fullerene</b>" has been published in <i><b>J. Phys. Chem. A</b></i>.</div>
         <a class="nread" href="https://doi.org/10.1021/acs.jpca.6c00238" target="_blank" rel="noopener">Read more</a>
       </div>
@@ -81,7 +122,7 @@
       <div class="ni" data-cat="conf">
         <span class="ntag t-conf">Conference</span>
         <div class="ndate">December 2025</div>
-        <div class="ntitle">Attended the 39<sup>th</sup> Winter School in Theoretical Chemstry</div>
+        <div class="ntitle">Attended the 39<sup>th</sup> Winter School in Theoretical Chemistry</div>
         <div class="ndesc">I recently attended the Helsinki Winter School in Theoretical Chemistry, which focused on "<b>Electronic Structure Theory</b>".</div>
         <a class="nread" href="http://www.chem.helsinki.fi/ws2025.html" target="_blank" rel="noopener">Read more</a>
       </div>
@@ -89,7 +130,7 @@
       <div class="ni" data-cat="award">
         <span class="ntag t-award">Award</span>
         <div class="ndate">November 2025</div>
-        <div class="ntitle"><i>JPCL</i> paper selected as Supplementary Journal Cover</div>
+        <div class="ntitle"><i>J. Phys. Chem. Lett.</i> paper selected as Supplementary Journal Cover</div>
         <div class="ndesc">Our paper on equivariant neural networks for <sup>129</sup>Xe NMR in porous liquids featured as a Supplementary Cover of <i><b>J. Phys. Chem. Lett.</b></i></div>
         <a class="nread" href="https://pubs.acs.org/toc/jpclcd/16/46" target="_blank" rel="noopener">Read more</a>
       </div>
@@ -97,7 +138,7 @@
       <div class="ni" data-cat="pub">
         <span class="ntag t-pub">Publication</span>
         <div class="ndate">November 2025</div>
-        <div class="ntitle">New paper in <i>JPCL</i></div>
+        <div class="ntitle">New paper in <i>J. Phys. Chem. Lett.</i></div>
         <div class="ndesc">Our research article, "<b>Equivariant Neural Networks Reveal How Host–Guest Interactions Shape <sup>129</sup>Xe NMR in Porous Liquids</b>" has been published in <i><b>J. Phys. Chem. Lett.</b></i>.</div>
         <a class="nread" href="https://doi.org/10.1021/acs.jpclett.5c02846" target="_blank" rel="noopener">Read more</a>
       </div>
@@ -122,7 +163,7 @@
         <span class="ntag t-conf">Conference</span>
         <div class="ndate">July 2025</div>
         <div class="ntitle">Contributed talk at <i>EUROMAR 2025</i>, Oulu, Finland</div>
-        <div class="ndesc">Presented our work titled "<b>Equivariant Neural Networks Reveal How Host–Guest Interactions Shape Xenon NMR Chemical Shift in Porous Organic Cages</b>" at <b><i>EUROMAR 2025</b></i> conference, organized at the <i><b>Oulu Music Centre</b></i> and <i><b>Pohjankartano</b></i> at <i><b>Oulu</b></i>, <i><b>Finland</b></i>.</div>
+        <div class="ndesc">Presented our work titled "<b>Equivariant Neural Networks Reveal How Host–Guest Interactions Shape Xenon NMR Chemical Shift in Porous Organic Cages</b>" at <b><i>EUROMAR 2025</i></b>, Oulu, Finland.</div>
         <a class="nread" href="https://euromar2025.org/" target="_blank" rel="noopener">Read more</a>
       </div>
 
@@ -130,7 +171,7 @@
         <span class="ntag t-conf">Conference</span>
         <div class="ndate">June 2025</div>
         <div class="ntitle">Poster presentation at <i>WATOC 2025</i>, Oslo, Norway</div>
-        <div class="ndesc">Presented a poster titled "<b>Host-Guest Dynamics in Porous Liquids Modeled Using E(3)-Equivariant Neural Networks</b>" at the <i><b>13<sup>th</sup> Triennial Congress of the World Association of Theoretical and Computational Chemists (WATOC 2025)</b></i> conference, organized at the <i><b>Oslo Kongressenter</b></i> at <i><b>Oslo</b></i>, <i><b>Norway</b></i>.</div>
+        <div class="ndesc">Presented a poster titled "<b>Host-Guest Dynamics in Porous Liquids Modeled Using E(3)-Equivariant Neural Networks</b>" at the <i><b>13<sup>th</sup> Triennial Congress of WATOC 2025</b></i>, Oslo, Norway.</div>
         <a class="nread" href="https://www.watoc2025.no/" target="_blank" rel="noopener">Read more</a>
       </div>
 
@@ -138,7 +179,7 @@
         <span class="ntag t-conf">Conference</span>
         <div class="ndate">June 2025</div>
         <div class="ntitle">Poster presentation at <i>CCD 2025</i>, Espoo, Finland</div>
-        <div class="ndesc">Presented a poster titled "<b>Local E(3)-Equivariant Neural Network Force Field for Modeling Host-Guest Interactions in Xenon-Based Porous Organic Cages</b>" at the <i><b>Computational Chemistry Days 2025</b></i> conference, organized at the <i><b>Department of Chemistry and Materials Science</b></i> at <i><b>Aalto University</b></i>.</div>
+        <div class="ndesc">Presented a poster titled "<b>Local E(3)-Equivariant Neural Network Force Field for Modeling Host-Guest Interactions in Xenon-Based Porous Organic Cages</b>" at <i><b>Computational Chemistry Days 2025</b></i>, Aalto University.</div>
         <a class="nread" href="https://ocamm.fi/event/computational-chemistry-days-2025/" target="_blank" rel="noopener">Read more</a>
       </div>
 
@@ -146,7 +187,7 @@
         <span class="ntag t-conf">Conference</span>
         <div class="ndate">March 2025</div>
         <div class="ntitle">Poster presentation at <i>Physics Days 2025</i>, Oulu, Finland</div>
-        <div class="ndesc">Presented a poster titled "<b>Machine Learning-Driven Approach for Modeling Host-Guest Dynamics in Xenon-Based Porous Liquids</b>" at the <i><b>Physics Days 2025</b></i> conference, organized by the <i><b>University of Oulu</b></i>, where our research unit was part of the organizing committee.</div>
+        <div class="ndesc">Presented a poster titled "<b>Machine Learning-Driven Approach for Modeling Host-Guest Dynamics in Xenon-Based Porous Liquids</b>" at <i><b>Physics Days 2025</b></i>, University of Oulu.</div>
         <a class="nread" href="https://ssl.eventilla.com/physicsdays2025" target="_blank" rel="noopener">Read more</a>
       </div>
 
@@ -162,17 +203,17 @@
         <span class="ntag t-award">Award</span>
         <div class="ndate">January 2025</div>
         <div class="ntitle"><i>EUROMAR 2025</i></div>
-        <div class="ndesc">Our research unit is organizing the 21<sup>st</sup> European Magnetic Resonance Congress (<b>EUROMAR2025</b>), in Oulu, Finland</div>
+        <div class="ndesc">Our research unit is organizing the 21<sup>st</sup> European Magnetic Resonance Congress (<b>EUROMAR 2025</b>), in Oulu, Finland.</div>
         <a class="nread" href="https://euromar2025.org/" target="_blank" rel="noopener">Read more</a>
       </div>
 
       <div class="ni hidden" data-cat="conf" id="ex8">
         <span class="ntag t-conf">Conference</span>
-        <div class="ndate">December 2025</div>
+        <div class="ndate">December 2024</div>
         <div class="ntitle">Contributed talk at the <i>38<sup>th</sup> Winter School in Theoretical Chemistry</i>, Helsinki, Finland</div>
         <div class="ndesc">Presented our work on "<b>Machine Learning Potentials for Large-Scale Porous Liquids Simulations</b>" at the <i><b>Winter School in Theoretical Chemistry</b></i>, Helsinki, Finland.</div>
         <a class="nread" href="http://www.chem.helsinki.fi/ws2024.html" target="_blank" rel="noopener">Read more</a>
-      </div>      
+      </div>
 
       <div class="ni hidden" data-cat="pub" id="ex9">
         <span class="ntag t-pub">Publication</span>
@@ -186,7 +227,7 @@
         <span class="ntag t-grant">Grant</span>
         <div class="ndate">June 2024</div>
         <div class="ntitle">Grant from <i>Otto A. Malm Foundation</i></div>
-        <div class="ndesc">Recieved a travel grant of 3300 euros from <i><b>Otto A. Malm Foundation</b></i> for the year 2024 for my project titled "<i><b>Realistic Modeling of Large-Scale Porous Materials using Machine-Learning-Assisted Molecular Dynamics</b></i>".</div>
+        <div class="ndesc">Received a travel grant of 3300 euros from <i><b>Otto A. Malm Foundation</b></i> for the year 2024 for my project titled "<i><b>Realistic Modeling of Large-Scale Porous Materials using Machine-Learning-Assisted Molecular Dynamics</b></i>".</div>
         <a class="nread" href="https://en.ottomalm.fi/stipends-granted-20243" target="_blank" rel="noopener">Read more</a>
       </div>
 
@@ -211,9 +252,9 @@
   </div>
   <div class="fs">
     <h4>Academic profiles</h4>
-    <a href="https://github.com/ozakary" target="_blank" rel="noopener">GitHub: ozakary</a>    
+    <a href="https://github.com/ozakary" target="_blank" rel="noopener">GitHub: ozakary</a>
     <a href="https://www.scopus.com/authid/detail.uri?authorId=58662986700" target="_blank" rel="noopener">Scopus ID: 58662986700</a>
-    <a href="https://www.webofscience.com/wos/author/record/OSI-7733-2025" target="_blank" rel="noopener">ResearcherID: OSI-7733-2025</a>    
+    <a href="https://www.webofscience.com/wos/author/record/OSI-7733-2025" target="_blank" rel="noopener">ResearcherID: OSI-7733-2025</a>
     <a href="https://orcid.org/0000-0002-7793-3306" target="_blank" rel="noopener">ORCID: 0000-0002-7793-3306</a>
     <a href="https://scholar.google.com/citations?user=kKUFATIAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
   </div>
@@ -221,18 +262,61 @@
 <div class="fbot">© 2026 Ouail Zakary &nbsp;·&nbsp; NMR Research Unit, University of Oulu &nbsp;·&nbsp; ozakary.github.io</div>
 
 <script>
+/* ── stats animation ── */
+var statsTargets = {
+  pub:       5,   /* update when you add publications */
+  conf:      17,  /* update when you add conferences  */
+  years:     Math.floor((new Date() - new Date('2020-10-01')) / (1000*60*60*24*365.25)),
+  students:  6,   /* update as needed                 */
+  countries: 6    /* update as needed                 */
+};
+function animateCounter(id, target, duration) {
+  var el = document.getElementById('s-' + id);
+  if (!el) return;
+  var start = null;
+  function step(ts) {
+    if (!start) start = ts;
+    var progress = Math.min((ts - start) / duration, 1);
+    var ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(ease * target);
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+setTimeout(function() {
+  Object.keys(statsTargets).forEach(function(id, i) {
+    setTimeout(function() { animateCounter(id, statsTargets[id], 1200); }, i * 120);
+  });
+}, 300);
+
+/* ── news filter & show-more ── */
+var moreShown = false;
+var allIds = ['ex1','ex2','ex3','ex4','ex5','ex6','ex7','ex8','ex9','ex10'];
+
 function filterNews(cat, el) {
   document.querySelectorAll('.ftag').forEach(f => f.classList.remove('on'));
   el.classList.add('on');
+  var btn = document.getElementById('show-more-btn');
+
   document.querySelectorAll('#news-grid .ni').forEach(function(item) {
     var match = cat === 'all'
       || item.dataset.cat === cat
       || (cat === 'pub' && (item.dataset.cat === 'pub' || item.dataset.cat === 'pre'));
-    item.style.display = match ? 'flex' : 'none';
+    var isExtra = item.id && allIds.includes(item.id);
+    if (match) {
+      item.style.display = (!isExtra || moreShown) ? 'flex' : 'none';
+    } else {
+      item.style.display = 'none';
+    }
   });
+
+  /* show the button only when viewing "all" and extras not yet revealed */
+  btn.style.display = (cat === 'all' && !moreShown) ? 'block' : 'none';
 }
+
 function showMore() {
-  ['ex1','ex2','ex3', 'ex4', 'ex5', 'ex6', 'ex7', 'ex8', 'ex9', 'ex10'].forEach(function(id) {
+  moreShown = true;
+  allIds.forEach(function(id) {
     var el = document.getElementById(id);
     if (el) { el.classList.remove('hidden'); el.style.display = 'flex'; }
   });

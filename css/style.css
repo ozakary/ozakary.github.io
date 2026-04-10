@@ -395,7 +395,7 @@ main { flex: 1; }
 /* graphical abstract float */
 .ga {
   float: right;
-  margin: 0 0 14px 22px;
+  margin: 22px 0 14px 22px;
   width: 390px;
   border: 1px solid var(--border-warm);
   border-radius: 2px;
