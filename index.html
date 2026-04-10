@@ -7,14 +7,51 @@
   <meta name="description" content="Personal academic website of Ouail Zakary, Postdoctoral Researcher at the NMR Research Unit, University of Oulu, Finland.">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .stats-strip{background:#f5f0e8;border-top:1px solid #e0d8cc;border-bottom:1px solid #e0d8cc;padding:20px 40px;}
-    .stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;max-width:900px;margin:0 auto;}
-    .stat-item{text-align:center;padding:6px 12px;border-right:1px solid #e0d8cc;}
-    .stat-item:last-child{border-right:none;}
-    .stat-num{font-size:32px;color:#2d6a8a;font-family:Georgia,serif;font-weight:normal;line-height:1;margin-bottom:5px;display:block;}
-    .stat-label{font-size:10px;font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:0.6px;color:#6a5a40;line-height:1.4;}
-    .stat-sub{font-size:9px;font-family:Arial,sans-serif;color:#b0a898;margin-top:2px;}
-    @media(max-width:760px){.stats-grid{grid-template-columns:repeat(3,1fr);}.stat-item:nth-child(3){border-right:none;}.stat-item:nth-child(4),.stat-item:nth-child(5){border-top:1px solid #e0d8cc;}}
+    .stats-section{background:#f5f0e8;border-top:1px solid #e0d8cc;border-bottom:1px solid #e0d8cc;}
+    .stats-grid{display:grid;grid-template-columns:repeat(5,1fr);max-width:900px;margin:0 auto;}
+    .stat-card{padding:18px 16px 13px;border-right:1px solid #e0d8cc;cursor:pointer;transition:background 0.15s;user-select:none;}
+    .stat-card:last-of-type{border-right:none;}
+    .stat-card:hover{background:#ede8dc;}
+    .stat-card.open{background:#e8e2d6;}
+    .stat-num{font-size:32px;color:#2d6a8a;font-family:Georgia,serif;font-weight:normal;line-height:1;display:block;margin-bottom:4px;}
+    .stat-label{font-size:10px;font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:0.6px;color:#6a5a40;line-height:1.4;margin-bottom:2px;}
+    .stat-sub{font-size:9px;font-family:Arial,sans-serif;color:#b0a898;}
+    .expand-hint{font-size:9px;font-family:Arial,sans-serif;color:#2d6a8a;margin-top:6px;display:flex;align-items:center;gap:3px;}
+    .expand-arrow{display:inline-block;transition:transform 0.2s;font-size:8px;}
+    .stat-card.open .expand-arrow{transform:rotate(180deg);}
+    .stat-drawer{display:none;background:#e8e2d6;border-top:1px solid #d5cfc2;padding:16px 20px;grid-column:1/-1;}
+    .stat-drawer.open{display:block;}
+    .drawer-title{font-size:10px;font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:0.5px;color:#6a5a40;margin-bottom:12px;font-weight:700;}
+    .bar-row{margin-bottom:9px;}
+    .bar-row:last-child{margin-bottom:0;}
+    .bar-meta{display:flex;justify-content:space-between;margin-bottom:3px;}
+    .bar-meta span{font-size:11px;font-family:Arial,sans-serif;color:#4a3f30;}
+    .bar-meta .bar-pct{color:#2d6a8a;font-weight:bold;}
+    .bar-track{height:6px;background:#d0c8bc;border-radius:3px;overflow:hidden;}
+    .bar-fill{height:100%;background:#2d6a8a;border-radius:3px;width:0%;transition:width 0.7s ease;}
+    .mini-grid{display:grid;gap:10px;}
+    .mini-grid-4{grid-template-columns:repeat(4,1fr);}
+    .mini-grid-3{grid-template-columns:repeat(3,1fr);}
+    .mini-card{background:#fdfbf7;border:1px solid #d8d2c8;border-radius:2px;padding:10px 12px;}
+    .mini-val{font-size:18px;color:#2d6a8a;font-family:Georgia,serif;margin-bottom:3px;}
+    .mini-lbl{font-size:9px;font-family:Arial,sans-serif;color:#6a5a40;text-transform:uppercase;letter-spacing:0.4px;line-height:1.4;}
+    .tl-row{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+    .tl-item{padding:10px 14px;border-right:1px solid #d0c8bc;}
+    .tl-item:last-child{border-right:none;}
+    .tl-val{font-size:16px;color:#2d6a8a;font-family:Georgia,serif;margin-bottom:3px;}
+    .tl-lbl{font-size:10px;font-family:Arial,sans-serif;color:#6a5a40;text-transform:uppercase;letter-spacing:0.4px;}
+    .tl-detail{font-size:10px;font-family:Arial,sans-serif;color:#9a8e80;margin-top:2px;}
+    .pill-row{display:flex;flex-wrap:wrap;gap:7px;}
+    .pill{font-size:11px;font-family:Arial,sans-serif;background:#fdfbf7;border:1px solid #d0c8bc;color:#4a3f30;padding:4px 12px;border-radius:12px;}
+    @media(max-width:760px){
+      .stats-grid{grid-template-columns:repeat(3,1fr);}
+      .stat-card:nth-child(3){border-right:none;}
+      .stat-card:nth-child(n+4){border-top:1px solid #e0d8cc;}
+      .mini-grid-4{grid-template-columns:repeat(2,1fr);}
+      .tl-row,.mini-grid-3{grid-template-columns:1fr;}
+      .tl-item{border-right:none;border-bottom:1px solid #d0c8bc;}
+      .tl-item:last-child{border-bottom:none;}
+    }
   </style>
 </head>
 <body>
@@ -58,33 +95,116 @@
   </div>
 
   <!-- STATS -->
-  <div class="stats-strip">
+  <div class="stats-section">
     <div class="stats-grid">
-      <div class="stat-item">
+
+      <div class="stat-card" id="card-pub" onclick="toggleDrawer('pub')">
         <span class="stat-num" id="s-pub">0</span>
         <div class="stat-label">Publications</div>
         <div class="stat-sub">peer-reviewed</div>
+        <div class="expand-hint"><span class="expand-arrow" id="arr-pub">&#9660;</span> details</div>
       </div>
-      <div class="stat-item">
+
+      <div class="stat-card" id="card-conf" onclick="toggleDrawer('conf')">
         <span class="stat-num" id="s-conf">0</span>
         <div class="stat-label">Conferences</div>
         <div class="stat-sub">talks &amp; posters</div>
+        <div class="expand-hint"><span class="expand-arrow" id="arr-conf">&#9660;</span> details</div>
       </div>
-      <div class="stat-item">
+
+      <div class="stat-card" id="card-years" onclick="toggleDrawer('years')">
         <span class="stat-num" id="s-years">0</span>
         <div class="stat-label">Years of research</div>
-        <div class="stat-sub">since PhD start</div>
+        <div class="stat-sub">PhD + postdoc</div>
+        <div class="expand-hint"><span class="expand-arrow" id="arr-years">&#9660;</span> details</div>
       </div>
-      <div class="stat-item">
+
+      <div class="stat-card" id="card-students" onclick="toggleDrawer('students')">
         <span class="stat-num" id="s-students">0</span>
         <div class="stat-label">Students supervised</div>
         <div class="stat-sub">PhD, MSc &amp; BSc</div>
+        <div class="expand-hint"><span class="expand-arrow" id="arr-students">&#9660;</span> details</div>
       </div>
-      <div class="stat-item">
+
+      <div class="stat-card" id="card-countries" onclick="toggleDrawer('countries')">
         <span class="stat-num" id="s-countries">0</span>
         <div class="stat-label">Countries</div>
         <div class="stat-sub">collaborations &amp; conferences</div>
+        <div class="expand-hint"><span class="expand-arrow" id="arr-countries">&#9660;</span> details</div>
       </div>
+
+      <!-- DRAWER: Publications -->
+      <div class="stat-drawer" id="drawer-pub">
+        <div class="drawer-title">Authorship breakdown</div>
+        <div class="bar-row">
+          <div class="bar-meta"><span>First author</span><span class="bar-pct">80%</span></div>
+          <div class="bar-track"><div class="bar-fill" id="bar-first" data-pct="80"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-meta"><span>Last author</span><span class="bar-pct">0%</span></div>
+          <div class="bar-track"><div class="bar-fill" id="bar-last" data-pct="0"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-meta"><span>Corresponding author</span><span class="bar-pct">100%</span></div>
+          <div class="bar-track"><div class="bar-fill" id="bar-corr" data-pct="100"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-meta"><span>Co-author</span><span class="bar-pct">20%</span></div>
+          <div class="bar-track"><div class="bar-fill" id="bar-co" data-pct="20"></div></div>
+        </div>
+      </div>
+
+      <!-- DRAWER: Conferences -->
+      <div class="stat-drawer" id="drawer-conf">
+        <div class="drawer-title">By type</div>
+        <div class="mini-grid mini-grid-4">
+          <div class="mini-card"><div class="mini-val" id="cv-oral">0</div><div class="mini-lbl">Oral communications</div></div>
+          <div class="mini-card"><div class="mini-val" id="cv-contrib">0</div><div class="mini-lbl">Contributed talks</div></div>
+          <div class="mini-card"><div class="mini-val" id="cv-poster">0</div><div class="mini-lbl">Poster presentations</div></div>
+          <div class="mini-card"><div class="mini-val" id="cv-workshop">0</div><div class="mini-lbl">Workshops</div></div>
+        </div>
+      </div>
+
+      <!-- DRAWER: Years -->
+      <div class="stat-drawer" id="drawer-years">
+        <div class="drawer-title">Career timeline</div>
+        <div class="tl-row">
+          <div class="tl-item">
+            <div class="tl-val">~38 months</div>
+            <div class="tl-lbl">PhD</div>
+            <div class="tl-detail">Le Mans Université, France</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-val">~26 months</div>
+            <div class="tl-lbl">Postdoctoral researcher</div>
+            <div class="tl-detail">University of Oulu, Finland</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DRAWER: Students -->
+      <div class="stat-drawer" id="drawer-students">
+        <div class="drawer-title">By level</div>
+        <div class="mini-grid mini-grid-3">
+          <div class="mini-card"><div class="mini-val">1</div><div class="mini-lbl">PhD student</div></div>
+          <div class="mini-card"><div class="mini-val">5</div><div class="mini-lbl">MSc students</div></div>
+          <div class="mini-card"><div class="mini-val">1</div><div class="mini-lbl">BSc student</div></div>
+        </div>
+      </div>
+
+      <!-- DRAWER: Countries -->
+      <div class="stat-drawer" id="drawer-countries">
+        <div class="drawer-title">Countries</div>
+        <div class="pill-row">
+          <span class="pill">Finland</span>
+          <span class="pill">France</span>
+          <span class="pill">Norway</span>
+          <span class="pill">Germany</span>
+          <span class="pill">Spain</span>
+          <span class="pill">USA</span>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -262,55 +382,90 @@
 <div class="fbot">© 2026 Ouail Zakary &nbsp;·&nbsp; NMR Research Unit, University of Oulu &nbsp;·&nbsp; ozakary.github.io</div>
 
 <script>
-/* ── stats animation ── */
+/* ── stat targets — update these numbers manually ── */
 var statsTargets = {
-  pub:       5,   /* update when you add publications */
-  conf:      17,  /* update when you add conferences  */
+  pub:       5,
+  conf:      17,
   years:     Math.floor((new Date() - new Date('2020-10-01')) / (1000*60*60*24*365.25)),
-  students:  6,   /* update as needed                 */
-  countries: 6    /* update as needed                 */
+  students:  7,
+  countries: 6
 };
-function animateCounter(id, target, duration) {
-  var el = document.getElementById('s-' + id);
-  if (!el) return;
+var confCounts = { oral: 7, contrib: 2, poster: 5, workshop: 3 };
+
+/* ── counter animation ── */
+function animateCounter(el, target, duration) {
   var start = null;
   function step(ts) {
     if (!start) start = ts;
-    var progress = Math.min((ts - start) / duration, 1);
-    var ease = 1 - Math.pow(1 - progress, 3);
-    el.textContent = Math.round(ease * target);
-    if (progress < 1) requestAnimationFrame(step);
+    var p = Math.min((ts - start) / duration, 1);
+    el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * target);
+    if (p < 1) requestAnimationFrame(step);
   }
   requestAnimationFrame(step);
 }
+
 setTimeout(function() {
   Object.keys(statsTargets).forEach(function(id, i) {
-    setTimeout(function() { animateCounter(id, statsTargets[id], 1200); }, i * 120);
+    var el = document.getElementById('s-' + id);
+    if (el) setTimeout(function() { animateCounter(el, statsTargets[id], 1200); }, i * 120);
   });
 }, 300);
+
+/* ── expandable drawers ── */
+var currentOpen = null;
+
+function toggleDrawer(id) {
+  var drawer = document.getElementById('drawer-' + id);
+  var card   = document.getElementById('card-' + id);
+  var arr    = document.getElementById('arr-' + id);
+  var isOpen = drawer.classList.contains('open');
+
+  if (currentOpen && currentOpen !== id) {
+    document.getElementById('drawer-' + currentOpen).classList.remove('open');
+    document.getElementById('card-'   + currentOpen).classList.remove('open');
+    document.getElementById('arr-'    + currentOpen).style.transform = '';
+  }
+
+  drawer.classList.toggle('open', !isOpen);
+  card.classList.toggle('open', !isOpen);
+  arr.style.transform = isOpen ? '' : 'rotate(180deg)';
+  currentOpen = isOpen ? null : id;
+
+  if (!isOpen) {
+    if (id === 'pub') {
+      ['bar-first','bar-last','bar-corr','bar-co'].forEach(function(bid, i) {
+        setTimeout(function() {
+          var el = document.getElementById(bid);
+          if (el) el.style.width = el.dataset.pct + '%';
+        }, i * 100);
+      });
+    }
+    if (id === 'conf') {
+      [['cv-oral', confCounts.oral], ['cv-contrib', confCounts.contrib],
+       ['cv-poster', confCounts.poster], ['cv-workshop', confCounts.workshop]
+      ].forEach(function(pair, i) {
+        var el = document.getElementById(pair[0]);
+        if (el) setTimeout(function() { animateCounter(el, pair[1], 700); }, i * 100);
+      });
+    }
+  }
+}
 
 /* ── news filter & show-more ── */
 var moreShown = false;
 var allIds = ['ex1','ex2','ex3','ex4','ex5','ex6','ex7','ex8','ex9','ex10'];
 
 function filterNews(cat, el) {
-  document.querySelectorAll('.ftag').forEach(f => f.classList.remove('on'));
+  document.querySelectorAll('.ftag').forEach(function(f) { f.classList.remove('on'); });
   el.classList.add('on');
   var btn = document.getElementById('show-more-btn');
-
   document.querySelectorAll('#news-grid .ni').forEach(function(item) {
     var match = cat === 'all'
       || item.dataset.cat === cat
       || (cat === 'pub' && (item.dataset.cat === 'pub' || item.dataset.cat === 'pre'));
     var isExtra = item.id && allIds.includes(item.id);
-    if (match) {
-      item.style.display = (!isExtra || moreShown) ? 'flex' : 'none';
-    } else {
-      item.style.display = 'none';
-    }
+    item.style.display = (match && (!isExtra || moreShown)) ? 'flex' : 'none';
   });
-
-  /* show the button only when viewing "all" and extras not yet revealed */
   btn.style.display = (cat === 'all' && !moreShown) ? 'block' : 'none';
 }
 

@@ -27,41 +27,140 @@
   <h2>Software &amp; code</h2>
   <div class="page-sub">Open-source tools, pipelines &amp; datasets</div>
 
-  <p class="intro-p">All code and datasets associated with publications are made publicly available on GitHub and Zenodo upon publication. Below are the main repositories.</p>
+  <p class="intro-p">All code and datasets associated with publications are made publicly available on GitHub and Zenodo/FairData/FigShare upon publication. Below are the main repositories.</p>
 
   <div class="sw">
-    <div class="st">RuP phase transition analysis pipeline</div>
-    <div class="sd">End-to-end workflow for fine-tuning MACE-MH-1 on DFT data, running multi-GPU LAMMPS molecular dynamics on LUMI and Mahti, and performing symmetry, RDF, structure factor, and lattice parameter analysis.</div>
-    <div class="sm">Associated with: <em>ChemRxiv 2026</em> &nbsp;·&nbsp; Repository and Zenodo deposit made public upon journal publication.</div>
+    <div class="st">RuP project</div>
+    <div class="sd">This is the supporting code for the manuscript “<i>Local Symmetry Breaking and Two-Stage Phase Transitions in RuP Uncovered by a Fine-Tuned Atomistic Foundation Model</i>“.</div>
+    <div class="sm">Associated with: <em>ChemRxiv <b>2026</b>, 0330</em> &nbsp;·&nbsp;
+    <a href="https://doi.org/10.26434/chemrxiv.15001387/v1" target="_blank" rel="noopener">Paper</a> &nbsp;·&nbsp;
+    <a href="https://github.com/ozakary/data-RuP" target="_blank" rel="noopener">GitHub: data-RuP</a>
+    </div>
+    <span class="stag">Shell</span>    
+    <span class="stag">VASP</span>
     <span class="stag">Python</span>
+    <span class="stag">ASE</span>    
     <span class="stag">MACE</span>
     <span class="stag">LAMMPS</span>
+    <span class="stag">Spglib</span>
+    <span class="stag">Phonopy</span>
+    <span class="stag">dynosor</span>
+    <span class="stag">VESTA</span>
+    <span class="stag">OVITO</span>
+  </div>
+
+  <div class="sw">
+    <div class="st">C<sub>60</sub> fullerene project</div>
+    <div class="sd">This is the supporting code for the manuscript “<i>Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene</i>“.</div>
+    <div class="sm">Associated with: <em>J. Phys. Chem. A <b>2026</b>, 130, 2169–2181</em> &nbsp;·&nbsp;
+    <a href="https://doi.org/10.1021/acs.jpca.6c00238" target="_blank" rel="noopener">Paper</a> &nbsp;·&nbsp;
+    <a href="https://github.com/ozakary/data-C60_ML" target="_blank" rel="noopener">GitHub: data-C60_ML</a>
+    </div>
+    <span class="stag">Shell</span>    
+    <span class="stag">DFTB+</span>    
+    <span class="stag">TURBOMOLE</span>
+    <span class="stag">Python</span>
+    <span class="stag">ASE</span>   
+    <span class="stag">NEP</span> 
+    <span class="stag">SchNet</span>
+    <span class="stag">GPUMD</span>
+    <span class="stag">VMD</span>
+  </div>
+
+  <div class="sw">
+    <div class="st">Porous liquids project</div>
+    <div class="sd">This is the supporting code for the manuscript “<i>Equivariant Neural Networks Reveal How Host–Guest Interactions Shape <sup>129</sup>Xe NMR in Porous Liquids</i>”.</div>
+    <div class="sm">Associated with: <em>J. Phys. Chem. Lett. <b>2025</b>, 16, 12095–12103</em> &nbsp;·&nbsp;
+    <a href="https://doi.org/10.1021/acs.jpclett.5c02846" target="_blank" rel="noopener">Paper</a> &nbsp;·&nbsp;
+    <a href="https://github.com/ozakary/data-Xe_at_CC3_at_TBA" target="_blank" rel="noopener">GitHub: data-Xe_at_CC3_at_TBA</a>
+    </div>
+    <span class="stag">Shell</span>  
+    <span class="stag">DFTB+</span>      
+    <span class="stag">TURBOMOLE</span>
+    <span class="stag">VASP</span>    
+    <span class="stag">Python</span>
+    <span class="stag">ASE</span>   
+    <span class="stag">Allegro</span> 
+    <span class="stag">MatTen</span>
+    <span class="stag">scikit-learn</span>
+    <span class="stag">LAMMPS</span>
+    <span class="stag">VMD</span>
+    <span class="stag">OVITO</span>    
+  </div>
+
+  <div class="sw">
+    <div class="st">Local atomic environmnent analyzer</div>
+    <div class="sd">A Python tool for analyzing the local environment around Xenon atoms in molecular clusters and identifying anomalous structures based on coordination number thresholds.</div>
+    <div class="sm">
+    <a href="https://github.com/ozakary/ClusterProbe" target="_blank" rel="noopener">GitHub: ClusterProbe</a>
+    </div>
+    <span class="stag">Python</span>
+    <span class="stag">ASE</span>    
+  </div>
+
+  <div class="sw">
+    <div class="st">MD simulations trajectory slicer</div>
+    <div class="sd">A versatile Python tool for converting LAMMPS dump files to XYZ format and sampling molecular dynamics trajectories with precise frame control.</div>
+    <div class="sm">
+    <a href="https://github.com/ozakary/TrajSlicer" target="_blank" rel="noopener">GitHub: TrajSlicer</a>
+    </div>
+    <span class="stag">Python</span>
+  </div>
+
+  <div class="sw">
+    <div class="st">NMR parameters extraction from VASP (versions < 6.6)</div>
+    <div class="sd">The VASP NMR Parameter Calculator extracts and processes NMR data from VASP output files (OUTCAR) that the standard VASP processing doesn't provide directly. This tool is particularly useful for researchers working with NMR computations in material science.</div>
+    <div class="sm">
+    <a href="https://github.com/ozakary/NMR-VASP" target="_blank" rel="noopener">GitHub: NMR-VASP</a>
+    </div>
+    <span class="stag">Python</span>
     <span class="stag">VASP</span>
   </div>
 
   <div class="sw">
-    <div class="st">¹²⁹Xe NMR ML pipeline for porous liquids</div>
-    <div class="sd">Equivariant GNN training pipeline for ¹²⁹Xe chemical shift prediction in CC3 porous organic cages. Includes data generation scripts, model training, and MD-coupled shielding computation.</div>
-    <div class="sm">Associated with: <em>J. Phys. Chem. Lett. 2025</em> &nbsp;·&nbsp;
-      <a href="https://github.com/ozakary" target="_blank" rel="noopener">GitHub: ozakary</a> &nbsp;·&nbsp;
-      <a href="#" target="_blank" rel="noopener">Zenodo</a>
+    <div class="st">PIMD GUI for teaching</div>
+    <div class="sd">This is Exercise N°4 from the Computational Physics and Chemistry 2025 course.</div>
+    <div class="sm">
+    <a href="https://github.com/ozakary/water-pimd-simulations" target="_blank" rel="noopener">GitHub: water-pimd-simulations</a>
     </div>
+    <span class="stag">I-PI</span>
+    <span class="stag">LAMMPS</span>
     <span class="stag">Python</span>
-    <span class="stag">PyTorch</span>
-    <span class="stag">e3nn</span>
-    <span class="stag">ASE</span>
+    <span class="stag">Shell</span>
+    <span class="stag">Jpyter Notebook</span>
+    <span class="stag">Tkinter</span>
+    <span class="stag">Ipykernel</span>
   </div>
 
   <div class="sw">
-    <div class="st">Multi-element ML NMR models</div>
-    <div class="sd">Benchmark suite for kernel ridge regression, SchNet, and MatTen NMR shielding models across ¹H, ¹³C, and ¹⁵N, with relativistic DFT training data generation via ORCA and VASP.</div>
-    <div class="sm">Associated with: <em>J. Phys. Chem. A 2026</em> &nbsp;·&nbsp;
-      <a href="https://github.com/ozakary" target="_blank" rel="noopener">GitHub: ozakary</a>
+    <div class="st">Pyrochlore oxyfluorides project</div>
+    <div class="sd">This is the Supporting Dataset for the manuscript “<i>Revealed Preferential Short-Range Anion Ordering in Disordered RbM<sub>2</sub>O<sub>5</sub>F (M = Nb, Ta) Pyrochlore-Type Oxyfluorides</i>”.</div>
+    <div class="sm">Associated with: <em>Inorg. Chem. <b>2025</b>, 64, 5764–5777</em> &nbsp;·&nbsp;
+    <a href="https://doi.org/10.1021/acs.inorgchem.5c00615" target="_blank" rel="noopener">Paper</a> &nbsp;·&nbsp;
+    <a href="https://github.com/ozakary/data-RbM2O5F" target="_blank" rel="noopener">GitHub: data-RbM2O5F</a>
     </div>
+    <span class="stag">Shell</span>  
+    <span class="stag">VASP</span>    
     <span class="stag">Python</span>
-    <span class="stag">SchNet</span>
-    <span class="stag">scikit-learn</span>
-    <span class="stag">ORCA</span>
+    <span class="stag">ASE</span>   
+    <span class="stag">mrsimulator</span> 
+    <span class="stag">Supercell</span>
+    <span class="stag">DMFit</span>
+    <span class="stag">VESTA</span>
+  </div>
+
+  <div class="sw">
+    <div class="st">Ordered oxyfluorides project</div>
+    <div class="sd">This is the Supporting Dataset for the manuscript “<i>Different Magnitudes of Second-Order Jahn-Teller Effect in Isostructural NaMO<sub>2</sub>F<sub>2</sub> (M = Nb, Ta) Oxyfluorides</i>”.</div>
+    <div class="sm">Associated with: <em>J. Alloys Compd. <b>2025</b>, 1010, 177457</em> &nbsp;·&nbsp;
+    <a href="https://doi.org/10.1016/j.jallcom.2024.177457" target="_blank" rel="noopener">Paper</a> &nbsp;·&nbsp;
+    <a href="https://github.com/ozakary/data-NaMO2F2" target="_blank" rel="noopener">GitHub: data-NaMO2F2</a>
+    </div>
+    <span class="stag">Shell</span>  
+    <span class="stag">VASP</span>    
+    <span class="stag">Python</span>
+    <span class="stag">DMFit</span>
+    <span class="stag">VESTA</span>
   </div>
 
 </div>
