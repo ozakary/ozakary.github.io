@@ -726,3 +726,47 @@ main { flex: 1; }
   .rimg { width: 100%; }
   .ga { float: none; width: 100%; margin: 0 0 16px 0; }
 }
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4a3f30;
+  text-decoration: none;
+  padding: 3px 0;
+}
+.profile-link:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+.profile-links .profile-link {
+  border-bottom: 0.5px solid #ede8e0;
+  font-size: 14px;
+}
+.profile-links .profile-link:last-child {
+  border-bottom: none;
+}
+
+/* ── CV timeline ── */
+.timeline{position:relative;padding-left:36px;margin-top:8px;}
+.timeline::before{content:'';position:absolute;left:8px;top:12px;bottom:12px;width:2px;background:#e0d8cc;}
+.tl-item{position:relative;margin-bottom:26px;opacity:0;transform:translateX(-18px);transition:opacity 0.5s ease,transform 0.5s ease;}
+.tl-item.visible{opacity:1;transform:translateX(0);}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-27px;top:5px;width:16px;height:16px;border-radius:50%;border:2.5px solid #2d6a8a;background:#fdfbf7;z-index:1;transform:translateX(-50%);}
+.tl-dot.postdoc{border-color:#2d6a8a;background:#2d6a8a;}
+.tl-dot.phd{border-color:#2d5a3d;background:#2d5a3d;}
+.tl-dot.msc{border-color:#4a3d7a;background:#4a3d7a;}
+.tl-dot.bsc{border-color:#7a5a1a;background:#7a5a1a;}
+.tl-badge{display:inline-block;font-size:9px;font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:0.5px;padding:2px 9px;border-radius:2px;font-weight:700;margin-bottom:5px;}
+.badge-postdoc{background:#e8f2f7;color:#2d6a8a;}
+.badge-phd{background:#e8f5ee;color:#2d5a3d;}
+.badge-msc{background:#ede8f7;color:#4a3d7a;}
+.badge-bsc{background:#f5f0e0;color:#7a5a1a;}
+.tl-card{background:#fefcf9;border:1px solid #e8e2d8;border-radius:3px;padding:14px 16px;}
+.tl-period{font-size:10px;font-family:Arial,sans-serif;color:#2d6a8a;font-weight:700;letter-spacing:0.3px;margin-bottom:5px;text-transform:uppercase;}
+.tl-degree{font-size:14px;color:#1a1a1a;font-weight:bold;margin-bottom:3px;}
+.tl-dept{font-size:12px;font-family:Arial,sans-serif;color:#666;margin-bottom:2px;}
+.tl-inst{font-size:12px;font-family:Arial,sans-serif;color:#2d6a8a;font-style:italic;margin-bottom:2px;}
+.tl-loc{font-size:11px;font-family:Arial,sans-serif;color:#999;}
