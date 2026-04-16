@@ -751,8 +751,9 @@ main { flex: 1; }
 /* ── CV timeline ── */
 .timeline{position:relative;padding-left:36px;margin-top:8px;}
 .timeline::before{content:'';position:absolute;left:8px;top:12px;bottom:12px;width:2px;background:#e0d8cc;}
-.tl-item{position:relative;margin-bottom:26px;opacity:0;transform:translateX(-18px);transition:opacity 0.5s ease,transform 0.5s ease;}
-.tl-item.visible{opacity:1;transform:translateX(0);}
+.tl-item{position:relative;margin-bottom:26px;}
+.timeline .tl-item{opacity:0;transform:translateX(-18px);transition:opacity 0.5s ease,transform 0.5s ease;}
+.timeline .tl-item.visible{opacity:1;transform:translateX(0);}
 .tl-item:last-child{margin-bottom:0;}
 .tl-dot{position:absolute;left:-27px;top:5px;width:16px;height:16px;border-radius:50%;border:2.5px solid #2d6a8a;background:#fdfbf7;z-index:1;transform:translateX(-50%);}
 .tl-dot.postdoc{border-color:#2d6a8a;background:#2d6a8a;}
