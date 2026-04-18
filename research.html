@@ -61,13 +61,38 @@
         </div>
         <div class="rright">
           <div class="albl">Overview</div>
-          <div class="atxt">Machine learning interatomic potentials (MLIPs) allow quantum-mechanical accuracy to be achieved at a fraction of the cost of direct DFT calculations, enabling simulations at experimentally relevant timescales and system sizes. My work focuses on training and fine-tuning equivariant GNN potentials — in particular the MACE architecture — for complex inorganic and molecular systems. A recent highlight is the fine-tuning of MACE-MH-1 on targeted RuP datasets, enabling the discovery of a two-stage phase transition that was inaccessible to direct DFT-based MD. I also develop and maintain multi-GPU LAMMPS+MACE workflows for LUMI (AMD ROCm) and Mahti (NVIDIA).</div>
+          <div class="atxt">Machine learning interatomic potentials (MLIPs) allow quantum-mechanical accuracy to be achieved at a fraction of the cost of direct DFT calculations, enabling simulations at experimentally relevant timescales and system sizes. My work focuses on training and fine-tuning equivariant GNN potentials for complex inorganic and molecular systems.</div>
           <div class="plbl">Related publications</div>
           <div class="pref">
             <div class="pt">Local Symmetry Breaking and Two-Stage Phase Transition in RuP Uncovered by a Fine-Tuned Atomistic Foundation Model</div>
             <div class="pj">ChemRxiv 2026 &nbsp;·&nbsp; Preprint</div>
             <div class="pa">Zakary, O.; Yin, W.; Aryal, N.</div>
             <a class="pdoi" href="https://doi.org/10.26434/chemrxiv.15001387/v1" target="_blank" rel="noopener">DOI: 10.26434/chemrxiv.15001387/v1</a>
+          </div>
+          <div class="pref">
+            <div class="pt">Equivariant Neural Networks Reveal How Host–Guest Interactions Shape <sup>129</sup>Xe NMR in Porous Liquids</div>
+            <div class="pj">J. Phys. Chem. Lett. 2025, 16, 12095–12103</div>
+            <div class="pa">Zakary, O.; Lantto, P.</div>
+            <a class="pdoi" href="https://doi.org/10.1021/acs.jpclett.5c02846" target="_blank" rel="noopener">DOI: 10.1021/acs.jpclett.5c02846</a>
+          </div>
+          <div class="pref">
+            <div class="pt">Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights into Quantum Effects in C<sub>60</sub> Fullerene</div>
+            <div class="pj">J. Phys. Chem. A 2026, 130, 2169–2181</div>
+            <div class="pa">Laurila, O.; Jacklin, T.; Zakary, O.; Lantto, P.</div>
+            <a class="pdoi" href="https://doi.org/10.1021/acs.jpca.6c00238" target="_blank" rel="noopener">DOI: 10.1021/acs.jpca.6c00238</a>
+          </div>
+          <div class="plbl">Related software</div>
+          <div class="pref">
+            <div class="pt">RuP project</div>
+            <a class="pdoi" href="https://github.com/ozakary/data-RuP" target="_blank" rel="noopener">GitHub: data-RuP</a>
+          </div>
+          <div class="pref">
+            <div class="pt">Porous liquids project</div>
+            <a class="pdoi" href="https://github.com/ozakary/data-Xe_at_CC3_at_TBA" target="_blank" rel="noopener">GitHub: data-Xe_at_CC3_at_TBA</a>
+          </div>
+          <div class="pref">
+            <div class="pt">C<b>60</b> fullerene project</div>
+            <a class="pdoi" href="https://github.com/ozakary/data-C60_ML" target="_blank" rel="noopener">GitHub: data-C60_ML</a>
           </div>
         </div>
       </div>
@@ -80,17 +105,14 @@
       <div class="rhd">
         <div class="rthumb">
           <svg width="34" height="34" viewBox="0 0 50 50" fill="none" aria-hidden="true">
-            <rect x="8"  y="20" width="34" height="6" rx="2" fill="#e0d8cc"/>
-            <rect x="8"  y="30" width="24" height="6" rx="2" fill="#d0c8bc"/>
-            <circle cx="38" cy="23" r="4" fill="#a09080"/>
-            <circle cx="38" cy="33" r="4" fill="#b8b0a4"/>
-            <text x="10" y="25" font-size="5" fill="#8a8070" font-family="Arial">¹²⁹Xe</text>
-            <text x="10" y="35" font-size="5" fill="#8a8070" font-family="Arial">¹³C</text>
+            <circle cx="25" cy="25" r="12" fill="#c8c0b4"/>
+            <ellipse cx="25" cy="25" rx="22" ry="9" stroke="#8a8070" stroke-width="1" fill="none"/>
+            <ellipse cx="25" cy="25" rx="9" ry="22" stroke="#8a8070" stroke-width="1" fill="none"/>
           </svg>
         </div>
         <div>
-          <div class="xtitle">Short- and long-range modeling of solid-state materials</div>
-          <div class="rshort">¹²⁹Xe, ¹³C and multi-element NMR chemical shift modeling in porous and complex materials</div>
+          <div class="xtitle">Nuclear quantum effects and NMR secondary shifts</div>
+          <div class="rshort">Quantum nuclear effects using machine learning-accelerated PIMD</div>
         </div>
       </div>
       <span class="xtog" id="xi-r2">+</span>
@@ -103,19 +125,22 @@
         </div>
         <div class="rright">
           <div class="albl">Overview</div>
-          <div class="atxt">NMR spectroscopy is one of the most powerful probes of local structure and dynamics in materials, but first-principles computation of chemical shifts is expensive, limiting achievable statistical sampling. I develop ML NMR models — trained on relativistic DFT shielding tensors — that predict ¹²⁹Xe, ¹³C, ¹⁵N, and other nuclear chemical shifts at negligible cost once trained. A key focus is xenon NMR in porous organic cages (CC3) and porous liquids, where cage breathing, solvent reorganization, and guest siting collectively determine the observed spectrum. Models are deployed on-the-fly during MD trajectories, enabling direct comparison with variable-temperature experimental NMR data.</div>
+          <div class="atxt">Classical molecular dynamics treats nuclei as point particles, neglecting quantum effects such as zero-point energy and tunneling that are particularly important for light nuclei and at low temperatures. Path integral molecular dynamics (PIMD) addresses this by representing each nucleus as a ring polymer of classical beads, recovering quantum statistical mechanics exactly in the limit of many beads. My work combines PIMD with ML interatomic potentials to make quantum nuclear simulations tractable for large systems.</div>
           <div class="plbl">Related publications</div>
           <div class="pref">
-            <div class="pt">Equivariant Neural Networks Reveal How Host–Guest Interactions Shape ¹²⁹Xe NMR in Porous Liquids</div>
-            <div class="pj">J. Phys. Chem. Lett. 2025, 16, 12095–12103</div>
-            <div class="pa">Zakary, O.; Lantto, P.</div>
-            <a class="pdoi" href="https://doi.org/10.1021/acs.jpclett.5c02846" target="_blank" rel="noopener">DOI: 10.1021/acs.jpclett.5c02846</a>
-          </div>
-          <div class="pref">
-            <div class="pt">Machine Learning NMR Models for Multi-Element Prediction in Complex Materials</div>
+            <div class="pt">Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights into Quantum Effects in C<sub>60</sub> Fullerene</div>
             <div class="pj">J. Phys. Chem. A 2026, 130, 2169–2181</div>
             <div class="pa">Laurila, O.; Jacklin, T.; Zakary, O.; Lantto, P.</div>
             <a class="pdoi" href="https://doi.org/10.1021/acs.jpca.6c00238" target="_blank" rel="noopener">DOI: 10.1021/acs.jpca.6c00238</a>
+          </div>
+          <div class="plbl">Related software</div>
+          <div class="pref">
+            <div class="pt">C₆₀ fullerene project</div>
+            <a class="pdoi" href="https://github.com/ozakary/data-C60_ML" target="_blank" rel="noopener">GitHub: data-C60_ML</a>
+          </div>
+          <div class="pref">
+            <div class="pt">PIMD GUI for teaching</div>
+            <a class="pdoi" href="https://github.com/ozakary/water-pimd-simulations" target="_blank" rel="noopener">GitHub: water-pimd-simulations</a>
           </div>
         </div>
       </div>
@@ -128,14 +153,17 @@
       <div class="rhd">
         <div class="rthumb">
           <svg width="34" height="34" viewBox="0 0 50 50" fill="none" aria-hidden="true">
-            <circle cx="25" cy="25" r="12" fill="#c8c0b4"/>
-            <ellipse cx="25" cy="25" rx="22" ry="9" stroke="#8a8070" stroke-width="1" fill="none"/>
-            <ellipse cx="25" cy="25" rx="9" ry="22" stroke="#8a8070" stroke-width="1" fill="none"/>
+            <rect x="8"  y="20" width="34" height="6" rx="2" fill="#e0d8cc"/>
+            <rect x="8"  y="30" width="24" height="6" rx="2" fill="#d0c8bc"/>
+            <circle cx="38" cy="23" r="4" fill="#a09080"/>
+            <circle cx="38" cy="33" r="4" fill="#b8b0a4"/>
+            <text x="10" y="25" font-size="5" fill="#8a8070" font-family="Arial">¹²⁹Xe</text>
+            <text x="10" y="35" font-size="5" fill="#8a8070" font-family="Arial">¹³C</text>
           </svg>
         </div>
         <div>
-          <div class="xtitle">Nuclear quantum effects and NMR secondary shifts in porous materials</div>
-          <div class="rshort">Quantum nuclear effects in fullerene and molecular systems via PIMD</div>
+          <div class="xtitle">Large-scale modeling of host-guest interactions in porous materials</div>
+          <div class="rshort">Dynamics, diffusion, and relxation processes of xenon in porous materials</div>
         </div>
       </div>
       <span class="xtog" id="xi-r3">+</span>
@@ -148,14 +176,19 @@
         </div>
         <div class="rright">
           <div class="albl">Overview</div>
-          <div class="atxt">Classical molecular dynamics treats nuclei as point particles, neglecting quantum effects such as zero-point energy and tunneling that are particularly important for light nuclei and at low temperatures. Path integral molecular dynamics (PIMD) addresses this by representing each nucleus as a ring polymer of classical beads, recovering quantum statistical mechanics exactly in the limit of many beads. My work combines PIMD with ML interatomic potentials to make quantum nuclear simulations tractable for large systems. A key application is C₆₀ fullerene, where quantum effects significantly influence both structural properties and ¹³C NMR chemical shifts, enabling direct comparison with experimental solid-state NMR data.</div>
+          <div class="atxt">NMR spectroscopy is one of the most powerful probes of local structure and dynamics in materials, but first-principles computation of NMR parameters is expensive, limiting achievable statistical sampling. I develop NMR-ML models that predict NMR parameters for various nuclei at a fraction of the computational cost. A key focus is xenon NMR in porous liquids and carbon nanoporous materials.</div>
           <div class="plbl">Related publications</div>
           <div class="pref">
-            <div class="pt">ML-Accelerated Path Integral MD and ¹³C NMR of C₆₀ Fullerene</div>
-            <div class="pj">Nature Communications — submitted 2025</div>
-            <div class="pa">Zakary, O. et al.</div>
-            <span class="pdoi" style="color:#bbb;cursor:default;text-decoration:none;">DOI — upon publication</span>
+            <div class="pt">Equivariant Neural Networks Reveal How Host–Guest Interactions Shape <sup>129</sup>Xe NMR in Porous Liquids</div>
+            <div class="pj">J. Phys. Chem. Lett. 2025, 16, 12095–12103</div>
+            <div class="pa">Zakary, O.; Lantto, P.</div>
+            <a class="pdoi" href="https://doi.org/10.1021/acs.jpclett.5c02846" target="_blank" rel="noopener">DOI: 10.1021/acs.jpclett.5c02846</a>
           </div>
+          <div class="plbl">Related software</div>
+          <div class="pref">
+            <div class="pt">Porous liquids project</div>
+            <a class="pdoi" href="https://github.com/ozakary/data-Xe_at_CC3_at_TBA" target="_blank" rel="noopener">GitHub: data-Xe_at_CC3_at_TBA</a>
+          </div> 
         </div>
       </div>
     </div>
@@ -164,6 +197,69 @@
   <!-- TOPIC 4 -->
   <div class="xcard">
     <div class="xhd" onclick="xToggle('r4')" role="button" aria-expanded="false" id="btn-r4">
+      <div class="rhd">
+        <div class="rthumb">
+          <svg width="34" height="34" viewBox="0 0 50 50" fill="none" aria-hidden="true">
+            <rect x="8"  y="20" width="34" height="6" rx="2" fill="#e0d8cc"/>
+            <rect x="8"  y="30" width="24" height="6" rx="2" fill="#d0c8bc"/>
+            <circle cx="38" cy="23" r="4" fill="#a09080"/>
+            <circle cx="38" cy="33" r="4" fill="#b8b0a4"/>
+            <text x="10" y="25" font-size="5" fill="#8a8070" font-family="Arial">¹²⁹Xe</text>
+            <text x="10" y="35" font-size="5" fill="#8a8070" font-family="Arial">¹³C</text>
+          </svg>
+        </div>
+        <div>
+          <div class="xtitle">Short- and long-range modeling of crystals</div>
+          <div class="rshort">NMR crystallography combining multi-nuclear solid-state NMR, powder X-ray diffraction, and DFT calculations</div>
+        </div>
+      </div>
+      <span class="xtog" id="xi-r4">+</span>
+    </div>
+    <div class="xbody" id="r4">
+      <div class="rbody-inner">
+        <div class="rimg">
+          <div class="rimg-placeholder">Image placeholder<br>to be replaced</div>
+          <div class="rimg-cap">Illustration — to be replaced</div>
+        </div>
+        <div class="rright">
+          <div class="albl">Overview</div>
+          <div class="atxt">This part of my research goes back to my PhD period and it deals with the precise structural characterization of disordered inorganic oxyfluorides, making conventional diffraction techniques insufficient for full structural resolution. By combining multi-nuclear solid-state NMR spectroscopy of various nuclei, including <sup>19</sup>F, <sup>1</sup>H, <sup>23</sup>Na, <sup>87</sup>Rb, and <sup>93</sup>Nb, powder X-ray diffraction, and DFT calculations, I build and validate structural models that capture both the average and the short-range crystal structures. This NMR crystallography strategy has been applied to transition metal oxyfluorides, revealing preferential anion ordering, correlated disorder, and second-order Jahn-Teller distortions that govern the physicochemical properties of these materials.</div>
+          <div class="plbl">Related publications</div>
+          <div class="pref">
+            <div class="pt">Revealed Preferential Short-Range Anion Ordering in Disordered RbM<sub>2</sub>O<sub>5</sub>F (M = Nb, Ta) Pyrochlore-Type Oxyfluorides</div>
+            <div class="pj">Inorg. Chem. 2025, 64, 5764–5777</div>
+            <div class="pa">Zakary, O.; Body, M.; Sarou-Kanian, V.; Charpentier, T.; Legein, C.</div>
+            <a class="pdoi" href="https://doi.org/10.1021/acs.inorgchem.5c00615" target="_blank" rel="noopener">DOI: 10.1021/acs.inorgchem.5c00615</a>
+          </div>
+          <div class="pref">
+            <div class="pt">Different Magnitudes of Second-Order Jahn-Teller Effect in Isostructural NaMO<sub>2</sub>F<sub>2</sub> (M = Nb, Ta) Oxyfluorides</div>
+            <div class="pj">J. Alloys Compd. 2025, 1010, 177457</div>
+            <div class="pa">Zakary, O.; Body, M.; Sarou-Kanian, V.; Arnaud, B.; Corbel, G.; Legein, C.</div>
+            <a class="pdoi" href="https://doi.org/10.1016/j.jallcom.2024.177457" target="_blank" rel="noopener">DOI: 10.1016/j.jallcom.2024.177457</a>
+          </div>
+          <div class="pref">
+            <div class="pt">Structural Modeling of O/F Correlated Disorder in TaOF<sub>3</sub> and NbOF<sub>3-<i>x</i></sub>(OH)<sub>x</sub> by Coupling Solid-State NMR and DFT Calculations</div>
+            <div class="pj">Inorg. Chem. 2023, 62, 16627–16640</div>
+            <div class="pa">Zakary, O.; Body, M.; Charpentier, T.; Sarou-Kanian, V.; Legein, C.</div>
+            <a class="pdoi" href="https://doi.org/10.1021/acs.inorgchem.3c02844" target="_blank" rel="noopener">DOI: 10.1021/acs.inorgchem.3c02844</a>
+          </div>
+          <div class="plbl">Related software</div>
+          <div class="pref">
+            <div class="pt">Pyrochlore oxyfluorides project</div>
+            <a class="pdoi" href="https://github.com/ozakary/data-RbM2O5F" target="_blank" rel="noopener">GitHub: data-RbM2O5F</a>
+          </div>
+          <div class="pref">
+            <div class="pt">Ordered oxyfluorides project</div>
+            <a class="pdoi" href="https://github.com/ozakary/data-NaMO2F2" target="_blank" rel="noopener">GitHub: data-NaMO2F2</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOPIC 5 -->
+  <div class="xcard">
+    <div class="xhd" onclick="xToggle('r5')" role="button" aria-expanded="false" id="btn-r5">
       <div class="rhd">
         <div class="rthumb">
           <svg width="34" height="34" viewBox="0 0 50 50" fill="none" aria-hidden="true">
@@ -177,12 +273,12 @@
         </div>
         <div>
           <div class="xtitle">HPC workflows &amp; open-source tools</div>
-          <div class="rshort">Multi-GPU LAMMPS+MACE on LUMI and Mahti, VASP automation, and community tooling</div>
+          <div class="rshort">Multi-GPU LAMMPS+MACE/Allegro/NequIP on LUMI, Mahti, and Puhti, QM chemistry packages automation, and community tooling</div>
         </div>
       </div>
-      <span class="xtog" id="xi-r4">+</span>
+      <span class="xtog" id="xi-r5">+</span>
     </div>
-    <div class="xbody" id="r4">
+    <div class="xbody" id="r5">
       <div class="rbody-inner">
         <div class="rimg">
           <div class="rimg-placeholder">Image placeholder<br>to be replaced</div>
@@ -190,12 +286,23 @@
         </div>
         <div class="rright">
           <div class="albl">Overview</div>
-          <div class="atxt">Deploying ML potentials at scale requires careful integration with HPC infrastructure. I develop and document production-ready workflows for running LAMMPS with MACE on both AMD ROCm (LUMI) and NVIDIA CUDA (Mahti) architectures, resolving compatibility issues between ML libraries, MPI implementations, and GPU backends. These workflows — including SLURM job scripts, module environments, and build instructions — are made publicly available. I also maintain automated VASP DFT pipelines for generating ML training datasets, and contribute Python analysis tools for RDF, structure factors, space-group tracking, and phonon dispersion from MD trajectories.</div>
+          <div class="atxt">Deploying ML potentials at scale requires careful integration with HPC infrastructure. I develop and document production-ready workflows for running packages on both AMD ROCm (LUMI) and NVIDIA CUDA (Mahti and Puhti) architectures, resolving compatibility issues between ML libraries, MPI implementations, and GPU backends. These workflows are made publicly available.</div>
           <div class="plbl">Related resources</div>
           <div class="pref">
-            <div class="pt">All workflow documentation and analysis tools available on GitHub</div>
-            <div class="pj">github.com/ozakary</div>
-            <a class="pdoi" href="https://github.com/ozakary" target="_blank" rel="noopener">Visit repository</a>
+            <div class="pt">RuP project</div>
+            <a class="pdoi" href="https://github.com/ozakary/data-RuP" target="_blank" rel="noopener">GitHub: data-RuP</a>
+          </div>
+          <div class="pref">
+            <div class="pt">MD simulations trajectory slicer</div>
+            <a class="pdoi" href="https://github.com/ozakary/TrajSlicer" target="_blank" rel="noopener">GitHub: TrajSlicer</a>
+          </div>
+          <div class="pref">
+            <div class="pt">NMR parameters extraction from VASP output files</div>
+            <a class="pdoi" href="https://github.com/ozakary/NMR-VASP" target="_blank" rel="noopener">GitHub: NMR-VASP</a>
+          </div>
+          <div class="pref">
+            <div class="pt">All repositories and workflow documentation</div>
+            <a class="pdoi" href="https://github.com/ozakary" target="_blank" rel="noopener">github.com/ozakary</a>
           </div>
         </div>
       </div>
