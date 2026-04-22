@@ -5,6 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV — Ouail Zakary</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .tl-expand-btn{margin-top:12px;font-size:11px;font-family:Arial,sans-serif;color:#2d6a8a;cursor:pointer;user-select:none;display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border:1px solid #2d6a8a;border-radius:2px;background:#e8f2f7;}
+    .tl-expand-btn:hover{background:#2d6a8a;color:#fff;}
+    .tl-details{display:none;margin-top:14px;padding-top:14px;border-top:1px solid #ede8e0;}
+    .tl-details.open{display:block;}
+    .tl-thesis-title{font-size:13px;color:#1a1a1a;font-style:italic;line-height:1.6;margin-bottom:8px;font-family:Georgia,serif;}
+    .tl-thesis-links{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap;}
+    .tl-thesis-links a{font-size:11px;font-family:Arial,sans-serif;padding:4px 12px;border:1px solid #2d6a8a;border-radius:2px;color:#2d6a8a;text-decoration:none;}
+    .tl-thesis-links a:hover{background:#2d6a8a;color:#fff;}
+    .tl-committee-label{font-size:10px;font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:0.6px;color:#888;font-weight:700;margin-bottom:10px;}
+    .tl-committee{display:flex;flex-direction:column;gap:8px;}
+    .tl-member{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 10px;background:#f5f0e8;border-radius:2px;border:1px solid #e8e2d8;}
+    .tl-member-info{flex:1;}
+    .tl-member-name{font-size:13px;color:#1a1a1a;font-family:Georgia,serif;margin-bottom:2px;}
+    .tl-member-role{display:inline-block;font-size:9px;font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:0.4px;padding:1px 7px;border-radius:2px;font-weight:700;margin-bottom:3px;}
+    .tl-member-role.referee{background:#f5e8e8;color:#7a2d2d;}
+    .tl-member-role.chair{background:#e8f2f7;color:#2d6a8a;}
+    .tl-member-role.examiner{background:#ede8f7;color:#4a3d7a;}
+    .tl-member-role.supervisor{background:#e8f5ee;color:#2d5a3d;}
+    .tl-member-pos{font-size:11px;font-family:Arial,sans-serif;color:#888;}
+    .tl-member-links{display:flex;gap:6px;align-items:center;flex-shrink:0;}
+    .tl-member-links a{display:flex;align-items:center;opacity:0.8;}
+    .tl-member-links a:hover{opacity:1;}
+  </style>
 </head>
 <body>
 
@@ -64,6 +88,123 @@
       <div class="tl-dept">Dept. of Physics</div>
       <div class="tl-inst">Le Mans Université</div>
       <div class="tl-loc">Avenue Olivier Messiaen, 72085 Le Mans cedex 9, France</div>
+      <div class="tl-expand-btn" onclick="togglePhd()" id="phd-btn">
+        <span id="phd-btn-text">&#9660; Thesis &amp; committee details</span>
+      </div>
+      <div class="tl-details" id="phd-details">
+        <div class="tl-thesis-title">Structural Modeling of Oxygen-Fluorine Ordering in Transition Metal Inorganic Oxyfluorides</div>
+        <div class="tl-thesis-links">
+          <a href="https://theses.hal.science/tel-04412685/" target="_blank" rel="noopener">Manuscript (HAL)</a>
+          <a href="https://theses.fr/2023LEMA1026" target="_blank" rel="noopener">Defense details (theses.fr)</a>
+        </div>
+        <div class="tl-committee-label">Doctoral committee</div>
+        <div class="tl-committee">
+
+          <div class="tl-member">
+            <div class="tl-member-info">
+              <div class="tl-member-name">Prof. Christian Bonhomme</div>
+              <div class="tl-member-role referee">Referee</div>
+              <div class="tl-member-pos">Professor &nbsp;·&nbsp; Sorbonne Université, Paris</div>
+            </div>
+            <div class="tl-member-links">
+              <a href="https://orcid.org/0000-0003-0802-6961" target="_blank" rel="noopener">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#A6CE39"/><circle cx="7.8" cy="6.5" r="1.2" fill="white"/><rect x="6.9" y="9.2" width="1.8" height="8.8" rx="0.9" fill="white"/><rect x="10.8" y="6" width="1.8" height="12" rx="0.9" fill="white"/><path d="M12.6 6 Q19.5 6 19.5 12 Q19.5 18 12.6 18" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+              </a>
+              <a href="https://scholar.google.com/citations?user=OkH8acAAAAAJ" target="_blank" rel="noopener">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2 L22 7.5 L12 13 L2 7.5 Z" fill="#4285F4"/><path d="M6 10.5 L6 16.5 Q12 20.5 18 16.5 L18 10.5 L12 13 Z" fill="#1A73E8"/><line x1="22" y1="7.5" x2="22" y2="14" stroke="#FBBC04" stroke-width="2" stroke-linecap="round"/><circle cx="22" cy="15.5" r="1.6" fill="#FBBC04"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="tl-member">
+            <div class="tl-member-info">
+              <div class="tl-member-name">Dr. Mathieu Allix</div>
+              <div class="tl-member-role referee">Referee</div>
+              <div class="tl-member-pos">CNRS Research Director &nbsp;·&nbsp; CNRS CEMHTI, Orléans</div>
+            </div>
+            <div class="tl-member-links">
+              <a href="https://orcid.org/0000-0001-9317-1316" target="_blank" rel="noopener">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#A6CE39"/><circle cx="7.8" cy="6.5" r="1.2" fill="white"/><rect x="6.9" y="9.2" width="1.8" height="8.8" rx="0.9" fill="white"/><rect x="10.8" y="6" width="1.8" height="12" rx="0.9" fill="white"/><path d="M12.6 6 Q19.5 6 19.5 12 Q19.5 18 12.6 18" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="tl-member">
+            <div class="tl-member-info">
+              <div class="tl-member-name">Prof. Christel Gervais</div>
+              <div class="tl-member-role chair">Chair</div>
+              <div class="tl-member-pos">Professor &nbsp;·&nbsp; Sorbonne Université, Paris</div>
+            </div>
+            <div class="tl-member-links">
+              <a href="https://orcid.org/0000-0001-7450-1738" target="_blank" rel="noopener">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#A6CE39"/><circle cx="7.8" cy="6.5" r="1.2" fill="white"/><rect x="6.9" y="9.2" width="1.8" height="8.8" rx="0.9" fill="white"/><rect x="10.8" y="6" width="1.8" height="12" rx="0.9" fill="white"/><path d="M12.6 6 Q19.5 6 19.5 12 Q19.5 18 12.6 18" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="tl-member">
+            <div class="tl-member-info">
+              <div class="tl-member-name">Dr. Thibault Charpentier</div>
+              <div class="tl-member-role examiner">Examiner</div>
+              <div class="tl-member-pos">CEA Research Director &nbsp;·&nbsp; CEA Paris-Saclay</div>
+            </div>
+            <div class="tl-member-links">
+              <a href="https://orcid.org/0000-0002-3034-1389" target="_blank" rel="noopener">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#A6CE39"/><circle cx="7.8" cy="6.5" r="1.2" fill="white"/><rect x="6.9" y="9.2" width="1.8" height="8.8" rx="0.9" fill="white"/><rect x="10.8" y="6" width="1.8" height="12" rx="0.9" fill="white"/><path d="M12.6 6 Q19.5 6 19.5 12 Q19.5 18 12.6 18" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+              </a>
+              <a href="https://scholar.google.com/citations?user=apNunY0AAAAJ" target="_blank" rel="noopener">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2 L22 7.5 L12 13 L2 7.5 Z" fill="#4285F4"/><path d="M6 10.5 L6 16.5 Q12 20.5 18 16.5 L18 10.5 L12 13 Z" fill="#1A73E8"/><line x1="22" y1="7.5" x2="22" y2="14" stroke="#FBBC04" stroke-width="2" stroke-linecap="round"/><circle cx="22" cy="15.5" r="1.6" fill="#FBBC04"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="tl-member">
+            <div class="tl-member-info">
+              <div class="tl-member-name">Dr. Damien Dambournet</div>
+              <div class="tl-member-role examiner">Examiner</div>
+              <div class="tl-member-pos">Associate Professor &nbsp;·&nbsp; Sorbonne Université, Paris</div>
+            </div>
+            <div class="tl-member-links">
+              <a href="https://orcid.org/0000-0003-3831-2643" target="_blank" rel="noopener">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#A6CE39"/><circle cx="7.8" cy="6.5" r="1.2" fill="white"/><rect x="6.9" y="9.2" width="1.8" height="8.8" rx="0.9" fill="white"/><rect x="10.8" y="6" width="1.8" height="12" rx="0.9" fill="white"/><path d="M12.6 6 Q19.5 6 19.5 12 Q19.5 18 12.6 18" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="tl-member">
+            <div class="tl-member-info">
+              <div class="tl-member-name">Dr. Monique Body</div>
+              <div class="tl-member-role supervisor">Supervisor</div>
+              <div class="tl-member-pos">Associate Professor &nbsp;·&nbsp; Le Mans Université</div>
+            </div>
+            <div class="tl-member-links">
+              <a href="https://orcid.org/0000-0002-5895-3731" target="_blank" rel="noopener">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#A6CE39"/><circle cx="7.8" cy="6.5" r="1.2" fill="white"/><rect x="6.9" y="9.2" width="1.8" height="8.8" rx="0.9" fill="white"/><rect x="10.8" y="6" width="1.8" height="12" rx="0.9" fill="white"/><path d="M12.6 6 Q19.5 6 19.5 12 Q19.5 18 12.6 18" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+              </a>
+              <a href="https://scholar.google.com/citations?user=sLCxmZIAAAAJ" target="_blank" rel="noopener">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2 L22 7.5 L12 13 L2 7.5 Z" fill="#4285F4"/><path d="M6 10.5 L6 16.5 Q12 20.5 18 16.5 L18 10.5 L12 13 Z" fill="#1A73E8"/><line x1="22" y1="7.5" x2="22" y2="14" stroke="#FBBC04" stroke-width="2" stroke-linecap="round"/><circle cx="22" cy="15.5" r="1.6" fill="#FBBC04"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="tl-member">
+            <div class="tl-member-info">
+              <div class="tl-member-name">Prof. Christophe Legein</div>
+              <div class="tl-member-role supervisor">Co-supervisor</div>
+              <div class="tl-member-pos">Professor &nbsp;·&nbsp; Le Mans Université</div>
+            </div>
+            <div class="tl-member-links">
+              <a href="https://orcid.org/0000-0001-7426-8817" target="_blank" rel="noopener">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#A6CE39"/><circle cx="7.8" cy="6.5" r="1.2" fill="white"/><rect x="6.9" y="9.2" width="1.8" height="8.8" rx="0.9" fill="white"/><rect x="10.8" y="6" width="1.8" height="12" rx="0.9" fill="white"/><path d="M12.6 6 Q19.5 6 19.5 12 Q19.5 18 12.6 18" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+              </a>
+              <a href="https://scholar.google.com/citations?user=Xo1Z9_4AAAAJ" target="_blank" rel="noopener">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2 L22 7.5 L12 13 L2 7.5 Z" fill="#4285F4"/><path d="M6 10.5 L6 16.5 Q12 20.5 18 16.5 L18 10.5 L12 13 Z" fill="#1A73E8"/><line x1="22" y1="7.5" x2="22" y2="14" stroke="#FBBC04" stroke-width="2" stroke-linecap="round"/><circle cx="22" cy="15.5" r="1.6" fill="#FBBC04"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   </div>
 
@@ -184,6 +325,16 @@ setTimeout(function() {
     setTimeout(function() { item.classList.add('visible'); }, i * 180);
   });
 }, 300);
+
+function togglePhd() {
+  var details = document.getElementById('phd-details');
+  var btn     = document.getElementById('phd-btn-text');
+  var open    = details.classList.contains('open');
+  details.classList.toggle('open', !open);
+  btn.innerHTML = open
+    ? '&#9660; Thesis &amp; committee details'
+    : '&#9650; Thesis &amp; committee details';
+}
 </script>
 
 </body>
