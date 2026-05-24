@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <nav class="sitenav">
   <a class="sitenav-name" href="index.html">Ouail Zakary</a>
   <div class="sitenav-links">
@@ -21,44 +20,12 @@
     <a href="cv.html">CV</a>
   </div>
 </nav>
-
 <main>
 <div class="inner">
   <h2>Publications</h2>
-  <div class="page-sub">Refereed articles in international scientific journals</div>
 
-  <!-- PUB 6 -->
-  <div class="xcard">
-    <div class="xhd" onclick="xToggle('q1')" role="button" aria-expanded="false" id="btn-q1">
-      <div class="xmeta">
-        <div class="xnum">2026 &nbsp;·&nbsp; Preprint</div>
-        <div class="xtitle">Local Symmetry Breaking and Two-Stage Phase Transition in RuP Uncovered by a Fine-Tuned Atomistic Foundation Model</div>
-        <div class="xauth"><strong>Ouail Zakary*</strong>, Weiguo Yin, Niraj Aryal*</div>
-        <div class="xjrnl">ChemRxiv <b>2026</b>, 0330</div>
-        <span class="xbadge b-pre">Preprint</span>
-      </div>
-      <span class="xtog" id="xi-q1">+</span>
-    </div>
-    <div class="xbody" id="q1">
-      <div class="pub-inner">
-        <div style="overflow: hidden;">
-          <div class="ga">
-            <img src="images/ga-chemrxiv03302026.png" alt="Graphical abstract">
-            <!-- <div class="ga-placeholder">Graphical abstract<br>(image placeholder)</div> -->
-            <!-- <div class="ga-cap">Graphical abstract</div> -->
-          </div>
-          <div class="albl">Abstract</div>
-          <div class="atxt">Resolving short-range structural distortions that persist within high-symmetry crystal structures remains a central challenge in materials chemistry. These distortions are dynamic, with correlations extending over nanometer length scales and picosecond timescales, making their atomistic modeling computationally demanding. Here, we address this challenge by modeling the parent compound of ruthenium-pnictide superconductors, RuP, in which such distortions and correlations are prominent. We fine-tune an atomistic foundation model (AFM) on ab initio molecular dynamics datasets and use the resulting interatomic potential to perform machine-learning molecular dynamics simulations of RuP. Analysis of the temperature dependence of lattice parameters and structure factors reveals a two-step phase transition, including an isosymmetric monoclinic-to-monoclinic transition near 180 K, followed by a monoclinic-to-orthorhombic transition near 330 K. Local order metrics and correlation functions further show that short-range monoclinic distortions persist above 330 K within the average high-symmetry phase, providing direct evidence of local symmetry breaking. Electronic-structure calculations reproduce the experimentally observed evolution from an insulating low-temperature state to an intermediate pseudogap-like regime and finally to a metallic high-temperature state, connecting the two-stage electronic transition to the underlying structural transformation. Phonon dispersion analysis reveals the emergence of imaginary phonon modes above the second transition, consistent with the dynamical instability of the average orthorhombic structure and the persistence of local lattice distortions. These findings provide an atomistic picture of local symmetry breaking in RuP and demonstrate that fine-tuned AFMs provide a practical approach for quantifying short-range distortions and correlated fluctuations in crystals with complex phase behavior.</div>
-          <div class="cf"></div>
-        </div>
-        <div class="xlinks">
-          <a class="xl doi" href="https://doi.org/10.26434/chemrxiv.15001387/v1" target="_blank" rel="noopener">DOI: 10.26434/chemrxiv.15001387/v1</a>
-          <a class="xl" href="https://doi.org/10.5281/zenodo.18709769" target="_blank" rel="noopener">Supporting data (Zenodo)</a>
-          <a class="xl" href="https://github.com/ozakary/data-RuP" target="_blank" rel="noopener">Supporting code (GitHub)</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- ═══ SECTION: JOURNAL ARTICLES ═══ -->
+  <div class="page-sub" style="margin-bottom:20px;">Refereed articles in international scientific journals</div>
 
   <!-- PUB 5 -->
   <div class="xcard">
@@ -77,8 +44,6 @@
         <div style="overflow: hidden;">
           <div class="ga">
             <img src="images/ga-jpca2026.png" alt="Graphical abstract">
-            <!-- <div class="ga-placeholder">Graphical abstract<br>(image placeholder)</div> -->
-            <!-- <div class="ga-cap">Graphical abstract</div> -->
           </div>
           <div class="albl">Abstract</div>
           <div class="atxt">A definitive answer on the existence and magnitude of the negative thermal expansion (NTE) and the <sup>13</sup>C nuclear magnetic resonance (NMR) signature in C<sub>60</sub> fullerene has been previously demonstrated using quantum-mechanical treatments of thermal rovibrational motion. This approach, while accurate, is computationally expensive, lacks the implementation of dispersion corrections, and is fundamentally limited to systems with well-defined equilibrium geometries and sufficiently strong restoring forces, making it inapplicable to weakly bound van der Waals complexes. Alternative methods, such as <i>ab initio</i> path integral molecular dynamics (PIMD), are more flexible but remain computationally expensive, especially when combined with calculations of <sup>13</sup>C NMR parameters. To overcome these limitations, we introduce an accurate and efficient neural network-based approach that combines machine learning interatomic potentials (MLIPs) with an NMR machine learning (NMR-ML) model. MLIPs enable machine learning PIMD (MLPIMD) simulations, while the NMR-ML model computes <sup>13</sup>C isotropic magnetic shielding, σ<sub>iso</sub>, directly from MLPIMD snapshots. We perform temperature-dependent MLPIMD simulations with MLIPs trained at different levels of theory. In all cases, NTE is observed, and the results reveal how both dispersion effects and atomic basis set choices influence its magnitude. Furthermore, we confirm that NTE is a quantum-mechanical phenomenon and, hence, classical MD simulations cannot reproduce it. To further test our approach, we investigate fully quantum-mechanical secondary isotope shifts of <sup>13</sup>C NMR magnetic shielding due to the isotope change from <sup>12</sup>C to <sup>13</sup>C of the immediate neighbor with hexagon-hexagon or hexagon-pentagon bond with the observed nucleus. The results show a good agreement with the experimental data, highlighting the accuracy of our approach. This work demonstrates that ML-accelerated simulations enable accurate and efficient modeling of thermally activated quantum mechanical phenomena.</div>
@@ -111,8 +76,6 @@
         <div style="overflow: hidden;">
           <div class="ga">
             <img src="images/ga-jpcl2025.png" alt="Graphical abstract">
-            <!-- <div class="ga-placeholder">Graphical abstract<br>(image placeholder)</div> -->
-            <!-- <div class="ga-cap">Graphical abstract</div> -->
           </div>
           <div class="albl">Abstract</div>
           <div class="atxt">Understanding host-guest interactions in porous liquids (PLs) formed from porous organic cages (POCs) is pivotal in tailoring their physicochemical properties, therefore, providing an avenue for engineering new PLs with enhanced functionalities. In this work, we demonstrate, for the first time, the use of an accurate and efficient machine learning-based approach for atomistic modeling of host-guest interactions in large-scale PLs. The approach uses E(3)-equivariant graph neural networks (EGNNs) to construct a machine learning interatomic potential and a nuclear magnetic resonance machine learning model. The former enables machine learning molecular dynamics (MLMD) simulations, while the latter computes <sup>129</sup>Xe isotropic chemical shift, <i>δ</i><sub>iso</sub>, from MLMD snapshots. Applied to a PL composed of CC3-R POC in 4-(trifluoromethoxy)benzyl alcohol (TBA) solvent loaded with high Xe concentration, this dual-model approach shows that host(CC3)–guest(Xe) interactions are best described by a three-site binding model comprising the CC3 intrinsic cavity, CC3 openings, and TBA solvent, with exchange events occurring between these sites. Good agreement between computed and experimental <sup>129</sup>Xe <i>δ</i><sub>iso</sub> validates our approach, demonstrating EGNN-based simulations as transformative tools for advancing PL understanding.</div>
@@ -144,8 +107,6 @@
         <div style="overflow: hidden;">
           <div class="ga">
             <img src="images/ga-inorgchem2025.png" alt="Graphical abstract">
-            <!-- <div class="ga-placeholder">Graphical abstract<br>(image placeholder)</div> -->
-            <!-- <div class="ga-cap">Graphical abstract</div> -->
           </div>
           <div class="albl">Abstract</div>
           <div class="atxt">Describing the crystal structure of disordered materials with mixed-occupancy crystallographic sites is essential for understanding their physicochemical properties and designing new materials tuned to targeted functionalities. Here, we investigate the structure of RbM<sub>2</sub>O<sub>5</sub>F (M = Nb, Ta) pyrochlore-type oxyfluorides using a multimodal approach that combines experimental and computational techniques. Rietveld structural refinement of PXRD data confirmed that these oxyfluorides are isostructural and their average crystal structure is disordered. The anionic site, 48<i>f</i>, is co-occupied by O and F, while the Rb site, 32<i>e</i>, is occupied at 25%. The shapes of the high-field solid-state <sup>19</sup>F MAS, and <sup>87</sup>Rb and <sup>93</sup>Nb (CT)MAS and 3QMAS NMR spectra, indicate that the local environment of these nuclei is distributed. Using the "<i>supercell</i>" approach, models incorporating different anion arrangements and Rb atoms distributed in their crystallographic site, were built and relaxed using DFT, and NMR parameters for <sup>19</sup>F, <sup>87</sup>Rb, and <sup>93</sup>Nb, were computed using the PAW and GIPAW approaches. The models showing the best agreement between computed and experimental NMR parameters are made up exclusively of [MO<sub>5</sub>F]<sup>6-</sup> octahedra, [RbO<sub>15</sub>F<sub>3</sub>]<sup>32-</sup>, [RbO<sub>16</sub>F<sub>2</sub>]<sup>33-</sup>, and [RbO<sub>14</sub>F<sub>4</sub>]<sup>31-</sup> cages, indicating the existence of a preferential short-range anion ordering in these pyrochlores, instead of the expected random distribution.</div>
@@ -177,8 +138,6 @@
         <div style="overflow: hidden;">
           <div class="ga">
             <img src="images/ga-jalloyscomds2025.png" alt="Graphical abstract">
-            <!-- <div class="ga-placeholder">Graphical abstract<br>(image placeholder)</div> -->
-            <!-- <div class="ga-cap">Graphical abstract</div> -->
           </div>
           <div class="albl">Abstract</div>
           <div class="atxt">The structures of the ordered and isotype oxyfluorides NaMO<sub>2</sub>F<sub>2</sub> (M = Nb, Ta) were thoroughly investigated by combining powder X-Ray Diffraction (PXRD), <sup>19</sup>F and high-field <sup>23</sup>Na and <sup>93</sup>Nb solid-state NMR, and DFT calculations. The structures, derived from Rietveld refinement of the PXRD data, exclusively consist of <i>cis</i>-[MO<sub>4</sub>F<sub>2</sub>]<sup>5–</sup> octahedra, in which cations are displaced from their ideal centered positions toward an oxide face. The NMR parameters were calculated for both the experimental (ES) and the atomic positions optimized (APO) structures, the latter exhibiting, as is often the case, the best agreement with the experimental data. Nb<sup>5+</sup> and Ta<sup>5+</sup> cations having the same size, niobium and tantalum isotypes have usually very close cell parameters. However, those of NaNbO<sub>2</sub>F<sub>2</sub> and NaTaO<sub>2</sub>F<sub>2</sub>, particularly <i>c</i>, differ in unusual proportions. This difference in <i>c</i> parameters is due to stronger second-order Jahn-Teller effect (SOJTE) for the <i>cis</i>-[NbO<sub>4</sub>F<sub>2</sub>]<sup>5–</sup> than for the <i>cis</i>-[TaO<sub>4</sub>F<sub>2</sub>]<sup>5–</sup> octahedra, further confirmed by band structure and projected density of states calculations. Furthermore, by optimizing the synthesis conditions of these compounds using thermal analysis, a very low amplitude endothermic event, upon heating, was observed only for NaNbO<sub>2</sub>F<sub>2</sub>. An extensive analysis of the variable temperature (VT) PXRD data revealed that this event is related to a deviation from linearity of the cell parameters evolution and that structural features of these two isotypes evolve differently with temperature.</div>
@@ -197,7 +156,7 @@
   <div class="xcard">
     <div class="xhd" onclick="xToggle('q6')" role="button" aria-expanded="false" id="btn-q6">
       <div class="xmeta">
-        <div class="xnum">2025 &nbsp;·&nbsp; Journal article</div>
+        <div class="xnum">2023 &nbsp;·&nbsp; Journal article</div>
         <div class="xtitle">Structural Modeling of O/F Correlated Disorder in TaOF<sub>3</sub> and NbOF<sub>3–<i>x</i></sub>(OH)<sub><i>x</i></sub> by Coupling Solid-State NMR and DFT Calculations</div>
         <div class="xauth"><strong>Ouail Zakary*</strong>, Monique Body*, Thibault Charpentier, Vincent Sarou-Kanian, Christophe Legein</div>
         <div class="xjrnl">Inorg. Chem. <b>2023</b>, 62, 16627–16640</div>
@@ -210,11 +169,9 @@
         <div style="overflow: hidden;">
           <div class="ga">
             <img src="images/ga-inorgchem2023.png" alt="Graphical abstract">
-            <!-- <div class="ga-placeholder">Graphical abstract<br>(image placeholder)</div> -->
-            <!-- <div class="ga-cap">Graphical abstract</div> -->
           </div>
           <div class="albl">Abstract</div>
-          <div class="atxt">The structure of MOF<sub>3</sub> (M = Nb, Ta) compounds was precisely modeled by combining powder X-ray diffraction, solid-state NMR spectroscopy, and semiempirical dispersion-corrected DFT calculations. It consists of stacked <sub>∞</sub>(MOF<sub>3</sub>) layers along the <i>c</i> direction formed by heteroleptic corner-connected MX<sub>6</sub> (X = O, F) octahedra. <sup>19</sup>F NMR resonance assignments and occupancy rates of the anionic crystallographic sites have been revised. The bridging site is shared equally by the anions, and the terminal site is occupied by F only. An O/F correlated disorder is expected since <i>cis</i>-MO<sub>2</sub>F<sub>4</sub> octahedra are favored, resulting in one-dimensional −F–M–O–M– strings along the <100> and <010> directions. Ten different 2×2×1 supercells per compound, fulfilling these characteristics, were built. Using DFT calculations and the GIPAW approach, the supercells were relaxed and the <sup>19</sup>F isotropic chemical shift values were determined. The agreement between the experimental and calculated <sup>19</sup>F spectra is excellent for TaOF<sub>3</sub>. The <sup>1</sup>H and <sup>19</sup>F experimental NMR spectra revealed that some of the bridging F atoms are substituted by OH groups, especially in NbOF<sub>3</sub>. New supercells involving OH groups were generated. Remarkably, the best agreement is obtained for the supercells with the composition closest to that estimated from the <sup>19</sup>F NMR spectra, <i>i.e.</i>, NbOF<sub>2.85</sub>(OH)<sub>0.15</sub>.</div>
+          <div class="atxt">The structure of MOF<sub>3</sub> (M = Nb, Ta) compounds was precisely modeled by combining powder X-ray diffraction, solid-state NMR spectroscopy, and semiempirical dispersion-corrected DFT calculations. It consists of stacked <sub>∞</sub>(MOF<sub>3</sub>) layers along the <i>c</i> direction formed by heteroleptic corner-connected MX<sub>6</sub> (X = O, F) octahedra. <sup>19</sup>F NMR resonance assignments and occupancy rates of the anionic crystallographic sites have been revised. The bridging site is shared equally by the anions, and the terminal site is occupied by F only. An O/F correlated disorder is expected since <i>cis</i>-MO<sub>2</sub>F<sub>4</sub> octahedra are favored, resulting in one-dimensional −F–M–O–M– strings along the &lt;100&gt; and &lt;010&gt; directions. Ten different 2×2×1 supercells per compound, fulfilling these characteristics, were built. Using DFT calculations and the GIPAW approach, the supercells were relaxed and the <sup>19</sup>F isotropic chemical shift values were determined. The agreement between the experimental and calculated <sup>19</sup>F spectra is excellent for TaOF<sub>3</sub>. The <sup>1</sup>H and <sup>19</sup>F experimental NMR spectra revealed that some of the bridging F atoms are substituted by OH groups, especially in NbOF<sub>3</sub>. New supercells involving OH groups were generated. Remarkably, the best agreement is obtained for the supercells with the composition closest to that estimated from the <sup>19</sup>F NMR spectra, <i>i.e.</i>, NbOF<sub>2.85</sub>(OH)<sub>0.15</sub>.</div>
           <div class="cf"></div>
         </div>
         <div class="xlinks">
@@ -225,9 +182,45 @@
     </div>
   </div>
 
-  <p style="font-size: 13px; font-family: var(--sans); color: var(--text-faint); margin-top: 8px;">
+  <!-- ═══ SECTION: PREPRINTS ═══ -->
+  <div class="hr"></div>
+  <div class="page-sub" style="margin-bottom:20px;">Preprints</div>
+
+  <!-- PREPRINT 1 -->
+  <div class="xcard">
+    <div class="xhd" onclick="xToggle('q1')" role="button" aria-expanded="false" id="btn-q1">
+      <div class="xmeta">
+        <div class="xnum">2026 &nbsp;·&nbsp; Preprint</div>
+        <div class="xtitle">Local Symmetry Breaking and Two-Stage Phase Transition in RuP Uncovered by a Fine-Tuned Atomistic Foundation Model</div>
+        <div class="xauth"><strong>Ouail Zakary*</strong>, Weiguo Yin, Niraj Aryal*</div>
+        <div class="xjrnl">ChemRxiv <b>2026</b>, 0330</div>
+        <span class="xbadge b-pre">Preprint</span>
+      </div>
+      <span class="xtog" id="xi-q1">+</span>
+    </div>
+    <div class="xbody" id="q1">
+      <div class="pub-inner">
+        <div style="overflow: hidden;">
+          <div class="ga">
+            <img src="images/ga-chemrxiv03302026.png" alt="Graphical abstract">
+          </div>
+          <div class="albl">Abstract</div>
+          <div class="atxt">Resolving short-range structural distortions that persist within high-symmetry crystal structures remains a central challenge in materials chemistry. These distortions are dynamic, with correlations extending over nanometer length scales and picosecond timescales, making their atomistic modeling computationally demanding. Here, we address this challenge by modeling the parent compound of ruthenium-pnictide superconductors, RuP, in which such distortions and correlations are prominent. We fine-tune an atomistic foundation model (AFM) on ab initio molecular dynamics datasets and use the resulting interatomic potential to perform machine-learning molecular dynamics simulations of RuP. Analysis of the temperature dependence of lattice parameters and structure factors reveals a two-step phase transition, including an isosymmetric monoclinic-to-monoclinic transition near 180 K, followed by a monoclinic-to-orthorhombic transition near 330 K. Local order metrics and correlation functions further show that short-range monoclinic distortions persist above 330 K within the average high-symmetry phase, providing direct evidence of local symmetry breaking. Electronic-structure calculations reproduce the experimentally observed evolution from an insulating low-temperature state to an intermediate pseudogap-like regime and finally to a metallic high-temperature state, connecting the two-stage electronic transition to the underlying structural transformation. Phonon dispersion analysis reveals the emergence of imaginary phonon modes above the second transition, consistent with the dynamical instability of the average orthorhombic structure and the persistence of local lattice distortions. These findings provide an atomistic picture of local symmetry breaking in RuP and demonstrate that fine-tuned AFMs provide a practical approach for quantifying short-range distortions and correlated fluctuations in crystals with complex phase behavior.</div>
+          <div class="cf"></div>
+        </div>
+        <div class="xlinks">
+          <a class="xl doi" href="https://doi.org/10.26434/chemrxiv.15001387/v1" target="_blank" rel="noopener">DOI: 10.26434/chemrxiv.15001387/v1</a>
+          <a class="xl" href="https://doi.org/10.5281/zenodo.18709769" target="_blank" rel="noopener">Supporting data (Zenodo)</a>
+          <a class="xl" href="https://github.com/ozakary/data-RuP" target="_blank" rel="noopener">Supporting code (GitHub)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p style="font-size: 13px; font-family: var(--sans); color: var(--text-faint); margin-top: 16px;">
     Full list available via <a href="https://scholar.google.com/citations?user=kKUFATIAAAAJ" target="_blank" rel="noopener">Google Scholar</a> or as a <a href="cv.html">PDF download</a>.
   </p>
+
 </div>
 </main>
 
