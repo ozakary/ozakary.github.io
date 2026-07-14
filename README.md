@@ -7,7 +7,7 @@ This is my personal [academic portfolio](https://ozakary.github.io/) website sho
 - 📧 Email: [Ouail.Zakary@oulu.fi](mailto:Ouail.Zakary@oulu.fi)  
 - 🔗 ORCID: [0000-0002-7793-3306](https://orcid.org/0000-0002-7793-3306)  
 - 🌐 Website: [Personal Webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
-- 📁 Portfolio: [Academic Portfolio](https://ozakary.github.io/)
+- 📁 Personal Website: [Academic Portfolio](https://ozakary.github.io/)
 ---
 
 ## Website Contents
