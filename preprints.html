@@ -26,38 +26,47 @@
 <main>
 <div class="inner">
   <h2>Preprints</h2>
-  <div class="page-sub">Manuscripts under review or in preparation</div>
+  <div class="page-sub">Manuscripts submitted or under review</div>
 
   <!-- PREPRINT 1 -->
   <div class="xcard">
-    <div class="xhd" onclick="xToggle('p1')" role="button" aria-expanded="false" id="btn-p1">
+    <div class="xhd" style="cursor: default;">
       <div class="xmeta">
         <div class="xnum">2026 &nbsp;·&nbsp; Preprint</div>
-        <div class="xtitle">Local Symmetry Breaking and Two-Stage Phase Transition in RuP Uncovered by a Fine-Tuned Atomistic Foundation Model</div>
-        <div class="xauth"><strong>Ouail Zakary*</strong>, Weiguo Yin, Niraj Aryal*</div>
-        <div class="xjrnl">ChemRxiv <b>2026</b>, 0330</div>
+        <div class="xtitle">Carbon Nanotube-Induced Magnetic Shielding Effects on <sup>129</sup>Xe NMR from Equivariant Neural Networks</div>
+        <div class="xauth"><strong>Ouail Zakary*</strong>, Tiia Jacklin, Perttu Lantto</div>
+        <div class="xjrnl">ChemRxiv <b>2026</b>, submitted for publication</div>
         <span class="xbadge b-pre">Preprint</span>
       </div>
-      <span class="xtog" id="xi-p1">+</span>
     </div>
-    <div class="xbody" id="p1">
-      <div class="pub-inner">
-        <div style="overflow: hidden;">
-          <div class="ga">
-            <img src="images/ga-chemrxiv03302026.png" alt="Graphical abstract">
-          </div>
-          <div class="albl">Abstract</div>
-          <div class="atxt">Resolving short-range structural distortions that persist within high-symmetry crystal structures remains a central challenge in materials chemistry. These distortions are dynamic, with correlations extending over nanometer length scales and picosecond timescales, making their atomistic modeling computationally demanding. Here, we address this challenge by modeling the parent compound of ruthenium-pnictide superconductors, RuP, in which such distortions and correlations are prominent. We fine-tune an atomistic foundation model (AFM) on ab initio molecular dynamics datasets and use the resulting interatomic potential to perform machine-learning molecular dynamics simulations of RuP. Analysis of the temperature dependence of lattice parameters and structure factors reveals a two-step phase transition, including an isosymmetric monoclinic-to-monoclinic transition near 180 K, followed by a monoclinic-to-orthorhombic transition near 330 K. Local order metrics and correlation functions further show that short-range monoclinic distortions persist above 330 K within the average high-symmetry phase, providing direct evidence of local symmetry breaking. Electronic-structure calculations reproduce the experimentally observed evolution from an insulating low-temperature state to an intermediate pseudogap-like regime and finally to a metallic high-temperature state, connecting the two-stage electronic transition to the underlying structural transformation. Phonon dispersion analysis reveals the emergence of imaginary phonon modes above the second transition, consistent with the dynamical instability of the average orthorhombic structure and the persistence of local lattice distortions. These findings provide an atomistic picture of local symmetry breaking in RuP and demonstrate that fine-tuned AFMs provide a practical approach for quantifying short-range distortions and correlated fluctuations in crystals with complex phase behavior.</div>
-          <div class="cf"></div>
-        </div>
-        <div class="xlinks">
-          <a class="xl doi" href="https://doi.org/10.26434/chemrxiv.15001387/v2" target="_blank" rel="noopener">DOI: 10.26434/chemrxiv.15001387/v2</a>
-          <a class="xl" href="https://doi.org/10.5281/zenodo.18709769" target="_blank" rel="noopener">Supporting data (Zenodo)</a>
-          <a class="xl" href="https://github.com/ozakary/data-RuP" target="_blank" rel="noopener">Supporting code (GitHub)</a>
-        </div>
+    <div class="pub-inner" style="padding-top: 0; margin-top: -8px;">
+      <div class="xlinks">
+        <a class="xl doi" href="https://doi.org/10.26434/chemrxiv.15007956/v1" target="_blank" rel="noopener">DOI: 10.26434/chemrxiv.15007956/v1</a>
       </div>
     </div>
   </div>
+  <div class="cf"></div>
+
+  <!-- PREPRINT 2 -->
+  <div class="xcard">
+    <div class="xhd" style="cursor: default;">
+      <div class="xmeta">
+        <div class="xnum">2026 &nbsp;·&nbsp; Preprint</div>
+        <div class="xtitle">Local Symmetry Breaking and Correlated Fluctuations in Quantum Materials from Atomistic Foundation Models</div>
+        <div class="xauth"><strong>Ouail Zakary*</strong>, Weiguo Yin, Niraj Aryal*</div>
+        <div class="xjrnl">ChemRxiv <b>2026</b>, submitted for publication</div>
+        <span class="xbadge b-pre">Preprint</span>
+      </div>
+    </div>
+    <div class="pub-inner" style="padding-top: 0; margin-top: -8px;">
+      <div class="xlinks">
+        <a class="xl doi" href="https://doi.org/10.26434/chemrxiv.15001387/v2" target="_blank" rel="noopener">DOI: 10.26434/chemrxiv.15001387/v2</a>
+        <a class="xl" href="https://doi.org/10.5281/zenodo.18709769" target="_blank" rel="noopener">Supporting Data</a>
+        <a class="xl" href="https://github.com/ozakary/data-RuP" target="_blank" rel="noopener">Supporting Code</a>
+      </div>
+    </div>
+  </div>
+  <div class="cf"></div>
 
   <p style="font-size: 13px; font-family: var(--sans); color: var(--text-faint); margin-top: 16px;">
     Full list available via <a href="https://scholar.google.com/citations?user=kKUFATIAAAAJ" target="_blank" rel="noopener">Google Scholar</a> or as a <a href="cv.html">PDF download</a>.
@@ -106,16 +115,5 @@
 </footer>
 <div class="fbot">© 2026 Ouail Zakary &nbsp;·&nbsp; ozakary.github.io</div>
 
-<script>
-function xToggle(id) {
-  var body = document.getElementById(id);
-  var icon = document.getElementById('xi-' + id);
-  var btn  = document.getElementById('btn-' + id);
-  var open = body.classList.contains('open');
-  body.classList.toggle('open', !open);
-  icon.textContent = open ? '+' : '−';
-  btn.setAttribute('aria-expanded', String(!open));
-}
-</script>
 </body>
 </html>
