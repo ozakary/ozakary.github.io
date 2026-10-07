@@ -1,6 +1,6 @@
-# Ouail Zakary's Portfolio
+# The Personal Academic Website of Ouail Zakary
 
-This is my personal [academic portfolio](https://ozakary.github.io/) website showcasing my research work in computational chemistry. The website includes information about my publications, research focus, and academic contributions.
+This is my personal [academic website](https://ozakary.github.io/) showcasing my research work. The website includes information about my publications, research focus, and academic contributions.
 
 ---
 📄 Author: **Ouail Zakary**  
@@ -12,12 +12,15 @@ This is my personal [academic portfolio](https://ozakary.github.io/) website sho
 
 ## Website Contents
 
-- **About**: Overview of my research.
-- **Publications**: Comprehensive list of research publications with access information.
+- **Home**: Overview of the website and news section.
+- **Research**: My research
+- **Publications**: List of publications with associated data and code.
+- **Preprints**: List of submited/under review publications with associated data and code.
 - **Conferences**: Presentations and proceedings from academic conferences.
-- **Code**: Software and computational tools developed during research.
-- **Funding**: Research grants and funding information.
-- **Collaborators**: Research partners and collaborations.
+- **Teaching**: Teaching courses with their corresponding hour volume, and students I supervised with their corresponding projects.
+- **Software**: Code and computational tools developed during research.
+- **Grants and Collaborations**: Research funding information and collaborators.
+- **CV**: My CV and other documents.
 
 ## Technical Implementation
 
