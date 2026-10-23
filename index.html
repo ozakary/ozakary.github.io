@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ouail Zakary</title>
-  <meta name="description" content="Personal academic website of Ouail Zakary, Postdoctoral Researcher at the NMR Research Unit, University of Oulu, Finland.">
+  <meta name="description" content="Personal academic website of Ouail Zakary, Postdoctoral Researcher at the Department of Chemistry and Materials Science (CMAT) and OCAMM, Aalto University, Finland.">
   <link rel="stylesheet" href="css/style.css">
   <style>
+    .t-pos{background:#f6e6ee;color:#8a2d5a;}
     .stats-section{background:#f5f0e8;border-top:1px solid #e0d8cc;border-bottom:1px solid #e0d8cc;}
     .stats-grid{display:grid;grid-template-columns:repeat(5,1fr);max-width:900px;margin:0 auto;}
     .stat-card{padding:18px 16px 13px;border-right:1px solid #e0d8cc;cursor:pointer;transition:background 0.15s;user-select:none;}
@@ -77,9 +78,10 @@
     <img class="hero-photo" src="images/profile-picture.png" alt="Ouail Zakary">
     <div class="hero-text">
       <h1>Ouail Zakary</h1>
-      <div class="hero-pos">Ph.D. &nbsp;·&nbsp; Postdoctoral Researcher &nbsp;·&nbsp; NMR Research Unit, University of Oulu, Finland</div>
+      <div class="hero-pos">Ph.D. &nbsp;·&nbsp; Postdoctoral Researcher &nbsp;·&nbsp; CMAT and OCAMM, Aalto University, Finland</div>
       <p>My research focuses on developing machine learning-driven approaches for the atomistic modeling of molecular and solid-state systems under real physicochemical conditions. By integrating quantum mechanics at the relativistic level with classical and path integral molecular dynamics, I aim to deliver highly predictive models for structural, dynamic, and spectroscopic observables.</p>
       <p>A significant part of my work involves training equivariant graph neural networks and kernel regression models to develop MLIPs and NMR-ML models that enable realistic simulations of complex materials.</p>
+      <p>At Aalto University, I work within the Dept. of Chemistry and Materials Science (CMAT), as well as the Otaniemi Center for Atomic-scale Materials Modeling (OCAMM), a joint unit of the computational groups of Asst. Prof. Miguel Caro, Assoc. Prof. Antti Karttunen, and Prof. Kari Laasonen, on the Business Finland project "Materials AI for accelerated industrial R&amp;D", carried out with industrial partners in the chemistry and materials fields and with CSC. The project applies AI-driven atomistic modeling to materials structure, chemical reactions and enhanced sampling, and data-driven cheminformatics for molecular modeling and design.</p>
       <div class="kw-row">
         <span class="kw">Equivariant GNNs</span>
         <span class="kw">MLIPs</span>
@@ -220,10 +222,18 @@
         <button class="ftag" onclick="filterNews('conf', this)">Conferences</button>
         <button class="ftag" onclick="filterNews('award', this)">Awards</button>
         <button class="ftag" onclick="filterNews('grant', this)">Grants</button>
+        <button class="ftag" onclick="filterNews('pos', this)">Positions</button>
       </div>
     </div>
 
     <div class="news-grid" id="news-grid">
+
+      <div class="ni" data-cat="pos">
+        <span class="ntag t-pos">Position</span>
+        <div class="ndate">November 2026</div>
+        <div class="ntitle">New postdoctoral position at <i>Aalto University</i></div>
+        <div class="ndesc">Starting as a Postdoctoral Researcher at the Department of Chemistry and Materials Science (CMAT) and the Otaniemi Center for Atomic-scale Materials Modeling (OCAMM), <b>Aalto University</b>, working across the computational groups of Asst. Prof. Miguel Caro, Assoc. Prof. Antti Karttunen, and Prof. Kari Laasonen.</div>
+      </div>
 
       <div class="ni" data-cat="pub">
         <span class="ntag t-pub">Publication</span>
@@ -410,15 +420,15 @@
   <div class="fs">
     <h4>Contact</h4>
     <p>Ouail Zakary</p>
-    <p>Office: KE 318</p>
-    <a href="mailto:ouail.zakary@oulu.fi">ouail.zakary@oulu.fi</a>
+    <a href="mailto:ouail.zakary@aalto.fi">ouail.zakary@aalto.fi</a>
   </div>
   <div class="fs">
     <h4>Address</h4>
-    <p>NMR Research Unit</p>
-    <p>University of Oulu</p>
-    <p>Pentti Kaiteran katu 1</p>
-    <p>P.O. Box 8000, 90014 Oulu, Finland</p>
+    <p>Dept. of Chemistry and Materials Science (CMAT)</p>
+    <p>Otaniemi Center for Atomic-scale Materials Modeling (OCAMM)</p>
+    <p>School of Chemical Engineering</p>
+    <p>Aalto University</p>
+    <p>P.O. Box 11000, FI-00076 Aalto, Finland</p>
   </div>
   <div class="fs">
     <h4>Academic profiles</h4>
@@ -517,31 +527,46 @@ function toggleDrawer(id) {
 }
 
 /* ── news filter & show-more ── */
+var NEWS_LIMIT = 6;      /* number of news items shown before "Show older news" */
 var moreShown = false;
-var allIds = ['ex1','ex2','ex3','ex4','ex5','ex6','ex7','ex8','ex9','ex10', 'ex11', 'ex12', 'ex13', 'ex14', 'ex15', 'ex16'];
+var currentCat = 'all';
+
+function renderNews() {
+  var btn = document.getElementById('show-more-btn');
+  var items = document.querySelectorAll('#news-grid .ni');
+  items.forEach(function(item, i) {
+    var match = currentCat === 'all'
+      || item.dataset.cat === currentCat
+      || (currentCat === 'pub' && item.dataset.cat === 'pre');
+    /* a specific tab shows all its items, the "All" tab respects the collapse */
+    var show = match && (currentCat !== 'all' || i < NEWS_LIMIT || moreShown);
+    item.classList.toggle('hidden', !show);
+    item.style.display = show ? 'flex' : 'none';
+  });
+  if (currentCat === 'all' && items.length > NEWS_LIMIT) {
+    btn.style.display = 'block';
+    btn.textContent = moreShown ? 'Hide older news' : 'Show older news';
+  } else {
+    btn.style.display = 'none';
+  }
+}
 
 function filterNews(cat, el) {
   document.querySelectorAll('.ftag').forEach(function(f) { f.classList.remove('on'); });
   el.classList.add('on');
-  var btn = document.getElementById('show-more-btn');
-  document.querySelectorAll('#news-grid .ni').forEach(function(item) {
-    var match = cat === 'all'
-      || item.dataset.cat === cat
-      || (cat === 'pub' && (item.dataset.cat === 'pub' || item.dataset.cat === 'pre'));
-    var isExtra = item.id && allIds.includes(item.id);
-    item.style.display = (match && (!isExtra || moreShown)) ? 'flex' : 'none';
-  });
-  btn.style.display = (cat === 'all' && !moreShown) ? 'block' : 'none';
+  currentCat = cat;
+  renderNews();
 }
 
 function showMore() {
-  moreShown = true;
-  allIds.forEach(function(id) {
-    var el = document.getElementById(id);
-    if (el) { el.classList.remove('hidden'); el.style.display = 'flex'; }
-  });
-  document.getElementById('show-more-btn').style.display = 'none';
+  moreShown = !moreShown;
+  renderNews();
+  if (!moreShown) {
+    document.querySelector('.news-wrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }
+
+renderNews();
 </script>
 </body>
 </html>
